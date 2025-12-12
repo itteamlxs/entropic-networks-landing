@@ -1,0 +1,1 @@
+const langTrigger=document.getElementById('lang-trigger'),langPanel=document.getElementById('lang-panel');langTrigger.addEventListener('click',e=>{e.preventDefault();langPanel.classList.toggle('hidden');langPanel.classList.toggle('visible');});

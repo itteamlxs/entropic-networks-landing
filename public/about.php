@@ -20,6 +20,12 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">       
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+<link rel="stylesheet" href="assets/css/custom-lang.css">
+<link rel="stylesheet" href="assets/css/custom-lang.css">
+<link rel="stylesheet" href="assets/css/custom-lang.css">
+<link rel="stylesheet" href="assets/css/custom-lang.css">
+<link rel="stylesheet" href="assets/css/custom-lang.css">
+<link rel="stylesheet" href="assets/css/custom-lang.css">
 </head> 
 
 <body class="about-page">    
@@ -443,21 +449,6 @@
 	</div><!--//modal--> 
     
     <!-- *****CONFIGURE STYLE****** -->
-	<div id="config-panel" class="config-panel config-panel-hide d-none d-lg-block">
-		<div class="panel-inner">
-			<a id="config-trigger" class="config-trigger" href="#"><i class="fas fa-cog mx-auto"></i></a>
-			<h5>Choose Colour</h5>
-			<ul id="color-options" class="list-unstyled list-inline mb-0">
-				<li class="theme-1 list-inline-item active" ><a data-style="assets/css/theme-1.css" href="#"></a></li>
-				<li class="theme-2 list-inline-item "><a data-style="assets/css/theme-2.css" href="#"></a></li>
-				<li class="theme-3 list-inline-item "><a data-style="assets/css/theme-3.css" href="#"></a></li>
-				<li class="theme-4 list-inline-item "><a data-style="assets/css/theme-4.css" href="#"></a></li>                   
-				<li class="theme-5 list-inline-item "><a data-style="assets/css/theme-5.css" href="#"></a></li>                     
-				<li class="theme-6 list-inline-item "><a data-style="assets/css/theme-6.css" href="#"></a></li>
-				<li class="theme-7 list-inline-item "><a data-style="assets/css/theme-7.css" href="#"></a></li>
-				<li class="theme-8 list-inline-item "><a data-style="assets/css/theme-8.css" href="#"></a></li>                    
-				<li class="theme-9 list-inline-item "><a data-style="assets/css/theme-9.css" href="#"></a></li>
-				<li class="theme-10 list-inline-item "><a data-style="assets/css/theme-10.css" href="#"></a></li>
 			</ul><!--//color-options-->
 			<a id="config-close" class="close" href="#"><i class="fas fa-times-circle"></i></a>
 			
@@ -472,7 +463,10 @@
     
     
     <!-- Theme Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
-    <script src="assets/js/demo/theme-switcher.js"></script>  
+<a id="lang-toggle" class="btn btn-sm btn-outline-secondary position-fixed bottom-0 end-0 m-3" href="?lang=<?= ($lang ?? 'en') === 'en' ? 'es' : 'en' ?>"><?= ($lang ?? 'en') === 'en' ? 'ES' : 'EN' ?></a>
+<script src="assets/js/lang-switcher.js"></script>
+<script src="assets/js/lang-switcher.js"></script>
+<script src="assets/js/lang-switcher.js"></script>
 </body>
 
 <!-- Mirrored from themes.3rdwavemedia.com/tempo/bs5/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Dec 2025 21:28:25 GMT -->
