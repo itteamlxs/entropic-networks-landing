@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from themes.3rdwavemedia.com/tempo/bs5/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Dec 2025 21:27:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Entropic Networks - Technology in Balance</title>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Entropic Networks transforms technological chaos into competitive advantage. Comprehensive IT solutions with personalized and preventive approach.">
+	<meta name="author" content="Entropic Networks">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href='../../../fonts.googleapis.com/css5319.css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+	<link href='../../../fonts.googleapis.com/cssb119.css?family=Montserrat:400,500,700' rel='stylesheet' type='text/css'>
+	<!-- FontAwesome JS -->
+	<script defer src="assets/plugins/fontawesome/js/all.js"></script>
+	<!-- Global CSS -->
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+</head>
+
+<body class="home-page">
+
+	<div class="wrapper">
+		<!-- ******HEADER****** -->
+		<header id="header" class="header">
+			<div class="container">
+				<h1 class="logo">
+					<a href="index.html">
+						<span class="logo-title">Entropic Networks</span>
+					</a>
+				</h1><!--//logo-->
+				<nav class="main-nav navbar navbar-expand-md navbar-dark" role="navigation">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="navbar-collapse collapse justify-content-end" id="navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="tour.html">Services</a></li>
+							<li class="nav-item"><a class="nav-link" href="pricing.html">Plans</a></li>
+							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Blog <i class="fas fa-angle-down"></i></a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="blog.html">Blog Home</a>
+									<a class="dropdown-item" href="blog-single.html">Single Blog Post</a>
+									<a class="dropdown-item" href="404.html">404 Page</a>
+
+								</div>
+							</li><!--//dropdown-->
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							<li class="nav-item"><a class="nav-link login-trigger" data-bs-toggle="modal" data-bs-target="#login-modal">Log in</a></li>
+							<li class="nav-item nav-item-cta last"><a class="nav-link btn btn-cta btn-cta-primary" data-bs-toggle="modal" data-bs-target="#signup-modal" >Get Started</a></li>
+						</ul><!--//nav-->
+					</div><!--//navabr-collapse-->
+				</nav><!--//main-nav-->
+			</div><!--//container-->
+		</header><!--//header-->
+
+		<!-- ******PROMO****** -->
+		<section id="promo" class="promo section">
+			<div class="container intro">
+				<h2 class="title">Everything you need<br />to transform technological chaos into competitive advantage</h2>
+				<p class="summary">Entropic Networks offers comprehensive technological solutions that optimize system performance and protect critical information with a preventive, personalized, and professional approach.</p>
+				<a class="btn btn-cta btn-cta-secondary" href="tour.html">Our Services</a>
+			</div><!--//intro-->
+
+			<div class="fixed-container">
+				<div class="signup">
+					<div class="container text-center">
+						<h3 class="title">Try Entropic Networks Free</h3>
+						<p class="summary">Sign up to try our Basic Plan FREE for 30 days! No credit card needed.</p>
+						<form class="signup-form">
+							<div class="form-group">
+								<label class="sr-only" for="semail1">Your email</label>
+								<input type="email" id="semail1" name="semail1" class="form-control" placeholder="Enter your email address">
+							</div>
+							<button type="submit" class="btn btn-cta btn-cta-primary">SIGN UP</button>
+						</form><!--//signup-form-->
+					</div><!--//contianer-->
+				</div><!--//signup-->
+
+			</div>
+			<div class="bg-carousel-wrapper">
+				<div id="bg-carousel" class="bg-carousel carousel slide carousel-fade" data-bs-ride="carousel" >
+					<div class="carousel-inner slides">
+						<div class="carousel-item active slide slide-1" data-bs-interval="6000"></div>
+						<div class="carousel-item slide slide-2" data-bs-interval="6000"></div>
+						<div class="carousel-item slide slide-3" data-bs-interval="6000"></div>
+					</div>
+				</div><!--//bg-carousel-->
+			</div><!--//bg-slider-wrapper-->
+		</section><!--//promo-->
+
+		<!-- ******PRESS****** -->
+		<div class="press">
+			<div class="container text-center">
+				<div class="row">
+					<div class="press-item col-lg-2 col-md-4 col-6"><a href="#"><img class="img-fluid" src="assets/images/press/press-1.png" alt=""></a></div>
+					<div class="press-item col-lg-2 col-md-4 col-6"><a href="#"><img class="img-fluid" src="assets/images/press/press-2.png" alt=""></a></div>
+					<div class="press-item col-lg-2 col-md-4 col-6"><a href="#"><img class="img-fluid" src="assets/images/press/press-3.png" alt=""></a></div>
+					<div class="press-item col-lg-2 col-md-4 col-6"><a href="#"><img class="img-fluid" src="assets/images/press/press-4.png" alt=""></a></div>
+					<div class="press-item col-lg-2 col-md-4 col-6"><a href="#"><img class="img-fluid" src="assets/images/press/press-5.png" alt=""></a></div>
+					<div class="press-item col-lg-2 col-md-4 col-6"><a href="#"><img class="img-fluid" src="assets/images/press/press-6.png" alt=""></a></div>
+				</div><!--row-->
+			</div>
+		</div><!--//press-->
+
+		<!-- ******WHY****** -->
+		<section id="why" class="why section">
+			<div class="container">
+				<h2 class="title text-center">Why Choose Entropic Networks</h2>
+				<p class="intro text-center">More than 300,000 satisfied customers trust our technological solutions worldwide</p>
+				<div class="row">
+					<div class="benefits col-lg-7 col-md-6 col-12">
+						<div class="item">
+							<div class="icon text-center">
+								<!--//You can replace the SVG icon below to your preferred Bootstrap icon - https://icons.getbootstrap.com/ -->
+								<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-shop" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+								</svg>
+							</div><!--//icon-->
+							<div class="content">
+								<h3 class="title">All-in-One Technology Solution</h3>
+								<p class="desc">We provide a complete range of services — specialized maintenance, network configuration, advanced cybersecurity, and consulting — in a single provider, eliminating the need for multiple partners and ensuring coherence and efficiency.</p>
+							</div><!--//content-->
+						</div><!--//item-->
+						<div class="item">
+							<div class="icon text-center">
+								<!--//You can replace the SVG icon below to your preferred Bootstrap icon - https://icons.getbootstrap.com/ -->
+								<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plug" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M6 0a.5.5 0 0 1 .5.5V3h3V.5a.5.5 0 0 1 1 0V3h1a.5.5 0 0 1 .5.5v3A3.5 3.5 0 0 1 8.5 10c-.002.434-.01.845-.04 1.22-.041.514-.126 1.003-.317 1.424a2.083 2.083 0 0 1-.97 1.028C6.725 13.9 6.169 14 5.5 14c-.998 0-1.61.33-1.974.718A1.922 1.922 0 0 0 3 16H2c0-.616.232-1.367.797-1.968C3.374 13.42 4.261 13 5.5 13c.581 0 .962-.088 1.218-.219.241-.123.4-.3.514-.55.121-.266.193-.621.23-1.09.027-.34.035-.718.037-1.141A3.5 3.5 0 0 1 4 6.5v-3a.5.5 0 0 1 .5-.5h1V.5A.5.5 0 0 1 6 0zM5 4v2.5A2.5 2.5 0 0 0 7.5 9h1A2.5 2.5 0 0 0 11 6.5V4H5z"/>
+								</svg>
+							</div><!--//icon-->
+							<div class="content">
+								<h3 class="title">Custom-Tailored Solutions</h3>
+								<p class="desc">We design specific solutions for each client's unique needs, offering adapted strategies and services that optimize their systems and resolve their particular challenges.</p>
+							</div><!--//content-->
+						</div><!--//item-->
+						<div class="item">
+							<div class="icon text-center">
+								<!--//You can replace the SVG icon below to your preferred Bootstrap icon - https://icons.getbootstrap.com/ -->
+								<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+								</svg>
+							</div><!--//icon-->
+							<div class="content">
+								<h3 class="title">Preventive and Strategic Approach</h3>
+								<p class="desc">We prioritize problem prevention and system optimization, distinguishing ourselves from reactive competitors by anticipating technological needs and proactively protecting our clients.</p>
+							</div><!--//content-->
+						</div><!--//item-->
+						<div class="item">
+							<div class="icon text-center">
+								<!--//You can replace the SVG icon below to your preferred Bootstrap icon - https://icons.getbootstrap.com/ -->
+								<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cloud-upload" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
+									<path fill-rule="evenodd" d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3z"/>
+								</svg>
+							</div><!--//icon-->
+							<div class="content">
+								<h3 class="title">Specialized Maintenance</h3>
+								<p class="desc">We ensure your PCs and laptops operate in perfect condition, optimizing both hardware and software to extend their useful life and maximize their performance.</p>
+							</div><!--//content-->
+						</div><!--//item-->
+						<div class="item last">
+							<div class="icon text-center">
+								<!--//You can replace the SVG icon below to your preferred Bootstrap icon - https://icons.getbootstrap.com/ -->
+								<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+									<path fill-rule="evenodd" d="M8.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 .5-.5z"/>
+								</svg>
+							</div><!--//icon-->
+							<div class="content">
+								<h3 class="title">Cybersecurity and Consulting</h3>
+								<p class="desc">We protect your data and systems through innovative solutions that anticipate threats and reduce vulnerabilities, ensuring the security of your critical information.</p>
+							</div><!--//content-->
+						</div><!--//item-->
+						<div class="clearfix"></div>
+						<div class="text-center">
+							<a class="btn btn-cta btn-cta-secondary" href="tour.html" >Explore Our Services</a>
+						</div>
+					</div>
+					<div class="testimonials col-lg-4 col-md-5 col-12 ml-md-auto mr-md-auto">
+						<div class="item">
+							<div class="quote-box">
+								<blockquote class="quote">Love it! vehicula consequat cursus. Morbi bibendum cursus urna, quis rhoncus arcu. Curabitur vel sollicitudin leo.
+								</blockquote><!--//quote-->
+								<p class="details">
+									<span class="name">Steven Turner</span>
+									<span class="title">London, UK</span>
+								</p>
+								<i class="fas fa-quote-right"></i>
+							</div><!--//quote-box-->
+							<div class="people text-center">
+								<img class="user-pic" src="assets/images/people/people-1.png" alt="">
+							</div><!--//people-->
+						</div><!--//item-->
+						<div class="item">
+							<div class="quote-box">
+								<blockquote class="quote">Great vehicula consequat cursus. Pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim!
+
+								</blockquote><!--//quote-->
+								<p class="details">
+									<span class="name">Michelle Cheung</span>
+									<span class="title">San Francisco, US</span>
+								</p>
+								<i class="fas fa-quote-right"></i>
+							</div><!--//quote-box-->
+							<div class="people text-center">
+								<img class="user-pic" src="assets/images/people/people-2.png" alt="">
+							</div><!--//people-->
+						</div><!--//item-->
+						<div class="item last">
+							<div class="quote-box">
+								<blockquote class="quote">Excellent Vivamus sit amet tortor id orci interdum tempor sed sit amet ante, pretium quis, sem. Nulla consequat massa quis enim!
+								</blockquote><!--//quote-->
+								<p class="details">
+									<span class="name">James Lee</span>
+									<span class="title">London, UK</span>
+								</p>
+								<i class="fas fa-quote-right"></i>
+							</div><!--//quote-box-->
+							<div class="people text-center">
+								<img class="user-pic" src="assets/images/people/people-3.png" alt="">
+							</div><!--//people-->
+						</div><!--//item-->
+					</div>
+				</div><!--//row-->
+			</div><!--//container-->
+		</section><!--//why-->
+
+		<!-- ******VIDEO****** -->
+		<section id="video" class="video section">
+			<div class="container">
+				<h2 class="title">Grow your business with technology in balance!</h2>
+				<p class="summary">Discover how Entropic Networks can transform your technological challenges into effective solutions that drive your company's productivity.</p>
+				<div class="control text-center">
+					<button type="button" id="play-video-trigger" class="video-play-trigger" data-bs-toggle="modal" data-bs-target="#modal-video"><span class="icon-holder"><i class="fas fa-play"></i></span></button>
+					<p>Watch Video</p>
+
+					<!-- Video Modal -->
+					<div class="modal modal-video" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4 id="videoModalLabel" class="modal-title">Video Tour</h4>
+								</div>
+								<div class="modal-body">
+									<div class="video-container ratio ratio-16x9">
+					                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QviDwsMLXb0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					                </div><!--//video-container-->
+								</div><!--//modal-body-->
+							</div><!--//modal-content-->
+						</div><!--//modal-dialog-->
+					</div><!--//modal-->
+				</div><!--//control-->
+			</div><!--//container-->
+		</section><!--//video-->
+
+		<!-- ******FAQ****** -->
+		<section id="faq" class="faq section has-bg-color">
+			<div class="container">
+				<h2 class="title text-center">Frequently Asked Questions</h2>
+				<div id="faqs-accordion" class="accordion faqs-accordion">
+					<div class="row gx-3">
+		                <div class="col-12 col-lg-6">
+
+			                <div class="accordion-item">
+							    <h2 class="accordion-header" id="faq-heading-1">
+
+							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1"><i class="fas fa-square-plus"></i>
+							        Can I viverra sit amet quam eget lacinia?
+							      </button>
+							    </h2>
+							    <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faq-heading-1">
+							        <div class="accordion-body text-start p4">
+							            Anim pariatur cliche reprehenderit, enim eiusmod high life
+		                                accusamus terry richardson ad squid. 3 wolf moon officia
+		                                aute, non cupidatat skateboard dolor brunch. Food truck
+		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+		                                sunt aliqua put a bird on it squid single-origin coffee
+		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
+		                                helvetica, craft beer labore wes anderson cred nesciunt
+		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+		                                Leggings occaecat craft beer farm-to-table, raw denim
+		                                aesthetic synth nesciunt you probably haven't heard of them
+		                                accusamus labore sustainable VHS.
+							        </div>
+							    </div>
+							</div><!--//accordion-item-->
+
+			                <div class="accordion-item">
+							    <h2 class="accordion-header" id="faq-heading-2">
+
+							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2"><i class="fas fa-square-plus"></i>
+							        What is the ipsum dolor sit amet quam tortor?
+							      </button>
+							    </h2>
+							    <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2">
+							        <div class="accordion-body text-start p4">
+							            Anim pariatur cliche reprehenderit, enim eiusmod high life
+		                                accusamus terry richardson ad squid. 3 wolf moon officia
+		                                aute, non cupidatat skateboard dolor brunch. Food truck
+		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+		                                sunt aliqua put a bird on it squid single-origin coffee
+		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
+		                                helvetica, craft beer labore wes anderson cred nesciunt
+		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+		                                Leggings occaecat craft beer farm-to-table, raw denim
+		                                aesthetic synth nesciunt you probably haven't heard of them
+		                                accusamus labore sustainable VHS.
+							        </div>
+							    </div>
+							</div><!--//accordion-item-->
+
+
+	                        <div class="accordion-item">
+							    <h2 class="accordion-header" id="faq-heading-3">
+
+							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3"><i class="fas fa-square-plus"></i>
+							        How does the morbi quam tortor work?
+							      </button>
+							    </h2>
+							    <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3">
+							        <div class="accordion-body text-start p4">
+							            Anim pariatur cliche reprehenderit, enim eiusmod high life
+		                                accusamus terry richardson ad squid. 3 wolf moon officia
+		                                aute, non cupidatat skateboard dolor brunch. Food truck
+		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+		                                sunt aliqua put a bird on it squid single-origin coffee
+		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
+		                                helvetica, craft beer labore wes anderson cred nesciunt
+		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+		                                Leggings occaecat craft beer farm-to-table, raw denim
+		                                aesthetic synth nesciunt you probably haven't heard of them
+		                                accusamus labore sustainable VHS.
+							        </div>
+							    </div>
+							</div><!--//accordion-item-->
+
+							<div class="accordion-item">
+							    <h2 class="accordion-header" id="faq-heading-4">
+
+							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4"><i class="fas fa-square-plus"></i>
+							        Can I ipsum dolor sit amet nascetur ridiculus?
+							      </button>
+							    </h2>
+							    <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq-heading-4">
+							        <div class="accordion-body text-start p4">
+							            Anim pariatur cliche reprehenderit, enim eiusmod high life
+		                                accusamus terry richardson ad squid. 3 wolf moon officia
+		                                aute, non cupidatat skateboard dolor brunch. Food truck
+		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+		                                sunt aliqua put a bird on it squid single-origin coffee
+		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
+		                                helvetica, craft beer labore wes anderson cred nesciunt
+		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+		                                Leggings occaecat craft beer farm-to-table, raw denim
+		                                aesthetic synth nesciunt you probably haven't heard of them
+		                                accusamus labore sustainable VHS.
+							        </div>
+							    </div>
+							</div><!--//accordion-item-->
+		                </div><!--//col-->
+	                    <div class="col-12 col-lg-6">
+		                    <div class="accordion-item">
+							    <h2 class="accordion-header" id="faq-heading-5">
+
+							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5"><i class="fas fa-square-plus"></i>
+							        Is it possible to tellus eget?
+							      </button>
+							    </h2>
+							    <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq-heading-5">
+							        <div class="accordion-body text-start p4">
+							            Anim pariatur cliche reprehenderit, enim eiusmod high life
+		                                accusamus terry richardson ad squid. 3 wolf moon officia
+		                                aute, non cupidatat skateboard dolor brunch. Food truck
+		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+		                                sunt aliqua put a bird on it squid single-origin coffee
+		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
+		                                helvetica, craft beer labore wes anderson cred nesciunt
+		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+		                                Leggings occaecat craft beer farm-to-table, raw denim
+		                                aesthetic synth nesciunt you probably haven't heard of them
+		                                accusamus labore sustainable VHS.
+							        </div>
+							    </div>
+							</div><!--//accordion-item-->
+
+							<div class="accordion-item">
+							    <h2 class="accordion-header" id="faq-heading-6">
+
+							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6"><i class="fas fa-square-plus"></i>
+							        Would it elementum turpis semper imperdiet?
+							      </button>
+							    </h2>
+							    <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq-heading-6">
+							        <div class="accordion-body text-start p4">
+							            Anim pariatur cliche reprehenderit, enim eiusmod high life
+		                                accusamus terry richardson ad squid. 3 wolf moon officia
+		                                aute, non cupidatat skateboard dolor brunch. Food truck
+		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+		                                sunt aliqua put a bird on it squid single-origin coffee
+		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
+		                                helvetica, craft beer labore wes anderson cred nesciunt
+		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+		                                Leggings occaecat craft beer farm-to-table, raw denim
+		                                aesthetic synth nesciunt you probably haven't heard of them
+		                                accusamus labore sustainable VHS.
+							        </div>
+							    </div>
+							</div><!--//accordion-item-->
+
+
+							<div class="accordion-item">
+							    <h2 class="accordion-header" id="faq-heading-7">
+
+							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7"><i class="fas fa-square-plus"></i>
+							        How can I imperdiet lorem sem non nisl?
+							      </button>
+							    </h2>
+							    <div id="faq7" class="accordion-collapse collapse" aria-labelledby="faq-heading-7">
+							        <div class="accordion-body text-start p4">
+							            Anim pariatur cliche reprehenderit, enim eiusmod high life
+		                                accusamus terry richardson ad squid. 3 wolf moon officia
+		                                aute, non cupidatat skateboard dolor brunch. Food truck
+		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+		                                sunt aliqua put a bird on it squid single-origin coffee
+		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
+		                                helvetica, craft beer labore wes anderson cred nesciunt
+		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+		                                Leggings occaecat craft beer farm-to-table, raw denim
+		                                aesthetic synth nesciunt you probably haven't heard of them
+		                                accusamus labore sustainable VHS.
+							        </div>
+							    </div>
+							</div><!--//accordion-item-->
+
+
+	                        <div class="accordion-item">
+							    <h2 class="accordion-header" id="faq-heading-8">
+
+							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8"><i class="fas fa-square-plus"></i>
+							        Can I imperdiet massa ut?
+							      </button>
+							    </h2>
+							    <div id="faq8" class="accordion-collapse collapse" aria-labelledby="faq-heading-8">
+							        <div class="accordion-body text-start p4">
+							            Anim pariatur cliche reprehenderit, enim eiusmod high life
+		                                accusamus terry richardson ad squid. 3 wolf moon officia
+		                                aute, non cupidatat skateboard dolor brunch. Food truck
+		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+		                                sunt aliqua put a bird on it squid single-origin coffee
+		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
+		                                helvetica, craft beer labore wes anderson cred nesciunt
+		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+		                                Leggings occaecat craft beer farm-to-table, raw denim
+		                                aesthetic synth nesciunt you probably haven't heard of them
+		                                accusamus labore sustainable VHS.
+							        </div>
+							    </div>
+							</div><!--//accordion-item-->
+						</div><!--//col-->
+                    </div><!--//row-->
+				</div><!--//accordion-->
+				<div class="more text-center">
+					<div class="intro">More questions?</div>
+					<a class="btn btn-cta btn-cta-secondary" href="contact.html">Get in touch</a>
+				</div>
+			</div><!--//container-->
+		</section><!--//faq-->
+
+		<!-- ******SIGNUP****** -->
+		<section id="signup" class="signup">
+			<div class="container text-center">
+				<h2 class="title">Ready to bring technology in balance with Entropic Networks?</h2>
+				<p class="summary">Sign up to try our Basic Plan FREE for 30 days! No credit card needed.</p>
+				<form class="signup-form" method="post" action="#">
+					<div class="form-group">
+						<label class="sr-only" for="semail2">Your email</label>
+						<input type="email" id="semail2" name="semail2" class="form-control" placeholder="Enter your email address" required>
+					</div>
+					<button type="submit" class="btn btn-cta btn-cta-primary">SIGN UP</button>
+				</form><!--//signup-form-->
+			</div>
+		</section><!--//signup-->
+
+	</div><!--//wrapper-->
+
+	<!-- ******FOOTER****** -->
+	<footer class="footer">
+		<div class="footer-content">
+			<div class="container">
+				<div class="row gx-5">
+					<div class="col-lg-6 col-12">
+						<div class="footer-col about">
+							<div class="footer-col-inner">
+								<h3 class="title">About Entropic Networks</h3>
+								<p>At Entropic Networks, we specialize in providing a comprehensive range of technological services designed to ensure optimal performance of your equipment and systems. Our purpose is to transform technological challenges into effective solutions that drive productivity and protect your investment.</p>
+								<p><a class="more" href="#">Learn more <i class="fas fa-long-arrow-alt-right"></i></a></p>
+							</div><!--//footer-col-inner-->
+						</div><!--//footer-col-->
+					</div><!--//col-->
+					<div class="col-lg-6 col-12">
+						<div class="row">
+							<div class="footer-col col-12 col-lg-6 links">
+								<div class="footer-col-inner">
+									<h3 class="title">Links</h3>
+									<ul class="list-unstyled">
+										<li><a href="#"><i class="fas fa-caret-right"></i>Knowledge Base</a></li>
+										<li><a href="#"><i class="fas fa-caret-right"></i>Jobs</a></li>
+										<li><a href="#"><i class="fas fa-caret-right"></i>Press</a></li>
+										<li><a href="#"><i class="fas fa-caret-right"></i>Terms of services</a></li>
+										<li><a href="#"><i class="fas fa-caret-right"></i>Privacy Policy</a></li>
+									</ul>
+								</div><!--//footer-col-inner-->
+							</div><!--//foooter-col-->
+							<div class="footer-col col-12 col-lg-6 contact">
+								<div class="footer-col-inner">
+									<h3 class="title">Get in touch</h3>
+									<div class="row">
+										<p class="tel col-lg-12 col-md-4 col-12"><i class="fas fa-phone"></i>0800 123 4567</p>
+										<p class="email col-lg-12 col-md-4 col-12"><i class="fas fa-envelope"></i><a href="#">support@entropicnetworks.com</a></p>
+										<p class="email col-lg-12 col-md-4 col-12"><i class="fas fa-comment"></i><a href="#">Live Chat</a></p>
+									</div>
+								</div><!--//footer-col-inner-->
+							</div><!--//foooter-col-->
+						</div><!--//row-->
+					</div><!--//col-->
+				</div><!--//row-->
+			</div><!--//container-->
+		</div><!--//footer-content-->
+		<div class="bottom-bar">
+			<div class="container">
+				<div class="row">
+					<small class="copyright col-md-6 col-12">Template Copyright <a href="http://themes.3rdwavemedia.com/" target="_blank">@ 3rd Wave Media</a></small>
+					<div class="social-container col-md-6 col-12">
+						<ul class="social list-inline">
+							<li class="last list-inline-item"><a href="#" ><i class="fa-brands fa-youtube"></i></a></li>
+							<li class="list-inline-item"><a href="#" ><i class="fa-brands fa-linkedin-in"></i></a></li>
+							<li class="list-inline-item"><a href="#" ><i class="fa-brands fa-facebook-f"></i></a></li>
+							<li class="list-inline-item"><a href="#" ><i class="fa-brands fa-x-twitter"></i></a></li>
+
+						</ul><!--//social-->
+					</div><!--//social-container-->
+				</div><!--//row-->
+			</div><!--//container-->
+		</div><!--//bottom-bar-->
+	</footer><!--//footer-->
+
+	<!-- Login Modal -->
+	<div class="modal modal-login" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 id="loginModalLabel" class="modal-title justify-content-center">Log in to your account</h4>
+				</div>
+				<div class="modal-body">
+					<div class="social-login text-center">
+						<ul class="list-unstyled social-login">
+							<li><button class="twitter-x-btn btn" type="button"><i class="fa-brands fa-x-twitter"></i>Log in with Xr</button></li>
+							<li><button class="facebook-btn btn" type="button"><i class="fa-brands fa-facebook-f"></i>Log in with Facebook</button></li>
+							<li><button class="google-btn btn" type="button"><i class="fa-brands fa-google"></i>Log in with Google</button></li>
+						</ul>
+					</div>
+					<div class="divider"><span>Or</span></div>
+					<div class="login-form-container">
+						<form class="login-form">
+							<div class="form-group email mb-3">
+								<i class="fas fa-envelope"></i>
+								<label class="sr-only" for="login-email">Your email</label>
+								<input id="login-email" name="login-email" type="email" class="form-control login-email" placeholder="Your email">
+							</div><!--//form-group-->
+							<div class="form-group password mb-3">
+								<i class="fas fa-lock"></i>
+								<label class="sr-only" for="login-password">Password</label>
+								<input id="login-password" name="login-password" type="password" class="form-control login-password" placeholder="Password">
+								<p class="forgot-password">
+									<a href="#" id="resetpass-link" data-bs-toggle="modal" data-bs-target="#resetpass-modal">Forgot password?</a>
+								</p>
+							</div><!--//form-group-->
+							<button type="submit" class="btn btn-block btn-cta-primary">Log in</button>
+							<div class="form-check remember mt-2">
+								<input class="form-check-input" type="checkbox" value="" id="RememberPassword">
+								<label class="form-check-label" for="RememberPassword">
+								Remember me
+								</label>
+							</div>
+						</form>
+					</div><!--//login-form-container-->
+				</div><!--//modal-body-->
+				<div class="modal-footer">
+					<p>New to Entropic Networks? <a class="signup-link" id="signup-link" href="#">Sign up now</a></p>
+				</div><!--//modal-footer-->
+			</div><!--//modal-content-->
+		</div><!--//modal-dialog-->
+	</div><!--//modal-->
+
+	<!-- Signup Modal -->
+	<div class="modal modal-signup" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 id="signupModalLabel" class="modal-title text-center">New to Entropic Networks? Sign up now.</h4>
+
+				</div>
+				<div class="modal-body">
+					<p class="intro text-center">It only takes 3 minutes!</p>
+					<div class="social-login text-center">
+						<ul class="list-unstyled social-login">
+							<li><button class="twitter-x-btn btn" type="button"><i class="fa-brands fa-x-twitter"></i>Sign up with Twitter</button></li>
+							<li><button class="facebook-btn btn" type="button"><i class="fa-brands fa-facebook-f"></i>Sign up with Facebook</button></li>
+							<li><button class="google-btn btn" type="button"><i class="fa-brands fa-google"></i>Sign up with Google</button></li>
+						</ul>
+						<p class="note">Don't worry, we won't post anything without your permission.</p>
+					</div>
+					<div class="divider"><span>Or</span></div>
+					<div class="login-form-container">
+						<form class="login-form">
+							<div class="form-group email mb-3">
+								<i class="fas fa-envelope"></i>
+								<label class="sr-only" for="signup-email">Your email</label>
+								<input id="signup-email" name="signup-email" type="email" class="form-control login-email" placeholder="Your email">
+							</div><!--//form-group-->
+							<div class="form-group password mb-3">
+								<i class="fas fa-lock"></i>
+								<label class="sr-only" for="signup-password">Your password</label>
+								<input id="signup-password" name="signup-password" type="password" class="form-control login-password" placeholder="Password">
+							</div><!--//form-group-->
+							<button type="submit" class="btn btn-block btn-cta-primary">Sign up</button>
+							<p class="note">By signing up, you agree to our terms of services and privacy policy.</p>
+						</form>
+					</div><!--//login-form-container-->
+				</div><!--//modal-body-->
+				<div class="modal-footer">
+					<p>Already have an account? <a class="login-link" id="login-link" href="#">Log in</a></p>
+				</div><!--//modal-footer-->
+			</div><!--//modal-content-->
+		</div><!--//modal-dialog-->
+	</div><!--//modal-->
+
+	<!-- Reset Password Modal -->
+	<div class="modal modal-resetpass" id="resetpass-modal" tabindex="-1" role="dialog" aria-labelledby="resetpassModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 id="resetpassModalLabel" class="modal-title text-center">Password Reset</h4>
+				</div>
+				<div class="modal-body">
+					<div class="resetpass-form-container">
+						<p class="intro">Please enter your email address below and we'll email you a link to a page where you can easily create a new password.</p>
+						<form class="resetpass-form">
+							<div class="form-group email mb-3">
+								<i class="fas fa-envelope"></i>
+								<label class="sr-only" for="reg-email">Your email</label>
+								<input id="reg-email" name="reg-email" type="email" class="form-control login-email" placeholder="Your email">
+							</div><!--//form-group-->
+							<button type="submit" class="btn btn-block btn-cta-primary">Reset Password</button>
+						</form>
+					</div><!--//login-form-container-->
+				</div><!--//modal-body-->
+				<div class="modal-footer">
+					<p>I want to <a class="back-to-login-link" id="back-to-login-link" href="#">return to login</a></p>
+				</div><!--//modal-footer-->
+			</div><!--//modal-content-->
+		</div><!--//modal-dialog-->
+	</div><!--//modal-->
+
+	<!-- *****CONFIGURE STYLE****** -->
+	<div id="config-panel" class="config-panel config-panel-hide d-none d-lg-block">
+		<div class="panel-inner">
+			<a id="config-trigger" class="config-trigger" href="#"><i class="fa-solid fa-gear mx-auto"></i></a>
+			<h5>Choose Colour</h5>
+			<ul id="color-options" class="list-unstyled list-inline mb-0">
+				<li class="theme-1 list-inline-item active" ><a data-style="assets/css/theme-1.css" href="#"></a></li>
+				<li class="theme-2 list-inline-item "><a data-style="assets/css/theme-2.css" href="#"></a></li>
+				<li class="theme-3 list-inline-item "><a data-style="assets/css/theme-3.css" href="#"></a></li>
+				<li class="theme-4 list-inline-item "><a data-style="assets/css/theme-4.css" href="#"></a></li>
+				<li class="theme-5 list-inline-item "><a data-style="assets/css/theme-5.css" href="#"></a></li>
+				<li class="theme-6 list-inline-item "><a data-style="assets/css/theme-6.css" href="#"></a></li>
+				<li class="theme-7 list-inline-item "><a data-style="assets/css/theme-7.css" href="#"></a></li>
+				<li class="theme-8 list-inline-item "><a data-style="assets/css/theme-8.css" href="#"></a></li>
+				<li class="theme-9 list-inline-item "><a data-style="assets/css/theme-9.css" href="#"></a></li>
+				<li class="theme-10 list-inline-item "><a data-style="assets/css/theme-10.css" href="#"></a></li>
+			</ul><!--//color-options-->
+			<a id="config-close" class="close" href="#"><i class="fa-solid fa-circle-xmark"></i></a>
+
+		</div><!--//panel-inner-->
+	</div><!--//config-panel-->
+
+	<!-- Javascript -->
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/plugins/vanilla-back-to-top.min.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<!-- Page Specific JS -->
+	<script src="assets/js/accordion.js"></script>
+	<script src="assets/js/modal-video.js"></script>
+
+	<!-- Theme Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+	<script src="assets/js/demo/theme-switcher.js"></script>
+</body>
+
+<!-- Mirrored from themes.3rdwavemedia.com/tempo/bs5/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Dec 2025 21:28:08 GMT -->
+</html>
