@@ -1,19 +1,23 @@
 #lang-toggle {
   position: fixed;
-  bottom: 70px;
-  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -45px;
   z-index: 1030;
-  padding: 6px 12px;
-  font-size: 12px;
-  font-weight: 600;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(109, 189, 99, 0.9);
   color: #fff;
   border: none;
-  border-radius: 4px 0 0 4px;
+  border-radius: 50% 0 0 50%;
   text-decoration: none;
   transition: right 0.3s ease, opacity 0.3s ease;
   opacity: 0;
   box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
 }
 
 #lang-toggle:hover {
