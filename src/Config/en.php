@@ -15,7 +15,7 @@ return [
     'login'        => 'Log in',
     'get_started'  => 'Get Started',
 
-    'hero_title'   => 'Everything you need<br>to transform technological chaos into competitive advantage',
+    'hero_title'   => 'Everything you need to transform technological chaos into competitive advantage',
     'hero_sub'     => 'Entropic Networks offers comprehensive technological solutions that optimize system performance and protect critical information with a preventive, personalized, and professional approach.',
     'hero_cta'     => 'Our Services',
 
