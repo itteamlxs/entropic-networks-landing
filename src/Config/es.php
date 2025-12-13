@@ -15,7 +15,7 @@ return [
     'login'        => 'Iniciar sesión',
     'get_started'  => 'Comenzar',
 
-    'hero_title'   => 'Todo lo que necesitas<br>para transformar el caos tecnológico en ventaja competitiva',
+    'hero_title'   => 'Todo lo que necesitas para transformar el caos tecnológico en ventaja competitiva',
     'hero_sub'     => 'Entropic Networks ofrece soluciones tecnológicas integrales que optimizan el rendimiento de los sistemas y protegen la información crítica con un enfoque preventivo, personalizado y profesional.',
     'hero_cta'     => 'Nuestros Servicios',
 
