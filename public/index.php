@@ -4,11 +4,13 @@ require_once __DIR__.'/../src/bootstrap.php';
 $lang = $_GET['lang'] ?? 'en';
 $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="<?=htmlspecialchars($lang)?>">
 
 <!-- Mirrored from themes.3rdwavemedia.com/tempo/bs5/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Dec 2025 21:27:39 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+	
 <head>
 	<title><?=t('site_title',$dict)?></title>
 	<!-- Meta -->
@@ -32,6 +34,7 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
 <body class="home-page">
 
 	<div class="wrapper">
+		
 		<!-- ******HEADER****** -->
 		<header id="header" class="header">
 			<div class="container">
@@ -40,6 +43,7 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
 						<span class="logo-title"><?=t('site_title',$dict)?></span>
 					</a>
 				</h1><!--//logo-->
+				
 				<nav class="main-nav navbar navbar-expand-md navbar-dark" role="navigation">
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
@@ -56,12 +60,13 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
 									<a class="dropdown-item" href="blog.php"><?=t('blog_home',$dict)?></a>
 									<a class="dropdown-item" href="blog-single.php"><?=t('blog_single',$dict)?></a>
 									<a class="dropdown-item" href="404.php">404 Page</a>
-
 								</div>
 							</li><!--//dropdown-->
+							
 							<li class="nav-item"><a class="nav-link" href="contact.php"><?=t('nav_contact',$dict)?></a></li>
 							<li class="nav-item"><a class="nav-link login-trigger" data-bs-toggle="modal" data-bs-target="#login-modal"><?=t('login',$dict)?></a></li>
 							<li class="nav-item nav-item-cta last"><a class="nav-link btn btn-cta btn-cta-primary" data-bs-toggle="modal" data-bs-target="#signup-modal" ><?=t('get_started',$dict)?></a></li>
+							
 						</ul><!--//nav-->
 					</div><!--//navabr-collapse-->
 				</nav><!--//main-nav-->
@@ -712,7 +717,7 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
 
 <!-- Language Toggle -->
 <a id="lang-toggle" href="?lang=<?= ($lang ?? 'en') === 'en' ? 'es' : 'en' ?>">
-    <i class="fas fa-globe"></i>
+	<i class="fa-solid fa-language"></i>
 </a>
 
 
