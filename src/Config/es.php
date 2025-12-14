@@ -1,7 +1,7 @@
 <?php
 return [
     'site_title'   => 'Entropic Networks',
-    'meta_desc'    => 'Entropic Networks transforma el caos tecnológico en ventaja competitiva.',
+    'meta_desc'    => 'Entropic Networks transforma el caos tecnológico en una ventaja competitiva.',
     'author'       => 'Entropic Networks',
 
     'nav_home'     => 'Inicio',
