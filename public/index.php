@@ -717,7 +717,7 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
 
 <!-- Language Toggle -->
 <a id="lang-toggle" href="?lang=<?= ($lang ?? 'en') === 'en' ? 'es' : 'en' ?>">
-	<i class="fa-thin fa-language"></i>
+	<i class="fa-solid fa-language"></i>
 </a>
 
 
