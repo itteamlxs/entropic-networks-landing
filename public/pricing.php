@@ -24,11 +24,11 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .price-plan .price-cols .item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
         .price-plan .price-cols .item.featured {
-            border: 3px solid #444;
+            border: 3px solid #6dbd63;
             position: relative;
         }
         .price-plan .price-cols .item .heading {
@@ -39,7 +39,7 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
             position: relative;
         }
         .price-plan .price-cols .item.featured .heading {
-            background: #555;
+            background: #6dbd63;
         }
         .price-plan .price-cols .item .content {
             background: #fff;
@@ -59,16 +59,15 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
         .price-plan .feature-list i {
             margin-right: 10px;
             width: 20px;
-            color: #666;
         }
         .price-plan .section-header {
             font-size: 14px;
             font-weight: bold;
-            color: #444;
+            color: #6dbd63;
             text-transform: uppercase;
             margin: 25px 0 15px;
             padding-bottom: 8px;
-            border-bottom: 2px solid #444;
+            border-bottom: 2px solid #6dbd63;
         }
         .price-plan .condition-list {
             font-size: 13px;
@@ -83,8 +82,20 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
             content: "•";
             position: absolute;
             left: 0;
-            color: #444;
+            color: #6dbd63;
             font-weight: bold;
+        }
+        .badge-popular {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
         .price-figure {
             margin: 20px 0;
@@ -96,7 +107,7 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
         .price-figure .number {
             font-size: 56px;
             font-weight: bold;
-            color: #444;
+            color: #6dbd63;
         }
         .price-figure .unit {
             font-size: 16px;
@@ -179,20 +190,20 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
                                 
                                 <div class="section-header"><?=t('included',$dict)?></div>
                                 <ul class="list-unstyled feature-list">
-                                    <li><i class="fas fa-check"></i> <?=t('plan_basic_visits',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_basic_remote',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_basic_review',$dict)?></li>
+                                    <li><i class="fas fa-check text-success"></i><?=t('plan_basic_visits',$dict)?></li>
+                                    <li><i class="fas fa-check text-success"></i><?=t('plan_basic_remote',$dict)?></li>
+                                    <li><i class="fas fa-check text-success"></i><?=t('plan_basic_review',$dict)?></li>
                                 </ul>
                                 
-                                <div class="section-header" style="border-color:#999;color:#999"><?=t('not_included',$dict)?></div>
+                                <div class="section-header text-danger"><?=t('not_included',$dict)?></div>
                                 <ul class="list-unstyled feature-list">
-                                    <li><i class="fas fa-times"></i> <?=t('plan_basic_not_hardware',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_basic_not_reinstall',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_basic_not_parts',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_basic_not_hours',$dict)?></li>
+                                    <li><i class="fas fa-times text-danger"></i><?=t('plan_basic_not_hardware',$dict)?></li>
+                                    <li><i class="fas fa-times text-danger"></i><?=t('plan_basic_not_reinstall',$dict)?></li>
+                                    <li><i class="fas fa-times text-danger"></i><?=t('plan_basic_not_parts',$dict)?></li>
+                                    <li><i class="fas fa-times text-danger"></i><?=t('plan_basic_not_hours',$dict)?></li>
                                 </ul>
                                 
-                                <div class="section-header" style="border-color:#ccc;color:#888"><?=t('conditions',$dict)?></div>
+                                <div class="section-header" style="border-color:#999;color:#999"><?=t('conditions',$dict)?></div>
                                 <ul class="list-unstyled condition-list">
                                     <li><?=t('plan_basic_extra',$dict)?></li>
                                     <li><?=t('plan_basic_cancel',$dict)?></li>
@@ -209,6 +220,7 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
                     <!-- Plan Empresarial -->
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="item featured">
+                            <span class="badge-popular"><?=t('popular',$dict)?></span>
                             <h3 class="heading"><?=t('plan_business_name',$dict)?></h3>
                             <div class="content">
                                 <p class="price-figure text-center">
@@ -222,20 +234,20 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
                                 
                                 <div class="section-header"><?=t('included',$dict)?></div>
                                 <ul class="list-unstyled feature-list">
-                                    <li><i class="fas fa-check"></i> <?=t('plan_business_visits',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_business_remote',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_business_maintenance',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_business_report',$dict)?></li>
+                                    <li><i class="fas fa-check text-success"></i><?=t('plan_business_visits',$dict)?></li>
+                                    <li><i class="fas fa-check text-success"></i><?=t('plan_business_remote',$dict)?></li>
+                                    <li><i class="fas fa-check text-success"></i><?=t('plan_business_maintenance',$dict)?></li>
+                                    <li><i class="fas fa-check text-success"></i><?=t('plan_business_report',$dict)?></li>
                                 </ul>
                                 
-                                <div class="section-header" style="border-color:#999;color:#999"><?=t('not_included',$dict)?></div>
+                                <div class="section-header text-danger"><?=t('not_included',$dict)?></div>
                                 <ul class="list-unstyled feature-list">
-                                    <li><i class="fas fa-times"></i> <?=t('plan_business_not_parts',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_business_not_hours',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_business_not_registered',$dict)?></li>
+                                    <li><i class="fas fa-times text-danger"></i><?=t('plan_business_not_parts',$dict)?></li>
+                                    <li><i class="fas fa-times text-danger"></i><?=t('plan_business_not_hours',$dict)?></li>
+                                    <li><i class="fas fa-times text-danger"></i><?=t('plan_business_not_registered',$dict)?></li>
                                 </ul>
                                 
-                                <div class="section-header" style="border-color:#ccc;color:#888"><?=t('conditions',$dict)?></div>
+                                <div class="section-header" style="border-color:#999;color:#999"><?=t('conditions',$dict)?></div>
                                 <ul class="list-unstyled condition-list">
                                     <li><?=t('plan_business_max',$dict)?></li>
                                     <li><?=t('plan_business_access',$dict)?></li>
@@ -265,20 +277,20 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
                                 
                                 <div class="section-header"><?=t('included',$dict)?></div>
                                 <ul class="list-unstyled feature-list">
-                                    <li><i class="fas fa-check"></i> <?=t('plan_corporate_visits',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_corporate_remote',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_corporate_audit',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_corporate_monitoring',$dict)?></li>
+                                    <li><i class="fas fa-check text-success"></i><?=t('plan_corporate_visits',$dict)?></li>
+                                    <li><i class="fas fa-check text-success"></i><?=t('plan_corporate_remote',$dict)?></li>
+                                    <li><i class="fas fa-check text-success"></i><?=t('plan_corporate_audit',$dict)?></li>
+                                    <li><i class="fas fa-check text-success"></i><?=t('plan_corporate_monitoring',$dict)?></li>
                                 </ul>
                                 
-                                <div class="section-header" style="border-color:#999;color:#999"><?=t('not_included',$dict)?></div>
+                                <div class="section-header text-danger"><?=t('not_included',$dict)?></div>
                                 <ul class="list-unstyled feature-list">
-                                    <li><i class="fas fa-times"></i> <?=t('plan_corporate_not_infrastructure',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_corporate_not_modifications',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_corporate_not_damages',$dict)?></li>
+                                    <li><i class="fas fa-times text-danger"></i><?=t('plan_corporate_not_infrastructure',$dict)?></li>
+                                    <li><i class="fas fa-times text-danger"></i><?=t('plan_corporate_not_modifications',$dict)?></li>
+                                    <li><i class="fas fa-times text-danger"></i><?=t('plan_corporate_not_damages',$dict)?></li>
                                 </ul>
                                 
-                                <div class="section-header" style="border-color:#ccc;color:#888"><?=t('conditions',$dict)?></div>
+                                <div class="section-header" style="border-color:#999;color:#999"><?=t('conditions',$dict)?></div>
                                 <ul class="list-unstyled condition-list">
                                     <li><?=t('plan_corporate_listed',$dict)?></li>
                                     <li><?=t('plan_corporate_enabled',$dict)?></li>
