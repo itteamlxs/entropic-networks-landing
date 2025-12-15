@@ -28,7 +28,7 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
         .price-plan .price-cols .item.featured {
-            border: 3px solid #6dbd63;
+            border: 3px solid #444;
             position: relative;
         }
         .price-plan .price-cols .item .heading {
@@ -39,7 +39,7 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
             position: relative;
         }
         .price-plan .price-cols .item.featured .heading {
-            background: #6dbd63;
+            background: #444;
         }
         .price-plan .price-cols .item .content {
             background: #fff;
@@ -63,11 +63,11 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
         .price-plan .section-header {
             font-size: 14px;
             font-weight: bold;
-            color: #6dbd63;
+            color: #444;
             text-transform: uppercase;
             margin: 25px 0 15px;
             padding-bottom: 8px;
-            border-bottom: 2px solid #6dbd63;
+            border-bottom: 2px solid #444;
         }
         .price-plan .condition-list {
             font-size: 13px;
@@ -82,14 +82,14 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
             content: "•";
             position: absolute;
             left: 0;
-            color: #6dbd63;
+            color: #444;
             font-weight: bold;
         }
         .badge-popular {
             position: absolute;
             top: -12px;
             right: 20px;
-            background: #ff6b6b;
+            background: #5a6c7d;
             color: white;
             padding: 5px 15px;
             border-radius: 20px;
@@ -107,7 +107,7 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
         .price-figure .number {
             font-size: 56px;
             font-weight: bold;
-            color: #6dbd63;
+            color: #444;
         }
         .price-figure .unit {
             font-size: 16px;
