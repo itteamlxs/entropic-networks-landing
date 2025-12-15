@@ -85,19 +85,6 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
             color: #444;
             font-weight: bold;
         }
-        .badge-popular {
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: #5a6c7d;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        .price-figure {
             margin: 20px 0;
         }
         .price-figure .currency {
@@ -220,7 +207,6 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
                     <!-- Plan Empresarial -->
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="item featured">
-                            <span class="badge-popular"><?=t('popular',$dict)?></span>
                             <h3 class="heading"><?=t('plan_business_name',$dict)?></h3>
                             <div class="content">
                                 <p class="price-figure text-center">
