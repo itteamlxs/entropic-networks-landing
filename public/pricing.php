@@ -1,370 +1,202 @@
-<!DOCTYPE html>
-<html lang="en"> 
+<?php
+require_once __DIR__.'/../src/bootstrap.php';
 
-<!-- Mirrored from themes.3rdwavemedia.com/tempo/bs5/pricing.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Dec 2025 21:28:18 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+$lang = $_GET['lang'] ?? 'en';
+$dict = require __DIR__.'/../src/Config/'.$lang.'.php';
+?>
+<!DOCTYPE html>
+<html lang="<?=htmlspecialchars($lang)?>">
 <head>
-    <title>Tempo - Bootstrap 5 template for startups</title>
-    <!-- Meta -->
+    <title><?=t('pricing_title',$dict)?> - <?=t('site_title',$dict)?></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">    
     <link rel="shortcut icon" href="favicon.ico">  
-    <link href='../../../fonts.googleapis.com/css5319.css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='../../../fonts.googleapis.com/cssb119.css?family=Montserrat:400,500,700' rel='stylesheet' type='text/css'>    
-    <!-- FontAwesome JS -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,500,700' rel='stylesheet' type='text/css'>    
     <script defer src="assets/plugins/fontawesome/js/all.js"></script>
-    <!-- Global CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-       
-    <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
-<link rel="stylesheet" href="assets/css/custom-lang.css">
-<link rel="stylesheet" href="assets/css/custom-lang.css">
-<link rel="stylesheet" href="assets/css/custom-lang.css">
-<link rel="stylesheet" href="assets/css/custom-lang.css">
-<link rel="stylesheet" href="assets/css/custom-lang.css">
-<link rel="stylesheet" href="assets/css/custom-lang.css">
-</head> 
+    <link rel="stylesheet" href="assets/css/custom-lang.css">
+</head>
 
 <body class="pricing-page">    
     <div class="wrapper">
-        <!-- ******HEADER****** --> 
         <header id="header" class="header">  
             <div class="container">            
                 <h1 class="logo">
-                    <a href="index.html">
-                        <span class="logo-title">Tempo</span>
+                    <a href="index.php">
+                        <span class="logo-title"><?=t('site_title',$dict)?></span>
                     </a>
-                </h1><!--//logo-->              
+                </h1>
                 <nav class="main-nav navbar navbar-expand-md navbar-dark" role="navigation">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>           
                     <div class="navbar-collapse collapse justify-content-end" id="navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="tour.html">Tour</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.php"><?=t('nav_home',$dict)?></a></li>
+                            <li class="nav-item"><a class="nav-link" href="tour.php"><?=t('nav_tour',$dict)?></a></li>
+                            <li class="nav-item"><a class="nav-link active" href="pricing.php"><?=t('nav_pricing',$dict)?></a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.php"><?=t('nav_about',$dict)?></a></li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Blog <i class="fas fa-angle-down"></i></a>
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><?=t('nav_blog',$dict)?> <i class="fas fa-angle-down"></i></a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="blog.html">Blog Home</a>
-                                    <a class="dropdown-item" href="blog-single.html">Single Blog Post</a>
-                                    <a class="dropdown-item" href="404.html">404 Page</a>
-                                            
+                                    <a class="dropdown-item" href="blog.php"><?=t('blog_home',$dict)?></a>
+                                    <a class="dropdown-item" href="blog-single.php"><?=t('blog_single',$dict)?></a>
+                                    <a class="dropdown-item" href="404.php">404 Page</a>
                                 </div>
-                            </li><!--//dropdown--> 
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>                            
-                            <li class="nav-item"><a class="nav-link login-trigger" data-bs-toggle="modal" data-bs-target="#login-modal">Log in</a></li>
-                            <li class="nav-item nav-item-cta last"><a class="nav-link btn btn-cta btn-cta-primary" data-bs-toggle="modal" data-bs-target="#signup-modal" >Get Started</a></li>
-                        </ul><!--//nav-->
-                    </div><!--//navabr-collapse-->
-                </nav><!--//main-nav-->     
-            </div><!--//container-->
-        </header><!--//header-->
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="contact.php"><?=t('nav_contact',$dict)?></a></li>                            
+                            <li class="nav-item"><a class="nav-link login-trigger" data-bs-toggle="modal" data-bs-target="#login-modal"><?=t('login',$dict)?></a></li>
+                            <li class="nav-item nav-item-cta last"><a class="nav-link btn btn-cta btn-cta-primary" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('get_started',$dict)?></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
         
-        <!-- ******PRICE PLAN****** --> 
         <section id="price-plan" class="price-plan section">
             <div class="container text-center">
-                <h2 class="title">30 day FREE trial with all plans!</h2>
-                <p class="intro">Tempo's pricing is simple and you can change your plan at any time. </p>
+                <h2 class="title"><?=t('pricing_title',$dict)?></h2>
+                <p class="intro"><?=t('pricing_intro',$dict)?></p>
                 <div class="price-cols row">
-                    <div class="item col-md-4 col-12">
-                        <h3 class="heading">Basic</h3>
-                        <div class="content">
-                            <p class="price-figure"><span class="currency">$</span><span class="number">5</span><span class="unit">/month</span></p>
-                            <ul class="list-unstyled feature-list">
-                                <li>1 user</li>
-                                <li>10 GB storage</li>
-                                <li>Email support</li>
-                                <li>Free update</li>
-                            </ul>
-                            <a class="btn btn-cta btn-cta-primary" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal">Sign Up <br /><span class="extra">30 day free trial</span></a>
-                        </div><!--//content-->
-                    </div><!--//item--> 
                     
+                    <!-- Plan Básico -->
                     <div class="item col-md-4 col-12">
-                        <h3 class="heading">Plus <span class="label label-custom">Popular</span></h3>
+                        <h3 class="heading"><?=t('plan_basic_name',$dict)?></h3>
                         <div class="content">
-                            <p class="price-figure"><span class="currency">$</span><span class="number">10</span><span class="unit">/month</span></p>
-                            <ul class="list-unstyled feature-list">
-                                <li>10 users</li>
-                                <li>30 GB storage</li>
-                                <li>Email priority support</li>
-                                <li>Free update</li>
+                            <p class="price-figure"><span class="currency">€</span><span class="number"><?=t('plan_basic_price',$dict)?></span><span class="unit">/<?=t('month',$dict)?></span></p>
+                            <p class="text-muted"><?=t('plan_basic_devices',$dict)?></p>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('included',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start">
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_basic_visits',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_basic_remote',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_basic_review',$dict)?></li>
                             </ul>
-                            <a class="btn btn-cta btn-cta-primary" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal">Sign Up <br /><span class="extra">30 day free trial</span></a>
-                        </div><!--//content-->
-                    </div><!--//item-->  
+                            
+                            <h5 class="mt-4 mb-3"><?=t('not_included',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start">
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_basic_not_hardware',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_basic_not_reinstall',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_basic_not_parts',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_basic_not_hours',$dict)?></li>
+                            </ul>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('conditions',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start small">
+                                <li>• <?=t('plan_basic_extra',$dict)?></li>
+                                <li>• <?=t('plan_basic_cancel',$dict)?></li>
+                                <li>• <?=t('plan_basic_accumulate',$dict)?></li>
+                            </ul>
+                            
+                            <a class="btn btn-cta btn-cta-primary mt-3" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
+                        </div>
+                    </div>
                     
+                    <!-- Plan Empresarial -->
                     <div class="item col-md-4 col-12">
-                        <h3 class="heading">Premium</h3>
+                        <h3 class="heading"><?=t('plan_business_name',$dict)?> <span class="label label-custom"><?=t('popular',$dict)?></span></h3>
                         <div class="content">
-                            <p class="price-figure"><span class="currency">$</span><span class="number">25</span><span class="unit">/month</span></p>
-                            <ul class="list-unstyled feature-list">
-                                <li>Unlimited user</li>
-                                <li>100 GB storage</li>
-                                <li>24/7 support</li>
-                                <li>Free update</li>
+                            <p class="price-figure"><span class="currency">€</span><span class="number"><?=t('plan_business_price',$dict)?></span><span class="unit">/<?=t('month',$dict)?></span></p>
+                            <p class="text-muted"><?=t('plan_business_devices',$dict)?></p>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('included',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start">
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_visits',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_remote',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_maintenance',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_report',$dict)?></li>
                             </ul>
-                            <a class="btn btn-cta btn-cta-primary" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal">Sign Up <br /><span class="extra">30 day free trial</span></a>
-                        </div><!--//content-->
-                    </div><!--//item-->        
+                            
+                            <h5 class="mt-4 mb-3"><?=t('not_included',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start">
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_business_not_parts',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_business_not_hours',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_business_not_registered',$dict)?></li>
+                            </ul>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('conditions',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start small">
+                                <li>• <?=t('plan_business_max',$dict)?></li>
+                                <li>• <?=t('plan_business_access',$dict)?></li>
+                                <li>• <?=t('plan_business_penalty',$dict)?></li>
+                            </ul>
+                            
+                            <a class="btn btn-cta btn-cta-primary mt-3" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Plan Corporativo -->
+                    <div class="item col-md-4 col-12">
+                        <h3 class="heading"><?=t('plan_corporate_name',$dict)?></h3>
+                        <div class="content">
+                            <p class="price-figure"><span class="currency">€</span><span class="number"><?=t('plan_corporate_price',$dict)?></span><span class="unit">/<?=t('month',$dict)?></span></p>
+                            <p class="text-muted"><?=t('plan_corporate_devices',$dict)?></p>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('included',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start">
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_visits',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_remote',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_audit',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_monitoring',$dict)?></li>
+                            </ul>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('not_included',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start">
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_corporate_not_infrastructure',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_corporate_not_modifications',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_corporate_not_damages',$dict)?></li>
+                            </ul>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('conditions',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start small">
+                                <li>• <?=t('plan_corporate_listed',$dict)?></li>
+                                <li>• <?=t('plan_corporate_enabled',$dict)?></li>
+                            </ul>
+                            
+                            <a class="btn btn-cta btn-cta-primary mt-3" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
+                        </div>
+                    </div>
                                  
-                </div><!--//row-->
-            </div><!--//container-->
-        </section><!--//price-plan-->
+                </div>
+                <p class="text-muted mt-4"><small><?=t('sla_note',$dict)?></small></p>
+            </div>
+        </section>
         
-        <!-- ******FAQ****** --> 
-		<section id="faq" class="faq section has-bg-color">
-			<div class="container">
-				<h2 class="title text-center">Frequently Asked Questions</h2>
-				<div id="faqs-accordion" class="accordion faqs-accordion">
-					<div class="row gx-3">
-		                <div class="col-12 col-lg-6">
-			                
-			                <div class="accordion-item">
-							    <h2 class="accordion-header" id="faq-heading-1">
-								 
-							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1"><i class="fas fa-square-plus"></i>
-							        Can I viverra sit amet quam eget lacinia?
-							      </button>
-							    </h2>
-							    <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faq-heading-1">
-							        <div class="accordion-body text-start p4">
-							            Anim pariatur cliche reprehenderit, enim eiusmod high life
-		                                accusamus terry richardson ad squid. 3 wolf moon officia
-		                                aute, non cupidatat skateboard dolor brunch. Food truck
-		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-		                                sunt aliqua put a bird on it squid single-origin coffee
-		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
-		                                helvetica, craft beer labore wes anderson cred nesciunt
-		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-		                                Leggings occaecat craft beer farm-to-table, raw denim
-		                                aesthetic synth nesciunt you probably haven't heard of them
-		                                accusamus labore sustainable VHS.
-							        </div>
-							    </div>
-							</div><!--//accordion-item-->
-			                
-			                <div class="accordion-item">
-							    <h2 class="accordion-header" id="faq-heading-2">
-								 
-							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2"><i class="fas fa-square-plus"></i>
-							        What is the ipsum dolor sit amet quam tortor?
-							      </button>
-							    </h2>
-							    <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2">
-							        <div class="accordion-body text-start p4">
-							            Anim pariatur cliche reprehenderit, enim eiusmod high life
-		                                accusamus terry richardson ad squid. 3 wolf moon officia
-		                                aute, non cupidatat skateboard dolor brunch. Food truck
-		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-		                                sunt aliqua put a bird on it squid single-origin coffee
-		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
-		                                helvetica, craft beer labore wes anderson cred nesciunt
-		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-		                                Leggings occaecat craft beer farm-to-table, raw denim
-		                                aesthetic synth nesciunt you probably haven't heard of them
-		                                accusamus labore sustainable VHS.
-							        </div>
-							    </div>
-							</div><!--//accordion-item-->
-			                
-			                
-	                        <div class="accordion-item">
-							    <h2 class="accordion-header" id="faq-heading-3">
-								 
-							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3"><i class="fas fa-square-plus"></i>
-							        How does the morbi quam tortor work?
-							      </button>
-							    </h2>
-							    <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3">
-							        <div class="accordion-body text-start p4">
-							            Anim pariatur cliche reprehenderit, enim eiusmod high life
-		                                accusamus terry richardson ad squid. 3 wolf moon officia
-		                                aute, non cupidatat skateboard dolor brunch. Food truck
-		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-		                                sunt aliqua put a bird on it squid single-origin coffee
-		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
-		                                helvetica, craft beer labore wes anderson cred nesciunt
-		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-		                                Leggings occaecat craft beer farm-to-table, raw denim
-		                                aesthetic synth nesciunt you probably haven't heard of them
-		                                accusamus labore sustainable VHS.
-							        </div>
-							    </div>
-							</div><!--//accordion-item-->
-							
-							<div class="accordion-item">
-							    <h2 class="accordion-header" id="faq-heading-4">
-								 
-							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4"><i class="fas fa-square-plus"></i>
-							        Can I ipsum dolor sit amet nascetur ridiculus?
-							      </button>
-							    </h2>
-							    <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq-heading-4">
-							        <div class="accordion-body text-start p4">
-							            Anim pariatur cliche reprehenderit, enim eiusmod high life
-		                                accusamus terry richardson ad squid. 3 wolf moon officia
-		                                aute, non cupidatat skateboard dolor brunch. Food truck
-		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-		                                sunt aliqua put a bird on it squid single-origin coffee
-		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
-		                                helvetica, craft beer labore wes anderson cred nesciunt
-		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-		                                Leggings occaecat craft beer farm-to-table, raw denim
-		                                aesthetic synth nesciunt you probably haven't heard of them
-		                                accusamus labore sustainable VHS.
-							        </div>
-							    </div>
-							</div><!--//accordion-item-->
-		                </div><!--//col-->
-	                    <div class="col-12 col-lg-6">
-		                    <div class="accordion-item">
-							    <h2 class="accordion-header" id="faq-heading-5">
-								 
-							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5"><i class="fas fa-square-plus"></i>
-							        Is it possible to tellus eget?
-							      </button>
-							    </h2>
-							    <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq-heading-5">
-							        <div class="accordion-body text-start p4">
-							            Anim pariatur cliche reprehenderit, enim eiusmod high life
-		                                accusamus terry richardson ad squid. 3 wolf moon officia
-		                                aute, non cupidatat skateboard dolor brunch. Food truck
-		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-		                                sunt aliqua put a bird on it squid single-origin coffee
-		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
-		                                helvetica, craft beer labore wes anderson cred nesciunt
-		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-		                                Leggings occaecat craft beer farm-to-table, raw denim
-		                                aesthetic synth nesciunt you probably haven't heard of them
-		                                accusamus labore sustainable VHS.
-							        </div>
-							    </div>
-							</div><!--//accordion-item-->
-							
-							<div class="accordion-item">
-							    <h2 class="accordion-header" id="faq-heading-6">
-								 
-							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6"><i class="fas fa-square-plus"></i>
-							        Would it elementum turpis semper imperdiet?
-							      </button>
-							    </h2>
-							    <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq-heading-6">
-							        <div class="accordion-body text-start p4">
-							            Anim pariatur cliche reprehenderit, enim eiusmod high life
-		                                accusamus terry richardson ad squid. 3 wolf moon officia
-		                                aute, non cupidatat skateboard dolor brunch. Food truck
-		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-		                                sunt aliqua put a bird on it squid single-origin coffee
-		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
-		                                helvetica, craft beer labore wes anderson cred nesciunt
-		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-		                                Leggings occaecat craft beer farm-to-table, raw denim
-		                                aesthetic synth nesciunt you probably haven't heard of them
-		                                accusamus labore sustainable VHS.
-							        </div>
-							    </div>
-							</div><!--//accordion-item-->
-							
-							
-							<div class="accordion-item">
-							    <h2 class="accordion-header" id="faq-heading-7">
-								 
-							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7"><i class="fas fa-square-plus"></i>
-							        How can I imperdiet lorem sem non nisl?
-							      </button>
-							    </h2>
-							    <div id="faq7" class="accordion-collapse collapse" aria-labelledby="faq-heading-7">
-							        <div class="accordion-body text-start p4">
-							            Anim pariatur cliche reprehenderit, enim eiusmod high life
-		                                accusamus terry richardson ad squid. 3 wolf moon officia
-		                                aute, non cupidatat skateboard dolor brunch. Food truck
-		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-		                                sunt aliqua put a bird on it squid single-origin coffee
-		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
-		                                helvetica, craft beer labore wes anderson cred nesciunt
-		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-		                                Leggings occaecat craft beer farm-to-table, raw denim
-		                                aesthetic synth nesciunt you probably haven't heard of them
-		                                accusamus labore sustainable VHS.
-							        </div>
-							    </div>
-							</div><!--//accordion-item-->
-	
-	
-	                        <div class="accordion-item">
-							    <h2 class="accordion-header" id="faq-heading-8">
-								 
-							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8"><i class="fas fa-square-plus"></i>
-							        Can I imperdiet massa ut?
-							      </button>
-							    </h2>
-							    <div id="faq8" class="accordion-collapse collapse" aria-labelledby="faq-heading-8">
-							        <div class="accordion-body text-start p4">
-							            Anim pariatur cliche reprehenderit, enim eiusmod high life
-		                                accusamus terry richardson ad squid. 3 wolf moon officia
-		                                aute, non cupidatat skateboard dolor brunch. Food truck
-		                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-		                                sunt aliqua put a bird on it squid single-origin coffee
-		                                nulla assumenda shoreditch et. Nihil anim keffiyeh
-		                                helvetica, craft beer labore wes anderson cred nesciunt
-		                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-		                                Leggings occaecat craft beer farm-to-table, raw denim
-		                                aesthetic synth nesciunt you probably haven't heard of them
-		                                accusamus labore sustainable VHS.
-							        </div>
-							    </div>
-							</div><!--//accordion-item-->
-						</div><!--//col-->
-                    </div><!--//row-->
-				</div><!--//accordion-->
-				<div class="more text-center">
-					<div class="intro">More questions?</div>
-					<a class="btn btn-cta btn-cta-secondary" href="contact.html">Get in touch</a>
-				</div>
-			</div><!--//container-->        
-		</section><!--//faq-->
-         
-        <!-- ******SIGNUP****** --> 
         <section id="signup" class="signup">
             <div class="container text-center">
-                <h2 class="title">Ready to kickstart your business with Tempo?</h2>
-                <p class="summary">Sign up to try Tempo FREE for 30 days! No credit card needed.</p>
+                <h2 class="title"><?=t('signup2_title',$dict)?></h2>
+                <p class="summary"><?=t('signup2_sub',$dict)?></p>
                 <form class="signup-form" method="post" action="#">
                     <div class="form-group">
-                        <label class="sr-only" for="semail2">Your email</label>
-                        <input type="email" id="semail2" name="semail2" class="form-control" placeholder="Enter your email address" required>
+                        <label class="sr-only" for="semail2"><?=t('your_email',$dict)?></label>
+                        <input type="email" id="semail2" name="semail2" class="form-control" placeholder="<?=t('email_placeholder',$dict)?>" required>
                     </div>
-                    <button type="submit" class="btn btn-cta btn-cta-primary">SIGN UP</button>
-                </form><!--//signup-form-->
+                    <button type="submit" class="btn btn-cta btn-cta-primary"><?=t('signup_btn',$dict)?></button>
+                </form>
             </div>
-        </section><!--//signup-->
+        </section>
             
-    </div><!--//wrapper-->
+    </div>
     
-    <!-- ******FOOTER****** --> 
     <footer class="footer">
         <div class="footer-content">
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-lg-5 col-md-7 col-12 about">
                         <div class="footer-col-inner">
-                            <h3 class="title">About Us</h3>
-                            <p>Maecenas ac vehicula velit, nec facilisis elit. Phasellus non porttitor justo, eu bibendum elit. Maecenas pharetra non ligula quis ultricies. Nulla varius vestibulum ligula quis hendrerit. Maecenas et fermentum massa. Ut hendrerit, nulla fringilla venenatis pulvinar, nisl est adipiscing nunc, quis consequat mi mauris vel felis.</p>
-                            <p><a class="more" href="#">Learn more <i class="fas fa-long-arrow-alt-right"></i></a></p>
-                            
-                        </div><!--//footer-col-inner-->
-                    </div><!--//foooter-col-->
+                            <h3 class="title"><?=t('footer_title',$dict)?></h3>
+                            <p><?=t('footer_desc',$dict)?></p>
+                            <p><a class="more" href="#"><?=t('learn_more',$dict)?> <i class="fas fa-long-arrow-alt-right"></i></a></p>
+                        </div>
+                    </div>
                     <div class="footer-col col-lg-3 col-md-4 col-12 mr-lg-auto links">
                         <div class="footer-col-inner">
-                            <h3 class="title">Links</h3>
+                            <h3 class="title"><?=t('links',$dict)?></h3>
                             <ul class="list-unstyled">
                                 <li><a href="#"><i class="fas fa-caret-right"></i>Knowledge Base</a></li>
                                 <li><a href="#"><i class="fas fa-caret-right"></i>Jobs</a></li>
@@ -372,179 +204,45 @@
                                 <li><a href="#"><i class="fas fa-caret-right"></i>Terms of services</a></li>
                                 <li><a href="#"><i class="fas fa-caret-right"></i>Privacy Policy</a></li>
                             </ul>
-                        </div><!--//footer-col-inner-->
-                    </div><!--//foooter-col-->                 
+                        </div>
+                    </div>
                     <div class="footer-col col-lg-3 col-12 contact">
                         <div class="footer-col-inner">
-                            <h3 class="title">Get in touch</h3>
+                            <h3 class="title"><?=t('get_in_touch',$dict)?></h3>
                             <div class="row">
-                                <p class="tel col-lg-12 col-md-4 col-12"><i class="fas fa-phone"></i>0800 123 4567</p>
-                                <p class="email col-lg-12 col-md-4 col-12"><i class="fas fa-envelope"></i><a href="#">support@website.com</a></p>
-                                <p class="email col-lg-12 col-md-4 col-12"><i class="fas fa-comment"></i><a href="#">Live Chat</a></p>    
-                            </div> 
-                        </div><!--//footer-col-inner-->            
-                    </div><!--//foooter-col-->   
-                </div><!--//row-->
-            </div><!--//container-->        
-        </div><!--//footer-content-->
+                                <p class="tel col-lg-12 col-md-4 col-12"><i class="fas fa-phone"></i><?=t('phone',$dict)?></p>
+                                <p class="email col-lg-12 col-md-4 col-12"><i class="fas fa-envelope"></i><a href="#"><?=t('email',$dict)?></a></p>
+                                <p class="email col-lg-12 col-md-4 col-12"><i class="fas fa-comment"></i><a href="#"><?=t('live_chat',$dict)?></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="bottom-bar">
             <div class="container">
                 <div class="row">
                     <small class="copyright col-md-6 col-12">Template Copyright <a href="http://themes.3rdwavemedia.com/" target="_blank">@ 3rd Wave Media</a></small>
                     <div class="social-container col-md-6 col-12">
                         <ul class="social list-inline">
-	                        <li class="last list-inline-item"><a href="#" ><i class="fa-brands fa-youtube"></i></a></li>
-                            <li class="list-inline-item"><a href="#" ><i class="fa-brands fa-linkedin-in"></i></a></li>
-                            <li class="list-inline-item"><a href="#" ><i class="fa-brands fa-facebook-f"></i></a></li>                        
-                            <li class="list-inline-item"><a href="#" ><i class="fa-brands fa-x-twitter"></i></a></li>
-                            
-                        </ul><!--//social-->
-                    </div><!--//social-container-->
-                </div><!--//row-->
-            </div><!--//container-->
-        </div><!--//bottom-bar-->
-    </footer><!--//footer-->
-    
-    <!-- Login Modal -->
-	<div class="modal modal-login" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 id="loginModalLabel" class="modal-title justify-content-center">Log in to your account</h4>
-				</div>
-				<div class="modal-body">
-					<div class="social-login text-center">                        
-						<ul class="list-unstyled social-login">
-							<li><button class="twitter-x-btn btn" type="button"><i class="fa-brands fa-x-twitter"></i>Log in with Twitter</button></li>
-							<li><button class="facebook-btn btn" type="button"><i class="fa-brands fa-facebook-f"></i>Log in with Facebook</button></li>
-							<li><button class="google-btn btn" type="button"><i class="fa-brands fa-google"></i>Log in with Google</button></li>
-						</ul>
-					</div>
-					<div class="divider"><span>Or</span></div>
-					<div class="login-form-container">
-						<form class="login-form">                
-							<div class="form-group email mb-3">
-								<i class="fas fa-envelope"></i>
-								<label class="sr-only" for="login-email">Your email</label>
-								<input id="login-email" name="login-email" type="email" class="form-control login-email" placeholder="Your email">
-							</div><!--//form-group-->
-							<div class="form-group password mb-3">
-								<i class="fas fa-lock"></i>
-								<label class="sr-only" for="login-password">Password</label>
-								<input id="login-password" name="login-password" type="password" class="form-control login-password" placeholder="Password">
-								<p class="forgot-password">
-									<a href="#" id="resetpass-link" data-bs-toggle="modal" data-bs-target="#resetpass-modal">Forgot password?</a>
-								</p>
-							</div><!--//form-group-->
-							<button type="submit" class="btn btn-block btn-cta-primary">Log in</button>
-							<div class="form-check remember mt-2">
-								<input class="form-check-input" type="checkbox" value="" id="RememberPassword">
-								<label class="form-check-label" for="RememberPassword">
-								Remember me
-								</label>
-							</div>
-						</form>
-					</div><!--//login-form-container-->
-				</div><!--//modal-body-->
-				<div class="modal-footer">
-					<p>New to Tempo? <a class="signup-link" id="signup-link" href="#">Sign up now</a></p>                    
-				</div><!--//modal-footer-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal-->
-	
-	<!-- Signup Modal -->
-	<div class="modal modal-signup" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 id="signupModalLabel" class="modal-title text-center">New to Tempo? Sign up now.</h4>
-					
-				</div>
-				<div class="modal-body">
-					<p class="intro text-center">It only takes 3 minutes!</p>
-					<div class="social-login text-center">                        
-						<ul class="list-unstyled social-login">
-							<li><button class="twitter-x-btn btn" type="button"><i class="fa-brands fa-x-twitter"></i>Sign up with Twitter</button></li>
-							<li><button class="facebook-btn btn" type="button"><i class="fa-brands fa-facebook-f"></i>Sign up with Facebook</button></li>
-							<li><button class="google-btn btn" type="button"><i class="fa-brands fa-google"></i>Sign up with Google</button></li>
-						</ul>
-						<p class="note">Don't worry, we won't post anything without your permission.</p>
-					</div>
-					<div class="divider"><span>Or</span></div>
-					<div class="login-form-container">
-						<form class="login-form">                
-							<div class="form-group email mb-3">
-								<i class="fas fa-envelope"></i>
-								<label class="sr-only" for="signup-email">Your email</label>
-								<input id="signup-email" name="signup-email" type="email" class="form-control login-email" placeholder="Your email">
-							</div><!--//form-group-->
-							<div class="form-group password mb-3">
-								<i class="fas fa-lock"></i>
-								<label class="sr-only" for="signup-password">Your password</label>
-								<input id="signup-password" name="signup-password" type="password" class="form-control login-password" placeholder="Password">
-							</div><!--//form-group-->
-							<button type="submit" class="btn btn-block btn-cta-primary">Sign up</button>
-							<p class="note">By signing up, you agree to our terms of services and privacy policy.</p>
-						</form>
-					</div><!--//login-form-container-->
-				</div><!--//modal-body-->
-				<div class="modal-footer">
-					<p>Already have an account? <a class="login-link" id="login-link" href="#">Log in</a></p>                    
-				</div><!--//modal-footer-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal-->
-	
-	<!-- Reset Password Modal -->
-	<div class="modal modal-resetpass" id="resetpass-modal" tabindex="-1" role="dialog" aria-labelledby="resetpassModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 id="resetpassModalLabel" class="modal-title text-center">Password Reset</h4>
-				</div>
-				<div class="modal-body">
-					<div class="resetpass-form-container">
-						<p class="intro">Please enter your email address below and we'll email you a link to a page where you can easily create a new password.</p>
-						<form class="resetpass-form">                
-							<div class="form-group email mb-3">
-								<i class="fas fa-envelope"></i>
-								<label class="sr-only" for="reg-email">Your email</label>
-								<input id="reg-email" name="reg-email" type="email" class="form-control login-email" placeholder="Your email">
-							</div><!--//form-group-->
-							<button type="submit" class="btn btn-block btn-cta-primary">Reset Password</button>
-						</form>
-					</div><!--//login-form-container-->
-				</div><!--//modal-body-->
-				<div class="modal-footer">
-					<p>I want to <a class="back-to-login-link" id="back-to-login-link" href="#">return to login</a></p>                    
-				</div><!--//modal-footer-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal-->
-    
-    <!-- *****CONFIGURE STYLE****** -->
-			</ul><!--//color-options-->
-			<a id="config-close" class="close" href="#"><i class="fas fa-times-circle"></i></a>
-			
-		</div><!--//panel-inner-->
-	</div><!--//config-panel-->
- 
-    <!-- Javascript -->          
-	<script src="assets/plugins/popper.min.js"></script> 
-	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
-	<script src="assets/plugins/vanilla-back-to-top.min.js"></script>   
-	<script src="assets/js/main.js"></script> 
-    
-    <!-- Page Specific JS -->
-	<script src="assets/js/accordion.js"></script> 
+                            <li class="last list-inline-item"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="assets/plugins/vanilla-back-to-top.min.js"></script>   
+    <script src="assets/js/main.js"></script> 
     
-    <!-- Theme Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
-
-<!-- Mirrored from themes.3rdwavemedia.com/tempo/bs5/pricing.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Dec 2025 21:28:18 GMT -->
-</html> 
-
+    <a id="lang-toggle" href="?lang=<?= $lang === 'en' ? 'es' : 'en' ?>">
+        <i class="fa-solid fa-language"></i>
+    </a>
+</body>
+</html>
