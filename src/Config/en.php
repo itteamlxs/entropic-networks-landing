@@ -61,11 +61,11 @@ return [
     'email'        => 'support@entropicnetworks.com',
     'live_chat'    => 'Live Chat',
 
-    // INGLÉS (en.php) - AGREGAR AL FINAL
+    // INGLÉS (en.php) - PRICING
 
     'month' => 'month',
     'pricing_title' => 'Technical Support Contract',
-    'pricing_intro' => 'Choose the plan that best fits your business needs. 30-day FREE trial on all plans!',
+    'pricing_intro' => 'Choose the plan that best fits your business needs. First diagnosis free of charge !',
     
     'plan_basic_name' => 'Basic Plan',
     'plan_basic_price' => '60',

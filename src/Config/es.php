@@ -61,11 +61,11 @@ return [
     'email'        => 'support@entropicnetworks.com',
     'live_chat'    => 'Chat en vivo',
 
-    // ESPAÑOL (es.php) - AGREGAR AL FINAL
+    // ESPAÑOL (es.php) - Pricing
 
     'month' => 'mes',
     'pricing_title' => 'Contrato de Soporte Técnico',
-    'pricing_intro' => 'Elige el plan que mejor se adapte a las necesidades de tu negocio. ¡Prueba GRATIS de 30 días en todos los planes!',
+    'pricing_intro' => 'Elige el plan que mejor se adapte a las necesidades de tu negocio. ¡Primer diagnóstico sin costo alguno!',
     
     'plan_basic_name' => 'Plan Básico',
     'plan_basic_price' => '60',

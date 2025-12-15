@@ -11,6 +11,8 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
     <link rel="shortcut icon" href="favicon.ico">  
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,500,700' rel='stylesheet' type='text/css'>    
@@ -27,10 +29,6 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-        .price-plan .price-cols .item.featured {
-            border: 3px solid #444;
-            position: relative;
-        }
         .price-plan .price-cols .item .heading {
             background: #444;
             color: #fff;
@@ -39,7 +37,18 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
             position: relative;
         }
         .price-plan .price-cols .item.featured .heading {
-            background: #555;
+            background: #003380;
+        }
+        .price-plan .price-cols .item .heading .label-custom {
+            background: #27ae60;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         .price-plan .price-cols .item .content {
             background: #fff;
@@ -47,11 +56,12 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
             border: 1px solid #e6e6e6;
             border-top: none;
             border-radius: 0 0 4px 4px;
-            min-height: 700px;
+        }
+        .price-plan .price-cols .item.featured {
+            border: 0px solid #3498db;
         }
         .price-plan .feature-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #f5f5f5;
+            padding: 0px 0;
         }
         .price-plan .feature-list li:last-child {
             border-bottom: none;
@@ -59,60 +69,10 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
         .price-plan .feature-list i {
             margin-right: 10px;
             width: 20px;
-            color: #666;
-        }
-        .price-plan .section-header {
-            font-size: 14px;
-            font-weight: bold;
-            color: #444;
-            text-transform: uppercase;
-            margin: 25px 0 15px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #444;
-        }
-        .price-plan .condition-list {
-            font-size: 13px;
-            color: #666;
-            line-height: 1.6;
-        }
-        .price-plan .condition-list li {
-            padding: 5px 0 5px 15px;
-            position: relative;
-        }
-        .price-plan .condition-list li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #444;
-            font-weight: bold;
-        }
-        .price-figure {
-            margin: 20px 0;
-        }
-        .price-figure .currency {
-            font-size: 24px;
-            vertical-align: super;
-        }
-        .price-figure .number {
-            font-size: 56px;
-            font-weight: bold;
-            color: #444;
-        }
-        .price-figure .unit {
-            font-size: 16px;
-            color: #999;
-        }
-        .device-info {
-            background: #f8f9fa;
-            padding: 10px;
-            border-radius: 4px;
-            margin-bottom: 20px;
-            font-weight: 600;
-            color: #444;
         }
         @media (max-width: 991px) {
-            .price-plan .price-cols .item .content {
-                min-height: auto;
+            .price-plan .price-cols .item {
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -155,147 +115,111 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
         </header>
         
         <section id="price-plan" class="price-plan section">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="title"><?=t('pricing_title',$dict)?></h2>
-                    <p class="intro"><?=t('pricing_intro',$dict)?></p>
-                </div>
-
+            <div class="container text-center">
+                <h2 class="title"><?=t('pricing_title',$dict)?></h2>
+                <p class="intro"><?=t('pricing_intro',$dict)?></p>
                 <div class="price-cols row">
                     
                     <!-- Plan Básico -->
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="item">
-                            <h3 class="heading"><?=t('plan_basic_name',$dict)?></h3>
-                            <div class="content">
-                                <p class="price-figure text-center">
-                                    <span class="currency">€</span>
-                                    <span class="number"><?=t('plan_basic_price',$dict)?></span>
-                                    <span class="unit">/<?=t('month',$dict)?></span>
-                                </p>
-                                <div class="device-info text-center">
-                                    <i class="fas fa-desktop"></i> <?=t('plan_basic_devices',$dict)?>
-                                </div>
-                                
-                                <div class="section-header"><?=t('included',$dict)?></div>
-                                <ul class="list-unstyled feature-list">
-                                    <li><i class="fas fa-check"></i> <?=t('plan_basic_visits',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_basic_remote',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_basic_review',$dict)?></li>
-                                </ul>
-                                
-                                <div class="section-header" style="border-color:#999;color:#999"><?=t('not_included',$dict)?></div>
-                                <ul class="list-unstyled feature-list">
-                                    <li><i class="fas fa-times"></i> <?=t('plan_basic_not_hardware',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_basic_not_reinstall',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_basic_not_parts',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_basic_not_hours',$dict)?></li>
-                                </ul>
-                                
-                                <div class="section-header" style="border-color:#ccc;color:#888"><?=t('conditions',$dict)?></div>
-                                <ul class="list-unstyled condition-list">
-                                    <li><?=t('plan_basic_extra',$dict)?></li>
-                                    <li><?=t('plan_basic_cancel',$dict)?></li>
-                                    <li><?=t('plan_basic_accumulate',$dict)?></li>
-                                </ul>
-                                
-                                <div class="text-center mt-4">
-                                    <a class="btn btn-cta btn-cta-primary w-100" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
-                                </div>
-                            </div>
+                    <div class="item col-md-4 col-12">
+                        <h3 class="heading"><?=t('plan_basic_name',$dict)?></h3>
+                        <div class="content">
+                            <p class="price-figure"><span class="currency">€</span><span class="number"><?=t('plan_basic_price',$dict)?></span><span class="unit">/<?=t('month',$dict)?></span></p>
+                            <p class="text-muted"><?=t('plan_basic_devices',$dict)?></p>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('included',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start">
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_basic_visits',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_basic_remote',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_basic_review',$dict)?></li>
+                            </ul>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('not_included',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start">
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_basic_not_hardware',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_basic_not_reinstall',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_basic_not_parts',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_basic_not_hours',$dict)?></li>
+                            </ul>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('conditions',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start small">
+                                <li>• <?=t('plan_basic_extra',$dict)?></li>
+                                <li>• <?=t('plan_basic_cancel',$dict)?></li>
+                                <li>• <?=t('plan_basic_accumulate',$dict)?></li>
+                            </ul>
+                            
+                            <a class="btn btn-cta btn-cta-primary mt-3" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
                         </div>
                     </div>
                     
                     <!-- Plan Empresarial -->
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="item featured">
-                            <h3 class="heading"><?=t('plan_business_name',$dict)?></h3>
-                            <div class="content">
-                                <p class="price-figure text-center">
-                                    <span class="currency">€</span>
-                                    <span class="number"><?=t('plan_business_price',$dict)?></span>
-                                    <span class="unit">/<?=t('month',$dict)?></span>
-                                </p>
-                                <div class="device-info text-center">
-                                    <i class="fas fa-desktop"></i> <?=t('plan_business_devices',$dict)?>
-                                </div>
-                                
-                                <div class="section-header"><?=t('included',$dict)?></div>
-                                <ul class="list-unstyled feature-list">
-                                    <li><i class="fas fa-check"></i> <?=t('plan_business_visits',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_business_remote',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_business_maintenance',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_business_report',$dict)?></li>
-                                </ul>
-                                
-                                <div class="section-header" style="border-color:#999;color:#999"><?=t('not_included',$dict)?></div>
-                                <ul class="list-unstyled feature-list">
-                                    <li><i class="fas fa-times"></i> <?=t('plan_business_not_parts',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_business_not_hours',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_business_not_registered',$dict)?></li>
-                                </ul>
-                                
-                                <div class="section-header" style="border-color:#ccc;color:#888"><?=t('conditions',$dict)?></div>
-                                <ul class="list-unstyled condition-list">
-                                    <li><?=t('plan_business_max',$dict)?></li>
-                                    <li><?=t('plan_business_access',$dict)?></li>
-                                    <li><?=t('plan_business_penalty',$dict)?></li>
-                                </ul>
-                                
-                                <div class="text-center mt-4">
-                                    <a class="btn btn-cta btn-cta-primary w-100" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
-                                </div>
-                            </div>
+                    <div class="item featured col-md-4 col-12">
+                        <h3 class="heading"><?=t('plan_business_name',$dict)?><span class="label-custom"><?=t('popular',$dict)?></span></h3>
+                        <div class="content">
+                            <p class="price-figure"><span class="currency">€</span><span class="number"><?=t('plan_business_price',$dict)?></span><span class="unit">/<?=t('month',$dict)?></span></p>
+                            <p class="text-muted"><?=t('plan_business_devices',$dict)?></p>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('included',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start">
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_visits',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_remote',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_maintenance',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_report',$dict)?></li>
+                            </ul>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('not_included',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start">
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_business_not_parts',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_business_not_hours',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_business_not_registered',$dict)?></li>
+                            </ul>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('conditions',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start small">
+                                <li>• <?=t('plan_business_max',$dict)?></li>
+                                <li>• <?=t('plan_business_access',$dict)?></li>
+                                <li>• <?=t('plan_business_penalty',$dict)?></li>
+                            </ul>
+                            
+                            <a class="btn btn-cta btn-cta-primary mt-3" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
                         </div>
                     </div>
                     
                     <!-- Plan Corporativo -->
-                    <div class="col-lg-4 col-md-12 col-12">
-                        <div class="item">
-                            <h3 class="heading"><?=t('plan_corporate_name',$dict)?></h3>
-                            <div class="content">
-                                <p class="price-figure text-center">
-                                    <span class="currency">€</span>
-                                    <span class="number"><?=t('plan_corporate_price',$dict)?></span>
-                                    <span class="unit">/<?=t('month',$dict)?></span>
-                                </p>
-                                <div class="device-info text-center">
-                                    <i class="fas fa-infinity"></i> <?=t('plan_corporate_devices',$dict)?>
-                                </div>
-                                
-                                <div class="section-header"><?=t('included',$dict)?></div>
-                                <ul class="list-unstyled feature-list">
-                                    <li><i class="fas fa-check"></i> <?=t('plan_corporate_visits',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_corporate_remote',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_corporate_audit',$dict)?></li>
-                                    <li><i class="fas fa-check"></i> <?=t('plan_corporate_monitoring',$dict)?></li>
-                                </ul>
-                                
-                                <div class="section-header" style="border-color:#999;color:#999"><?=t('not_included',$dict)?></div>
-                                <ul class="list-unstyled feature-list">
-                                    <li><i class="fas fa-times"></i> <?=t('plan_corporate_not_infrastructure',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_corporate_not_modifications',$dict)?></li>
-                                    <li><i class="fas fa-times"></i> <?=t('plan_corporate_not_damages',$dict)?></li>
-                                </ul>
-                                
-                                <div class="section-header" style="border-color:#ccc;color:#888"><?=t('conditions',$dict)?></div>
-                                <ul class="list-unstyled condition-list">
-                                    <li><?=t('plan_corporate_listed',$dict)?></li>
-                                    <li><?=t('plan_corporate_enabled',$dict)?></li>
-                                </ul>
-                                
-                                <div class="text-center mt-4">
-                                    <a class="btn btn-cta btn-cta-primary w-100" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
-                                </div>
-                            </div>
+                    <div class="item col-md-4 col-12">
+                        <h3 class="heading"><?=t('plan_corporate_name',$dict)?></h3>
+                        <div class="content">
+                            <p class="price-figure"><span class="currency">€</span><span class="number"><?=t('plan_corporate_price',$dict)?></span><span class="unit">/<?=t('month',$dict)?></span></p>
+                            <p class="text-muted"><?=t('plan_corporate_devices',$dict)?></p>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('included',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start">
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_visits',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_remote',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_audit',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_monitoring',$dict)?></li>
+                            </ul>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('not_included',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start">
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_corporate_not_infrastructure',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_corporate_not_modifications',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_corporate_not_damages',$dict)?></li>
+                            </ul>
+                            
+                            <h5 class="mt-4 mb-3"><?=t('conditions',$dict)?></h5>
+                            <ul class="list-unstyled feature-list text-start small">
+                                <li>• <?=t('plan_corporate_listed',$dict)?></li>
+                                <li>• <?=t('plan_corporate_enabled',$dict)?></li>
+                            </ul>
+                            
+                            <a class="btn btn-cta btn-cta-primary mt-3" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
                         </div>
                     </div>
                                  
                 </div>
-
-                <div class="alert alert-info mt-5 text-center" role="alert">
-                    <i class="fas fa-info-circle"></i> <strong>SLA:</strong> <?=t('sla_note',$dict)?>
-                </div>
+                <p class="text-muted mt-4"><small><?=t('sla_note',$dict)?></small></p>
             </div>
         </section>
         
