@@ -36,6 +36,9 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
             border-radius: 4px 4px 0 0;
             position: relative;
         }
+        .price-plan .price-cols .item.featured {
+            border: 0px solid #3498db;
+        }
         .price-plan .price-cols .item.featured .heading {
             background: #003380;
         }
@@ -57,11 +60,9 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
             border-top: none;
             border-radius: 0 0 4px 4px;
         }
-        .price-plan .price-cols .item.featured {
-            border: 0px solid #3498db;
-        }
         .price-plan .feature-list li {
-            padding: 0px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #f5f5f5;
         }
         .price-plan .feature-list li:last-child {
             border-bottom: none;
@@ -124,32 +125,28 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
                     <div class="item col-md-4 col-12">
                         <h3 class="heading"><?=t('plan_basic_name',$dict)?></h3>
                         <div class="content">
-                            <p class="price-figure"><span class="currency">€</span><span class="number"><?=t('plan_basic_price',$dict)?></span><span class="unit">/<?=t('month',$dict)?></span></p>
+                            <p class="price-figure"><span class="currency">€</span><span class="number">90</span><span class="unit">/<?=t('month',$dict)?></span></p>
                             <p class="text-muted"><?=t('plan_basic_devices',$dict)?></p>
                             
                             <h5 class="mt-4 mb-3"><?=t('included',$dict)?></h5>
                             <ul class="list-unstyled feature-list text-start">
-                                <li><i class="fas fa-check text-success"></i> <?=t('plan_basic_visits',$dict)?></li>
-                                <li><i class="fas fa-check text-success"></i> <?=t('plan_basic_remote',$dict)?></li>
-                                <li><i class="fas fa-check text-success"></i> <?=t('plan_basic_review',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> 4 <?=t('plan_visits',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> 20h <?=t('plan_remote',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_basic_sla',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_basic_hours',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_basic_channels',$dict)?></li>
                             </ul>
                             
                             <h5 class="mt-4 mb-3"><?=t('not_included',$dict)?></h5>
                             <ul class="list-unstyled feature-list text-start">
-                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_basic_not_hardware',$dict)?></li>
-                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_basic_not_reinstall',$dict)?></li>
-                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_basic_not_parts',$dict)?></li>
-                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_basic_not_hours',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_no_preventive',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_no_monitoring',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_no_reports',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_no_reinstall',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_no_migration',$dict)?></li>
                             </ul>
                             
-                            <h5 class="mt-4 mb-3"><?=t('conditions',$dict)?></h5>
-                            <ul class="list-unstyled feature-list text-start small">
-                                <li>• <?=t('plan_basic_extra',$dict)?></li>
-                                <li>• <?=t('plan_basic_cancel',$dict)?></li>
-                                <li>• <?=t('plan_basic_accumulate',$dict)?></li>
-                            </ul>
-                            
-                            <a class="btn btn-cta btn-cta-primary mt-3" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
+                            <a class="btn btn-cta btn-cta-primary mt-3 w-100" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
                         </div>
                     </div>
                     
@@ -157,32 +154,31 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
                     <div class="item featured col-md-4 col-12">
                         <h3 class="heading"><?=t('plan_business_name',$dict)?><span class="label-custom"><?=t('popular',$dict)?></span></h3>
                         <div class="content">
-                            <p class="price-figure"><span class="currency">€</span><span class="number"><?=t('plan_business_price',$dict)?></span><span class="unit">/<?=t('month',$dict)?></span></p>
+                            <p class="price-figure"><span class="currency">€</span><span class="number">200</span><span class="unit">/<?=t('month',$dict)?></span></p>
                             <p class="text-muted"><?=t('plan_business_devices',$dict)?></p>
                             
                             <h5 class="mt-4 mb-3"><?=t('included',$dict)?></h5>
                             <ul class="list-unstyled feature-list text-start">
-                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_visits',$dict)?></li>
-                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_remote',$dict)?></li>
-                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_maintenance',$dict)?></li>
-                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_report',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> 8 <?=t('plan_visits',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> 40h <?=t('plan_remote',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_sla',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_hours',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_business_channels',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_preventive_quarterly',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_monthly_reports',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <strong>1 <?=t('plan_reinstall_free',$dict)?></strong></li>
+                                <li><i class="fas fa-check text-success"></i> <strong>1 <?=t('plan_migration_free',$dict)?></strong></li>
                             </ul>
                             
                             <h5 class="mt-4 mb-3"><?=t('not_included',$dict)?></h5>
                             <ul class="list-unstyled feature-list text-start">
-                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_business_not_parts',$dict)?></li>
-                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_business_not_hours',$dict)?></li>
-                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_business_not_registered',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_no_monitoring',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_no_audit',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_no_account_manager',$dict)?></li>
+                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_no_server_config',$dict)?></li>
                             </ul>
                             
-                            <h5 class="mt-4 mb-3"><?=t('conditions',$dict)?></h5>
-                            <ul class="list-unstyled feature-list text-start small">
-                                <li>• <?=t('plan_business_max',$dict)?></li>
-                                <li>• <?=t('plan_business_access',$dict)?></li>
-                                <li>• <?=t('plan_business_penalty',$dict)?></li>
-                            </ul>
-                            
-                            <a class="btn btn-cta btn-cta-primary mt-3" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
+                            <a class="btn btn-cta btn-cta-primary mt-3 w-100" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
                         </div>
                     </div>
                     
@@ -190,31 +186,28 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
                     <div class="item col-md-4 col-12">
                         <h3 class="heading"><?=t('plan_corporate_name',$dict)?></h3>
                         <div class="content">
-                            <p class="price-figure"><span class="currency">€</span><span class="number"><?=t('plan_corporate_price',$dict)?></span><span class="unit">/<?=t('month',$dict)?></span></p>
+                            <p class="price-figure"><span class="currency">€</span><span class="number">450</span><span class="unit">/<?=t('month',$dict)?></span></p>
                             <p class="text-muted"><?=t('plan_corporate_devices',$dict)?></p>
                             
                             <h5 class="mt-4 mb-3"><?=t('included',$dict)?></h5>
                             <ul class="list-unstyled feature-list text-start">
-                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_visits',$dict)?></li>
-                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_remote',$dict)?></li>
-                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_audit',$dict)?></li>
-                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_monitoring',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> 12 <?=t('plan_visits',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_remote_unlimited',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_sla',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_hours',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_corporate_channels',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_preventive_monthly',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_monitoring_247',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_audit_biannual',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_weekly_reports',$dict)?></li>
+                                <li><i class="fas fa-check text-success"></i> <strong><?=t('plan_reinstall_unlimited',$dict)?></strong></li>
+                                <li><i class="fas fa-check text-success"></i> <strong><?=t('plan_migration_unlimited',$dict)?></strong></li>
+                                <li><i class="fas fa-check text-success"></i> <strong>4h/<?=t('month',$dict)?> <?=t('plan_server_config',$dict)?></strong></li>
+                                <li><i class="fas fa-check text-success"></i> <strong><?=t('plan_travel_50km',$dict)?></strong></li>
+                                <li><i class="fas fa-check text-success"></i> <?=t('plan_account_manager',$dict)?></li>
                             </ul>
                             
-                            <h5 class="mt-4 mb-3"><?=t('not_included',$dict)?></h5>
-                            <ul class="list-unstyled feature-list text-start">
-                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_corporate_not_infrastructure',$dict)?></li>
-                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_corporate_not_modifications',$dict)?></li>
-                                <li><i class="fas fa-times text-danger"></i> <?=t('plan_corporate_not_damages',$dict)?></li>
-                            </ul>
-                            
-                            <h5 class="mt-4 mb-3"><?=t('conditions',$dict)?></h5>
-                            <ul class="list-unstyled feature-list text-start small">
-                                <li>• <?=t('plan_corporate_listed',$dict)?></li>
-                                <li>• <?=t('plan_corporate_enabled',$dict)?></li>
-                            </ul>
-                            
-                            <a class="btn btn-cta btn-cta-primary mt-3" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
+                            <a class="btn btn-cta btn-cta-primary mt-3 w-100" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('signup_btn',$dict)?></a>
                         </div>
                     </div>
                                  
