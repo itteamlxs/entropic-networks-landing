@@ -124,4 +124,34 @@ return [
 'plan_no_audit' => 'Auditoría de seguridad',
 'plan_no_account_manager' => 'Gestor de cuenta dedicado',
 'plan_no_server_config' => 'Configuración de servidores',
+
+//TRADUCCIONES ESPAÑOL (es.php) - CONTACT PAGE
+
+// Contact Page - Main
+'contact_title' => 'Contacto',
+'contact_heading' => 'Ponte en contacto',
+'contact_intro' => 'Nos encantaría saber de ti. Estamos aquí para ayudarte con cualquier consulta sobre nuestros servicios de soporte técnico.',
+
+// Contact Info Sections
+'contact_email_title' => 'Email:',
+'contact_phone_title' => 'Llámanos:',
+'contact_hours' => 'Lun-Vie 9:00-18:00',
+'contact_address_title' => 'Encuéntranos en:',
+'contact_address' => 'Calle Principal 123 Madrid, España',
+
+// Contact Form
+'contact_form_title' => 'Formulario de Contacto',
+'contact_form_intro' => 'Envíanos un mensaje y te responderemos lo antes posible.',
+'contact_name_label' => 'Tu nombre',
+'contact_name_placeholder' => 'Tu nombre completo',
+'contact_email_label' => 'Tu email',
+'contact_email_placeholder' => 'tu@email.com',
+'contact_subject_label' => 'Asunto',
+'contact_subject_placeholder' => 'Asunto del mensaje',
+'contact_message_label' => 'Tu mensaje',
+'contact_message_placeholder' => 'Escribe tu mensaje aquí...',
+'contact_send_btn' => 'Enviar Mensaje',
+'contact_success' => '¡Gracias! Tu mensaje ha sido enviado exitosamente. Te responderemos pronto.',
+'contact_map_title' => 'Mapa de Google',
+
 ];

@@ -124,4 +124,34 @@ return [
 'plan_no_account_manager' => 'Dedicated account manager',
 'plan_no_server_config' => 'Server configuration',
 
+//#ENGLISH TRANSLATIONS (en.php) - CONTACT PAGE#
+
+// Contact Page - Main
+'contact_title' => 'Contact',
+'contact_heading' => 'Get in touch',
+'contact_intro' => 'We\'d love to hear from you. We\'re here to help with any questions about our technical support services.',
+
+// Contact Info Sections
+'contact_email_title' => 'Email:',
+'contact_phone_title' => 'Call us:',
+'contact_hours' => 'Mon-Fri 9:00-18:00',
+'contact_address_title' => 'Find us at:',
+'contact_address' => '123 Main Street Madrid, Spain',
+
+// Contact Form
+'contact_form_title' => 'Contact Form',
+'contact_form_intro' => 'Send us a message and we\'ll respond as soon as possible.',
+'contact_name_label' => 'Your name',
+'contact_name_placeholder' => 'Your full name',
+'contact_email_label' => 'Your email',
+'contact_email_placeholder' => 'your@email.com',
+'contact_subject_label' => 'Subject',
+'contact_subject_placeholder' => 'Message subject',
+'contact_message_label' => 'Your message',
+'contact_message_placeholder' => 'Write your message here...',
+'contact_send_btn' => 'Send Message',
+'contact_success' => 'Thank you! Your message has been sent successfully. We\'ll respond soon.',
+'contact_map_title' => 'Google Map',
+
+
 ];
