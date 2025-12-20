@@ -61,6 +61,37 @@ return [
     'email'        => 'support@entropicnetworks.com',
     'live_chat'    => 'Live Chat',
 
+
+// FAQ Section
+'faq_title' => 'Frequently Asked Questions',
+'faq_more' => 'More questions?',
+'faq_cta' => 'Get in touch',
+
+'faq_q1' => 'Can I viverra sit amet quam eget lacinia?',
+'faq_a1' => 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.',
+
+'faq_q2' => 'What is the ipsum dolor sit amet quam tortor?',
+'faq_a2' => 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.',
+
+'faq_q3' => 'How does the morbi quam tortor work?',
+'faq_a3' => 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.',
+
+'faq_q4' => 'Can I ipsum dolor sit amet nascetur ridiculus?',
+'faq_a4' => 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.',
+
+'faq_q5' => 'Is it possible to tellus eget?',
+'faq_a5' => 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.',
+
+'faq_q6' => 'Would it elementum turpis semper imperdiet?',
+'faq_a6' => 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.',
+
+'faq_q7' => 'How can I imperdiet lorem sem non nisl?',
+'faq_a7' => 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.',
+
+'faq_q8' => 'Can I imperdiet massa ut?',
+'faq_a8' => 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.',
+
+
 // INGLÉS (en.php) - PRICING
 'pricing_title' => 'Technical Support Plans',
 'pricing_intro' => 'Professional IT support services tailored to your business needs',
@@ -153,5 +184,13 @@ return [
 'contact_success' => 'Thank you! Your message has been sent successfully. We\'ll respond soon.',
 'contact_map_title' => 'Google Map',
 
+
+// #ENGLIS ALERT BAR (en.php) - Alert Bar #
+
+'alert_bar_active' => true, // Set to false to hide alert bar
+'alert_bar_title' => 'Attention!',
+'alert_bar_message' => 'Platform enters maintenance on 01/01/2025, take all necessary measures.',
+'alert_bar_link' => 'maintenance.php', // Optional: Leave empty to hide link
+'alert_bar_link_text' => 'More info',
 
 ];

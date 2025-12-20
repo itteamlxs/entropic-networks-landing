@@ -17,10 +17,15 @@ function handleContactForm($post_data) {
     }
     
     // Validate and sanitize inputs
-    $name = filter_var(trim($post_data['name'] ?? ''), FILTER_SANITIZE_STRING);
-    $email = filter_var(trim($post_data['email'] ?? ''), FILTER_SANITIZE_EMAIL);
-    $subject = filter_var(trim($post_data['subject'] ?? ''), FILTER_SANITIZE_STRING);
-    $message = filter_var(trim($post_data['message'] ?? ''), FILTER_SANITIZE_STRING);
+    $name = trim($post_data['name'] ?? '');
+    $email = trim($post_data['email'] ?? '');
+    $subject = trim($post_data['subject'] ?? '');
+    $message = trim($post_data['message'] ?? '');
+    
+    // Sanitize after validation
+    $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+    $subject = htmlspecialchars($subject, ENT_QUOTES, 'UTF-8');
+    $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
     
     // Validation
     if (empty($name) || empty($email) || empty($subject) || empty($message)) {
@@ -30,6 +35,8 @@ function handleContactForm($post_data) {
         ];
     }
     
+    // Sanitize and validate email
+    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         return [
             'success' => false,
@@ -52,67 +59,30 @@ function handleContactForm($post_data) {
     $email_body .= "IP Address: " . $_SERVER['REMOTE_ADDR'] . "\n";
     $email_body .= "Date: " . date('Y-m-d H:i:s') . "\n";
     
-    // Email headers
-    $headers = "From: " . $email . "\r\n";
-    $headers .= "Reply-To: " . $email . "\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-    
-    // Send email using SMTP if configured, otherwise use mail()
-    if (isset($env['SMTP_HOST']) && !empty($env['SMTP_HOST'])) {
-        return sendEmailSMTP($to, $email_subject, $email_body, $email, $name, $env);
-    } else {
-        // Fallback to PHP mail()
-        if (mail($to, $email_subject, $email_body, $headers)) {
-            return ['success' => true];
-        } else {
-            return [
-                'success' => false,
-                'message' => 'Failed to send email. Please try again later.'
-            ];
-        }
-    }
+    // Send email using SMTP
+    return sendEmailSMTP($to, $email_subject, $email_body, $email, $name, $env);
 }
 
 function sendEmailSMTP($to, $subject, $body, $from_email, $from_name, $env) {
     // Check if PHPMailer is available
-    if (!class_exists('PHPMailer\PHPMailer\PHPMailer')) {
-        // Fallback to basic mail() if PHPMailer not available
-        $headers = "From: $from_email\r\n";
-        $headers .= "Reply-To: $from_email\r\n";
-        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-        
-        if (mail($to, $subject, $body, $headers)) {
-            return ['success' => true];
-        } else {
-            return [
-                'success' => false,
-                'message' => 'Failed to send email'
-            ];
-        }
-    }
-    
-    // Use PHPMailer for SMTP
     $autoload_path = __DIR__ . '/../vendor/autoload.php';
     
     if (!file_exists($autoload_path)) {
         error_log("Composer autoload not found at: $autoload_path");
-        // Fallback to basic mail()
-        $headers = "From: $from_email\r\n";
-        $headers .= "Reply-To: $from_email\r\n";
-        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-        
-        if (mail($to, $subject, $body, $headers)) {
-            return ['success' => true];
-        } else {
-            return [
-                'success' => false,
-                'message' => 'Failed to send email'
-            ];
-        }
+        return [
+            'success' => false,
+            'message' => 'PHPMailer not installed'
+        ];
     }
     
     require_once $autoload_path;
+    
+    if (!class_exists('PHPMailer\PHPMailer\PHPMailer')) {
+        return [
+            'success' => false,
+            'message' => 'PHPMailer class not found'
+        ];
+    }
     
     $mail = new PHPMailer\PHPMailer\PHPMailer(true);
     
@@ -128,7 +98,7 @@ function sendEmailSMTP($to, $subject, $body, $from_email, $from_name, $env) {
         $mail->CharSet = 'UTF-8';
         
         // Recipients
-        $mail->setFrom($env['SMTP_FROM'] ?? $from_email, $from_name);
+        $mail->setFrom($env['SMTP_USER'], $from_name);
         $mail->addAddress($to);
         $mail->addReplyTo($from_email, $from_name);
         
@@ -141,10 +111,11 @@ function sendEmailSMTP($to, $subject, $body, $from_email, $from_name, $env) {
         return ['success' => true];
         
     } catch (Exception $e) {
-        error_log("Email sending failed: " . $e->getMessage());
+        $error_msg = "Email sending failed: " . $e->getMessage() . " | PHPMailer: " . ($mail->ErrorInfo ?? 'N/A');
+        error_log($error_msg);
         return [
             'success' => false,
-            'message' => 'Failed to send email. Please try again later.'
+            'message' => 'Failed to send email: ' . $mail->ErrorInfo
         ];
     }
 }

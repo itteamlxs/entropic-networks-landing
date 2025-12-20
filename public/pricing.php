@@ -3,9 +3,10 @@ require_once __DIR__.'/../src/bootstrap.php';
 
 $lang = $_GET['lang'] ?? 'en';
 $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
+$current_page = 'pricing';
 ?>
 <!DOCTYPE html>
-<html lang="<?=htmlspecialchars($lang)?>">
+<html lang="<?=htmlspecialchars($lang, ENT_QUOTES, 'UTF-8')?>">
 <head>
     <title><?=t('pricing_title',$dict)?> - <?=t('site_title',$dict)?></title>
     <meta charset="utf-8">
@@ -81,39 +82,7 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
 
 <body class="pricing-page">    
     <div class="wrapper">
-        <header id="header" class="header">  
-            <div class="container">            
-                <h1 class="logo">
-                    <a href="index.php">
-                        <span class="logo-title"><?=t('site_title',$dict)?></span>
-                    </a>
-                </h1>
-                <nav class="main-nav navbar navbar-expand-md navbar-dark" role="navigation">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>           
-                    <div class="navbar-collapse collapse justify-content-end" id="navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="index.php"><?=t('nav_home',$dict)?></a></li>
-                            <li class="nav-item"><a class="nav-link" href="tour.php"><?=t('nav_tour',$dict)?></a></li>
-                            <li class="nav-item"><a class="nav-link active" href="pricing.php"><?=t('nav_pricing',$dict)?></a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.php"><?=t('nav_about',$dict)?></a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><?=t('nav_blog',$dict)?> <i class="fas fa-angle-down"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="blog.php"><?=t('blog_home',$dict)?></a>
-                                    <a class="dropdown-item" href="blog-single.php"><?=t('blog_single',$dict)?></a>
-                                    <a class="dropdown-item" href="404.php">404 Page</a>
-                                </div>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="contact.php"><?=t('nav_contact',$dict)?></a></li>                            
-                            <li class="nav-item"><a class="nav-link login-trigger" data-bs-toggle="modal" data-bs-target="#login-modal"><?=t('login',$dict)?></a></li>
-                            <li class="nav-item nav-item-cta last"><a class="nav-link btn btn-cta btn-cta-primary" data-bs-toggle="modal" data-bs-target="#signup-modal"><?=t('get_started',$dict)?></a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </header>
+        <?php include __DIR__.'/../src/partials/nav.php'; ?>
         
         <section id="price-plan" class="price-plan section">
             <div class="container text-center">
@@ -232,58 +201,8 @@ $dict = require __DIR__.'/../src/Config/'.$lang.'.php';
             
     </div>
     
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-lg-5 col-md-7 col-12 about">
-                        <div class="footer-col-inner">
-                            <h3 class="title"><?=t('footer_title',$dict)?></h3>
-                            <p><?=t('footer_desc',$dict)?></p>
-                            <p><a class="more" href="#"><?=t('learn_more',$dict)?> <i class="fas fa-long-arrow-alt-right"></i></a></p>
-                        </div>
-                    </div>
-                    <div class="footer-col col-lg-3 col-md-4 col-12 mr-lg-auto links">
-                        <div class="footer-col-inner">
-                            <h3 class="title"><?=t('links',$dict)?></h3>
-                            <ul class="list-unstyled">
-                                <li><a href="#"><i class="fas fa-caret-right"></i>Knowledge Base</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i>Jobs</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i>Press</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i>Terms of services</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i>Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-col col-lg-3 col-12 contact">
-                        <div class="footer-col-inner">
-                            <h3 class="title"><?=t('get_in_touch',$dict)?></h3>
-                            <div class="row">
-                                <p class="tel col-lg-12 col-md-4 col-12"><i class="fas fa-phone"></i><?=t('phone',$dict)?></p>
-                                <p class="email col-lg-12 col-md-4 col-12"><i class="fas fa-envelope"></i><a href="#"><?=t('email',$dict)?></a></p>
-                                <p class="email col-lg-12 col-md-4 col-12"><i class="fas fa-comment"></i><a href="#"><?=t('live_chat',$dict)?></a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bottom-bar">
-            <div class="container">
-                <div class="row">
-                    <small class="copyright col-md-6 col-12">Template Copyright <a href="http://themes.3rdwavemedia.com/" target="_blank">@ 3rd Wave Media</a></small>
-                    <div class="social-container col-md-6 col-12">
-                        <ul class="social list-inline">
-                            <li class="last list-inline-item"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include __DIR__.'/../src/partials/footer.php'; ?>
+    <?php include __DIR__.'/../src/partials/modals.php'; ?>
 
     <script src="assets/plugins/popper.min.js"></script> 
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
