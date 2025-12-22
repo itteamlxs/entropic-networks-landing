@@ -207,6 +207,47 @@ return [
 'team_training' => 'Continuous training in new technologies',
 'team_multilang' => 'Multilingual support (ES/EN)',
 
+//# ENGLISH TRANSLATION (en.php) - TOUR PAGE#
+
+// Tour Page
+'tour_title' => 'Our Services',
+'tour_meta_desc' => 'Explore our comprehensive IT services: specialized maintenance, network installation, cybersecurity, and personalized consulting.',
+'tour_hero_title' => 'Comprehensive Technology Solutions for Your Business',
+'tour_feature_1' => 'Specialized maintenance for optimal equipment performance',
+'tour_feature_2' => 'Robust network infrastructure tailored to your needs',
+'tour_feature_3' => 'Advanced cybersecurity protecting your critical data',
+'tour_feature_4' => 'Strategic consulting aligned with your business goals',
+
+'tour_what_includes' => 'What\'s Included',
+
+'tour_maintenance_title' => 'Specialized Maintenance',
+'tour_maintenance_desc' => 'We extend your equipment\'s lifespan and enhance performance. Balanced technology starts with comprehensive maintenance that optimizes both hardware and software, ensuring maximum productivity.',
+'tour_maint_include_1' => 'Complete hardware and software diagnostics',
+'tour_maint_include_2' => 'Performance optimization and system cleaning',
+'tour_maint_include_3' => 'Driver and critical updates installation',
+'tour_maint_include_4' => 'Preventive maintenance to avoid failures',
+
+'tour_network_title' => 'Network Installation & Configuration',
+'tour_network_desc' => 'Robust and customized connectivity so nothing stops you. We design and implement network solutions adapted to your specific needs, ensuring your infrastructure is always operational.',
+'tour_net_include_1' => 'Complete network infrastructure design',
+'tour_net_include_2' => 'Router, switch, and access point configuration',
+'tour_net_include_3' => 'WiFi optimization and coverage',
+'tour_net_include_4' => 'Network documentation and support',
+
+'tour_security_title' => 'Cybersecurity',
+'tour_security_desc' => 'We protect what matters with solutions that anticipate threats. We safeguard your data and systems through innovative solutions that reduce vulnerabilities and ensure your critical information security.',
+'tour_sec_include_1' => 'Vulnerability assessment and security audits',
+'tour_sec_include_2' => 'Firewall configuration and threat protection',
+'tour_sec_include_3' => 'Secure backup and disaster recovery implementation',
+'tour_sec_include_4' => 'Staff training in security best practices',
+
+'tour_consulting_title' => 'Personalized Consulting',
+'tour_consulting_desc' => 'Custom strategies for your technology to drive your success. We offer strategic advisory to optimize your systems\' performance, improve security, and align your technology with your business objectives.',
+'tour_cons_include_1' => 'Technology infrastructure analysis and diagnosis',
+'tour_cons_include_2' => 'Strategic planning and technology roadmap',
+'tour_cons_include_3' => 'Technology budget optimization',
+'tour_cons_include_4' => 'Ongoing support and monitoring',
+
 
 
 //#ENGLISH TRANSLATIONS (en.php) - CONTACT PAGE#
@@ -246,5 +287,18 @@ return [
 'alert_bar_message' => 'Platform enters maintenance on 01/01/2025, take all necessary measures.',
 'alert_bar_link' => 'maintenance.php', // Optional: Leave empty to hide link
 'alert_bar_link_text' => 'More info',
+
+//# ENGLISH ALERT MODAL (en.php) Alert modal#
+
+'alert_modal_title' => 'Important Information',
+'alert_modal_content' => 'Platform will enter scheduled maintenance on 01/01/2025 from 00:00 to 06:00 EST.
+
+During this time, all services will be temporarily unavailable. We recommend:
+- Saving all your work before maintenance begins
+- Scheduling critical tasks after 06:00 EST
+- Contacting support if you have urgent needs
+
+We apologize for any inconvenience.',
+'close' => 'Close',
 
 ];

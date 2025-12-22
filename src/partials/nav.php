@@ -1,5 +1,6 @@
 <!-- ******HEADER****** -->
 <?php include __DIR__.'/alert-bar.php'; ?>
+<?php include __DIR__.'/alert-modal.php'; ?>
 <header id="header" class="header">
     <div class="container">
         <h1 class="logo">

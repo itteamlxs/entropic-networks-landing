@@ -10,33 +10,16 @@
                 <strong><?=t('alert_bar_title',$dict)?></strong> <?=t('alert_bar_message',$dict)?>
             </span>
             <?php if (isset($dict['alert_bar_link']) && !empty($dict['alert_bar_link'])): ?>
-                <a href="<?=htmlspecialchars($dict['alert_bar_link'], ENT_QUOTES, 'UTF-8')?>" class="alert-link">
+                <a href="#" class="alert-link" data-bs-toggle="modal" data-bs-target="#alert-info-modal">
                     <?=t('alert_bar_link_text',$dict)?>
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                     </svg>
                 </a>
             <?php endif; ?>
-            <button type="button" class="alert-close" onclick="closeAlertBar()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                </svg>
-            </button>
         </div>
     </div>
 </div>
-
-<script>
-// Check if alert was closed previously
-if (localStorage.getItem('alert_bar_closed') === 'true') {
-    document.getElementById('alert-bar').style.display = 'none';
-}
-
-function closeAlertBar() {
-    document.getElementById('alert-bar').style.display = 'none';
-    localStorage.setItem('alert_bar_closed', 'true');
-}
-</script>
 
 <style>
 .alert-bar {
@@ -58,7 +41,7 @@ function closeAlertBar() {
     justify-content: center;
     gap: 12px;
     flex-wrap: wrap;
-    padding: 0 40px;
+    padding: 0 15px;
 }
 
 .alert-bar .alert-icon {
@@ -95,28 +78,9 @@ function closeAlertBar() {
     color: #fff;
 }
 
-.alert-bar .alert-close {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    padding: 5px;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-    line-height: 1;
-}
-
-.alert-bar .alert-close:hover {
-    opacity: 1;
-}
-
 @media (max-width: 768px) {
     .alert-bar .alert-content {
-        padding: 0 50px 0 15px;
+        padding: 0 15px;
         justify-content: flex-start;
     }
     

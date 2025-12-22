@@ -155,6 +155,46 @@ return [
 'plan_no_account_manager' => 'Gestor de cuenta dedicado',
 'plan_no_server_config' => 'Configuración de servidores',
 
+//# TRADUCCIONES ENSPANIOL (es.php) - TOUR PAGE
+
+// Tour Page
+'tour_title' => 'Nuestros Servicios',
+'tour_meta_desc' => 'Explora nuestros servicios integrales de TI: mantenimiento especializado, instalación de redes, ciberseguridad y consultoría personalizada.',
+'tour_hero_title' => 'Soluciones Tecnológicas Integrales para Tu Empresa',
+'tour_feature_1' => 'Mantenimiento especializado para rendimiento óptimo de equipos',
+'tour_feature_2' => 'Infraestructura de red robusta adaptada a tus necesidades',
+'tour_feature_3' => 'Ciberseguridad avanzada protegiendo tus datos críticos',
+'tour_feature_4' => 'Consultoría estratégica alineada con tus objetivos empresariales',
+
+'tour_what_includes' => 'Qué Incluye',
+
+'tour_maintenance_title' => 'Mantenimiento Especializado',
+'tour_maintenance_desc' => 'Prolongamos la vida de tus equipos y potenciamos su rendimiento. Tecnología en equilibrio empieza con un mantenimiento integral que optimiza tanto hardware como software, asegurando la máxima productividad.',
+'tour_maint_include_1' => 'Diagnóstico completo de hardware y software',
+'tour_maint_include_2' => 'Optimización de rendimiento y limpieza de sistema',
+'tour_maint_include_3' => 'Instalación de drivers y actualizaciones críticas',
+'tour_maint_include_4' => 'Mantenimiento preventivo para evitar fallos',
+
+'tour_network_title' => 'Instalación y Configuración de Redes',
+'tour_network_desc' => 'Conectividad robusta y personalizada para que nada te detenga. Diseñamos e implementamos soluciones de red adaptadas a tus necesidades específicas, asegurando que tu infraestructura esté siempre operativa.',
+'tour_net_include_1' => 'Diseño completo de infraestructura de red',
+'tour_net_include_2' => 'Configuración de routers, switches y puntos de acceso',
+'tour_net_include_3' => 'Optimización de WiFi y cobertura',
+'tour_net_include_4' => 'Documentación de red y soporte',
+
+'tour_security_title' => 'Ciberseguridad',
+'tour_security_desc' => 'Protegemos lo que importa con soluciones que anticipan las amenazas. Resguardamos tus datos y sistemas mediante soluciones innovadoras que reducen vulnerabilidades y garantizan la seguridad de tu información crítica.',
+'tour_sec_include_1' => 'Evaluación de vulnerabilidades y auditorías de seguridad',
+'tour_sec_include_2' => 'Configuración de firewall y protección contra amenazas',
+'tour_sec_include_3' => 'Implementación de respaldos seguros y recuperación ante desastres',
+'tour_sec_include_4' => 'Capacitación del personal en mejores prácticas de seguridad',
+
+'tour_consulting_title' => 'Consultoría Personalizada',
+'tour_consulting_desc' => 'Estrategias a tu medida para que tu tecnología impulse tu éxito. Ofrecemos asesoramiento estratégico para optimizar el rendimiento de tus sistemas, mejorar la seguridad y alinear tu tecnología con tus objetivos empresariales.',
+'tour_cons_include_1' => 'Análisis y diagnóstico de infraestructura tecnológica',
+'tour_cons_include_2' => 'Planificación estratégica y hoja de ruta tecnológica',
+'tour_cons_include_3' => 'Optimización de presupuesto tecnológico',
+'tour_cons_include_4' => 'Soporte continuo y monitoreo',
 
 //# TRADUCCIONES ESPANIOL (es.php) - ABOUT PAGE
 
@@ -245,5 +285,18 @@ return [
 'alert_bar_message' => 'Plataforma entra en mantenimiento 01/01/2025, toma todas las medidas necesarias.',
 'alert_bar_link' => 'maintenance.php', // Opcional: Dejar vacío para ocultar el enlace
 'alert_bar_link_text' => 'Más información',
+
+//TRADUCCIOM AL ESPANIOL (es.php) alert modal
+
+'alert_modal_title' => 'Información Importante',
+'alert_modal_content' => 'La plataforma entrará en mantenimiento programado el 01/01/2025 de 00:00 a 06:00 EST.
+
+Durante este tiempo, todos los servicios estarán temporalmente no disponibles. Recomendamos:
+- Guardar todo su trabajo antes del inicio del mantenimiento
+- Programar tareas críticas después de las 06:00 EST
+- Contactar a soporte si tiene necesidades urgentes
+
+Disculpe las molestias.',
+'close' => 'Cerrar',
 
 ];
