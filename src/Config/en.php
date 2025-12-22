@@ -155,6 +155,55 @@ return [
 'plan_no_account_manager' => 'Dedicated account manager',
 'plan_no_server_config' => 'Server configuration',
 
+
+//#ENGLISH TRANSLATION (en.php) ABOUT PAGE
+
+// About Page
+'about_title' => 'About Us',
+'about_meta_desc' => 'Learn about Entropic Network, our mission to transform technological challenges into competitive advantages.',
+'about_intro' => 'At Entropic Network, we transform technological chaos into a competitive advantage. We provide comprehensive solutions that optimize system performance and protect critical information.',
+
+'mission_title' => 'Our Mission',
+'mission_text' => 'To transform technological challenges into effective solutions that drive productivity and protect our clients\' investments, with a professional and personalized approach.',
+
+'vision_title' => 'Our Vision',
+'vision_text' => 'To be the strategic technology ally that converts disorder into balance, providing comprehensive, preventive, and personalized solutions.',
+
+'our_services_title' => 'Our Services',
+'our_services_intro' => 'We offer a comprehensive range of technology services designed to ensure optimal operation of your systems.',
+
+'service_maintenance_title' => 'Specialized Maintenance',
+'service_maintenance_desc' => 'We ensure your PCs and laptops operate in perfect condition, optimizing both hardware and software to extend their lifespan and maximize performance.',
+
+'service_network_title' => 'Network Installation & Configuration',
+'service_network_desc' => 'We design and implement robust and efficient connectivity solutions, adapted to your specific needs, so your infrastructure is always operational.',
+
+'service_security_title' => 'Cybersecurity',
+'service_security_desc' => 'We protect your data and systems through innovative solutions that anticipate threats and reduce vulnerabilities, ensuring the security of your critical information.',
+
+'service_consulting_title' => 'Personalized Consulting',
+'service_consulting_desc' => 'We offer strategic advice to optimize system performance, improve security, and align your technology with your business objectives.',
+
+'differentiators_title' => 'What Sets Us Apart',
+'differentiators_intro' => 'Our approach makes us the ideal technology partner for your business.',
+
+'diff_allinone_title' => 'All-in-One Technology Solution',
+'diff_allinone_desc' => 'We provide a complete range of services in a single provider, eliminating the need for multiple partners and ensuring coherence and efficiency.',
+
+'diff_custom_title' => 'Tailored Customization',
+'diff_custom_desc' => 'We design specific solutions for each client\'s unique needs, offering adapted strategies and services that optimize their systems.',
+
+'diff_preventive_title' => 'Preventive & Strategic Approach',
+'diff_preventive_desc' => 'We prioritize problem prevention and system optimization, anticipating technological needs and proactively protecting our clients.',
+
+'cta_about_title' => 'Ready to Transform Your Technology?',
+'cta_about_text' => 'Optimize your technology today. Contact us and discover the Entropic Network difference.',
+'contact_us' => 'Contact Us',
+
+
+
+
+
 //#ENGLISH TRANSLATIONS (en.php) - CONTACT PAGE#
 
 // Contact Page - Main

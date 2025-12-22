@@ -1,474 +1,203 @@
+<?php
+require_once __DIR__.'/../src/bootstrap.php';
+$lang = $_GET['lang'] ?? 'en';
+$dict = require __DIR__.'/../src/Config/'.$lang.'.php';
+$current_page = 'about';
+?>
 <!DOCTYPE html>
-<html lang="en"> 
-
-<!-- Mirrored from themes.3rdwavemedia.com/tempo/bs5/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Dec 2025 21:28:18 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<html lang="<?=htmlspecialchars($lang, ENT_QUOTES, 'UTF-8')?>">
 <head>
-    <title>Tempo - Bootstrap 5 template for startups</title>
-    <!-- Meta -->
+    <title><?=t('site_title',$dict)?> - <?=t('about_title',$dict)?></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="<?=t('about_meta_desc',$dict)?>">
     <meta name="author" content="">    
     <link rel="shortcut icon" href="favicon.ico">  
-    <link href='../../../fonts.googleapis.com/css5319.css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='../../../fonts.googleapis.com/cssb119.css?family=Montserrat:400,500,700' rel='stylesheet' type='text/css'>    
-    <!-- FontAwesome JS -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,500,700' rel='stylesheet' type='text/css'>    
     <script defer src="assets/plugins/fontawesome/js/all.js"></script>
-    <!-- Global CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">       
-    <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
-<link rel="stylesheet" href="assets/css/custom-lang.css">
-<link rel="stylesheet" href="assets/css/custom-lang.css">
-<link rel="stylesheet" href="assets/css/custom-lang.css">
-<link rel="stylesheet" href="assets/css/custom-lang.css">
-<link rel="stylesheet" href="assets/css/custom-lang.css">
-<link rel="stylesheet" href="assets/css/custom-lang.css">
+    <link rel="stylesheet" href="assets/css/custom-lang.css">
 </head> 
 
 <body class="about-page">    
     <div class="wrapper">
-        <!-- ******HEADER****** --> 
-        <header id="header" class="header">  
-            <div class="container">            
-                <h1 class="logo">
-                    <a href="index.html">
-                        <span class="logo-title">Tempo</span>
-                    </a>
-                </h1><!--//logo-->              
-                <nav class="main-nav navbar navbar-expand-md navbar-dark" role="navigation">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>           
-                    <div class="navbar-collapse collapse justify-content-end" id="navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="tour.html">Tour</a></li>
-                            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Blog <i class="fa fa-angle-down"></i></a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="blog.html">Blog Home</a>
-                                    <a class="dropdown-item" href="blog-single.html">Single Blog Post</a>
-                                    <a class="dropdown-item" href="404.html">404 Page</a>
-                                            
-                                </div>
-                            </li><!--//dropdown--> 
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>                            
-                            <li class="nav-item"><a class="nav-link login-trigger" data-bs-toggle="modal" data-bs-target="#login-modal">Log in</a></li>
-                            <li class="nav-item nav-item-cta last"><a class="nav-link btn btn-cta btn-cta-primary" data-bs-toggle="modal" data-bs-target="#signup-modal" >Get Started</a></li>
-                        </ul><!--//nav-->
-                    </div><!--//navabr-collapse-->
-                </nav><!--//main-nav-->     
-            </div><!--//container-->
-        </header><!--//header-->
+        <?php include __DIR__.'/../src/partials/nav.php'; ?>
         
         <!-- ******ABOUT US****** --> 
         <section id="about-us" class="about-us section">
-            <div class="container text-center">
-                <h2 class="title">About Us</h2>
-                <p class="intro mx-auto mb-5">Our team lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.</p>
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="title"><?=t('about_title',$dict)?></h2>
+                    <p class="intro mx-auto"><?=t('about_intro',$dict)?></p>
+                </div>
                 
-                <div class="row">
-                    <div class="item col-xl-4 col-md-6 col-12 mb-5">
-                        <div class="item-inner">
-	                        <div class="row gy-3">
-		                        <div class="col-12 col-md-auto">
-                                    <img class="profile-image rounded" src="assets/images/team/profile-1.jpg" alt="" />
-		                        </div><!--//col-->
-	                        
-		                        <div class="col text-center text-md-start">
-			                        <h4 class="name mb-1">Alan Smith</h4>
-			                        <div class="role mb-2">Co-Founder &amp; CEO</div>
-			                        <ul class="social-list list-inline mb-3">
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-medium-m fa-fw"></i></a></li>
-									</ul><!--//social-list-->
-			                        
-			                       
-			                        <a class="bio-link" href="#modal-member-1" data-bs-toggle="modal" data-bs-target="#modal-member-1">Read bio <i class="fas fa-long-arrow-alt-right" data-fa-transform="down-1"></i></a>
-			                         
-		                        </div><!--//col-->
-	                        </div><!--//row-->
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
+                <!-- Mission & Vision -->
+                <div class="row mb-5">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bullseye text-primary me-3" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                        <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
+                                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8"/>
+                                        <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                    </svg>
+                                    <h3 class="mb-0"><?=t('mission_title',$dict)?></h3>
+                                </div>
+                                <p class="mb-0"><?=t('mission_text',$dict)?></p>
+                            </div>
+                        </div>
+                    </div>
                     
-                    
-                    <div class="item col-xl-4 col-md-6 col-12 mb-5">
-                        <div class="item-inner">
-	                        <div class="row gy-3">
-		                        <div class="col-12 col-md-auto">
-                                    <img class="profile-image rounded" src="assets/images/team/profile-2.jpg" alt="" />
-		                        </div><!--//col-->
-	                        
-		                        <div class="col text-center text-md-start">
-			                        <h4 class="name mb-1">Sam Thompson</h4>
-			                        <div class="role mb-2">Co-Founder &amp; CTO</div>
-			                        <ul class="social-list list-inline mb-3">
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-medium-m fa-fw"></i></a></li>
-									</ul><!--//social-list-->
-			                        
-			                       
-			                        <a class="bio-link" href="#modal-member-1" data-bs-toggle="modal" data-bs-target="#modal-member-1">Read bio <i class="fas fa-long-arrow-alt-right" data-fa-transform="down-1"></i></a>
-			                         
-		                        </div><!--//col-->
-	                        </div><!--//row-->
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                    
-                    
-                    <div class="item col-xl-4 col-md-6 col-12 mb-5">
-                        <div class="item-inner">
-	                        <div class="row gy-3">
-		                        <div class="col-12 col-md-auto">
-                                    <img class="profile-image rounded" src="assets/images/team/profile-3.jpg" alt="" />
-		                        </div><!--//col-->
-	                        
-		                        <div class="col text-center text-md-start">
-			                        <h4 class="name mb-1">Teresa Tucker</h4>
-			                        <div class="role mb-2">Product Designer</div>
-			                        <ul class="social-list list-inline mb-3">
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-medium-m fa-fw"></i></a></li>
-									</ul><!--//social-list-->
-			                        
-			                       
-			                        <a class="bio-link" href="#modal-member-1" data-bs-toggle="modal" data-bs-target="#modal-member-1">Read bio <i class="fas fa-long-arrow-alt-right" data-fa-transform="down-1"></i></a>
-			                         
-		                        </div><!--//col-->
-	                        </div><!--//row-->
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                    
-                    
-                    <div class="item col-xl-4 col-md-6 col-12 mb-5">
-                        <div class="item-inner">
-	                        <div class="row gy-3">
-		                        <div class="col-12 col-md-auto">
-                                    <img class="profile-image rounded" src="assets/images/team/profile-4.jpg" alt="" />
-		                        </div><!--//col-->
-	                        
-		                        <div class="col text-center text-md-start">
-			                        <h4 class="name mb-1">Paul Wang</h4>
-			                        <div class="role mb-2">App Developer</div>
-			                        <ul class="social-list list-inline mb-3">
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-medium-m fa-fw"></i></a></li>
-									</ul><!--//social-list-->
-			                        
-			                       
-			                        <a class="bio-link" href="#modal-member-1" data-bs-toggle="modal" data-bs-target="#modal-member-1">Read bio <i class="fas fa-long-arrow-alt-right" data-fa-transform="down-1"></i></a>
-			                         
-		                        </div><!--//col-->
-	                        </div><!--//row-->
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                    
-                    <div class="item col-xl-4 col-md-6 col-12 mb-5">
-                        <div class="item-inner">
-	                        <div class="row gy-3">
-		                        <div class="col-12 col-md-auto">
-                                    <img class="profile-image rounded" src="assets/images/team/profile-5.jpg" alt="" />
-		                        </div><!--//col-->
-	                        
-		                        <div class="col text-center text-md-start">
-			                        <h4 class="name mb-1">Bryan Oliver</h4>
-			                        <div class="role mb-2">App Developer</div>
-			                        <ul class="social-list list-inline mb-3">
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-medium-m fa-fw"></i></a></li>
-									</ul><!--//social-list-->
-			                        
-			                       
-			                        <a class="bio-link" href="#modal-member-1" data-bs-toggle="modal" data-bs-target="#modal-member-1">Read bio <i class="fas fa-long-arrow-alt-right" data-fa-transform="down-1"></i></a>
-			                         
-		                        </div><!--//col-->
-	                        </div><!--//row-->
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                    
-                    <div class="item col-xl-4 col-md-6 col-12 mb-5">
-                        <div class="item-inner">
-	                        <div class="row gy-3">
-		                        <div class="col-12 col-md-auto">
-                                    <img class="profile-image rounded" src="assets/images/team/profile-6.jpg" alt="" />
-		                        </div><!--//col-->
-	                        
-		                        <div class="col text-center text-md-start">
-			                        <h4 class="name mb-1">Cheryl Bradley</h4>
-			                        <div class="role mb-2">Customer Support</div>
-			                        <ul class="social-list list-inline mb-3">
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
-										<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-medium-m fa-fw"></i></a></li>
-									</ul><!--//social-list-->
-			                        
-			                       
-			                        <a class="bio-link" href="#modal-member-1" data-bs-toggle="modal" data-bs-target="#modal-member-1">Read bio <i class="fas fa-long-arrow-alt-right" data-fa-transform="down-1"></i></a>
-			                         
-		                        </div><!--//col-->
-	                        </div><!--//row-->
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                    
-                </div><!--//row-->
-            </div><!--//container-->
-        </section><!--//about-us-->    
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-eye text-primary me-3" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                    </svg>
+                                    <h3 class="mb-0"><?=t('vision_title',$dict)?></h3>
+                                </div>
+                                <p class="mb-0"><?=t('vision_text',$dict)?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Our Services -->
+                <div class="text-center mb-4">
+                    <h3 class="title"><?=t('our_services_title',$dict)?></h3>
+                    <p class="text-muted"><?=t('our_services_intro',$dict)?></p>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-6">
+                        <div class="service-item p-4 h-100 border rounded">
+                            <div class="d-flex align-items-start mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-gear-fill text-primary me-3 flex-shrink-0" viewBox="0 0 16 16">
+                                    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="mb-2"><?=t('service_maintenance_title',$dict)?></h4>
+                                    <p class="mb-0 text-muted"><?=t('service_maintenance_desc',$dict)?></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="service-item p-4 h-100 border rounded">
+                            <div class="d-flex align-items-start mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-diagram-3-fill text-primary me-3 flex-shrink-0" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zm-6 8A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm6 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="mb-2"><?=t('service_network_title',$dict)?></h4>
+                                    <p class="mb-0 text-muted"><?=t('service_network_desc',$dict)?></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="service-item p-4 h-100 border rounded">
+                            <div class="d-flex align-items-start mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-shield-fill-check text-primary me-3 flex-shrink-0" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7 7 0 0 0 1.048-.625 11.8 11.8 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="mb-2"><?=t('service_security_title',$dict)?></h4>
+                                    <p class="mb-0 text-muted"><?=t('service_security_desc',$dict)?></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="service-item p-4 h-100 border rounded">
+                            <div class="d-flex align-items-start mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-chat-dots-fill text-primary me-3 flex-shrink-0" viewBox="0 0 16 16">
+                                    <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                                </svg>
+                                <div>
+                                    <h4 class="mb-2"><?=t('service_consulting_title',$dict)?></h4>
+                                    <p class="mb-0 text-muted"><?=t('service_consulting_desc',$dict)?></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Differentiators -->
+                <div class="text-center mb-4">
+                    <h3 class="title"><?=t('differentiators_title',$dict)?></h3>
+                    <p class="text-muted"><?=t('differentiators_intro',$dict)?></p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="text-center p-4 h-100">
+                            <div class="mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-grid-3x3-gap-fill text-primary" viewBox="0 0 16 16">
+                                    <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"/>
+                                </svg>
+                            </div>
+                            <h4 class="mb-3"><?=t('diff_allinone_title',$dict)?></h4>
+                            <p class="text-muted"><?=t('diff_allinone_desc',$dict)?></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="text-center p-4 h-100">
+                            <div class="mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-sliders text-primary" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/>
+                                </svg>
+                            </div>
+                            <h4 class="mb-3"><?=t('diff_custom_title',$dict)?></h4>
+                            <p class="text-muted"><?=t('diff_custom_desc',$dict)?></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="text-center p-4 h-100">
+                            <div class="mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-lightning-charge-fill text-primary" viewBox="0 0 16 16">
+                                    <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+                                </svg>
+                            </div>
+                            <h4 class="mb-3"><?=t('diff_preventive_title',$dict)?></h4>
+                            <p class="text-muted"><?=t('diff_preventive_desc',$dict)?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- ******CTA****** --> 
         <section id="cta-section" class="cta-section has-bg-color">
             <div class="container text-center">
-                <h2 class="title">Want to join us?</h2>
-                <p class="intro mx-auto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Please email your CV to <a href="#">jobs@yourappsite.com</a></p>
-                <a class="btn-cta-primary btn btn-cta" href="#">Apply Now</a>
+                <h2 class="title"><?=t('cta_about_title',$dict)?></h2>
+                <p class="intro mx-auto"><?=t('cta_about_text',$dict)?></p>
+                <a class="btn-cta-primary btn btn-cta" href="contact.php?lang=<?=htmlspecialchars($lang, ENT_QUOTES, 'UTF-8')?>"><?=t('contact_us',$dict)?></a>
             </div>
-        </section><!--//signup-->
+        </section>
             
-    </div><!--//wrapper-->
+    </div>
     
-    <!-- ******FOOTER****** --> 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-lg-5 col-md-7 col-12 about">
-                        <div class="footer-col-inner">
-                            <h3 class="title">About Us</h3>
-                            <p>Maecenas ac vehicula velit, nec facilisis elit. Phasellus non porttitor justo, eu bibendum elit. Maecenas pharetra non ligula quis ultricies. Nulla varius vestibulum ligula quis hendrerit. Maecenas et fermentum massa. Ut hendrerit, nulla fringilla venenatis pulvinar, nisl est adipiscing nunc, quis consequat mi mauris vel felis.</p>
-                            <p><a class="more" href="#">Learn more <i class="fas fa-long-arrow-alt-right"></i></a></p>
-                            
-                        </div><!--//footer-col-inner-->
-                    </div><!--//foooter-col-->
-                    <div class="footer-col col-lg-3 col-md-4 col-12 mr-lg-auto links">
-                        <div class="footer-col-inner">
-                            <h3 class="title">Links</h3>
-                            <ul class="list-unstyled">
-                                <li><a href="#"><i class="fas fa-caret-right"></i>Knowledge Base</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i>Jobs</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i>Press</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i>Terms of services</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i>Privacy Policy</a></li>
-                            </ul>
-                        </div><!--//footer-col-inner-->
-                    </div><!--//foooter-col-->                 
-                    <div class="footer-col col-lg-3 col-12 contact">
-                        <div class="footer-col-inner">
-                            <h3 class="title">Get in touch</h3>
-                            <div class="row">
-                                <p class="tel col-lg-12 col-md-4 col-12"><i class="fas fa-phone"></i>0800 123 4567</p>
-                                <p class="email col-lg-12 col-md-4 col-12"><i class="fas fa-envelope"></i><a href="#">support@website.com</a></p>
-                                <p class="email col-lg-12 col-md-4 col-12"><i class="fas fa-comment"></i><a href="#">Live Chat</a></p>    
-                            </div> 
-                        </div><!--//footer-col-inner-->            
-                    </div><!--//foooter-col-->   
-                </div><!--//row-->
-            </div><!--//container-->        
-        </div><!--//footer-content-->
-        <div class="bottom-bar">
-            <div class="container">
-                <div class="row">
-                    <small class="copyright col-md-6 col-12">Template Copyright <a href="http://themes.3rdwavemedia.com/" target="_blank">@ 3rd Wave Media</a></small>
-                    <div class="social-container col-md-6 col-12">
-                        <ul class="social list-inline">
-	                        <li class="last list-inline-item"><a href="#" ><i class="fa-brands fa-youtube"></i></a></li>
-                            <li class="list-inline-item"><a href="#" ><i class="fa-brands fa-linkedin-in"></i></a></li>
-                            <li class="list-inline-item"><a href="#" ><i class="fa-brands fa-facebook-f"></i></a></li>                        
-                            <li class="list-inline-item"><a href="#" ><i class="fa-brands fa-x-twitter"></i></a></li>
-                            
-                        </ul><!--//social-->
-                    </div><!--//social-container-->
-                </div><!--//row-->
-            </div><!--//container-->
-        </div><!--//bottom-bar-->
-    </footer><!--//footer-->
-    
-    <!-- Modal Member Bio -->
-    <div class="modal modal-member modal-member-1" id="modal-member-1" tabindex="-1" role="dialog" aria-labelledby="member-1-ModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 id="member-1-ModalLabel" class="modal-title sr-only">User Name</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-	                    <div class="col-12 col-md-auto text-center mb-3 mb-md-0">
-                            <img class="profile-image rounded" src="assets/images/team/profile-1.jpg" alt="" />
-	                    </div><!--//col-->
-                    
-                        <div class="col text-center text-md-start">
-	                        <h2 class="name mb-1">User Name</h2>
-	                        <div class="role mb-2">Job Title</div>
-	                        <ul class="social-list list-inline mb-3">
-								<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
-								<li class="list-inline-item"><a  href="#"><i class="fa-brands fa-medium-m fa-fw"></i></a></li>
-							</ul><!--//social-list-->
-	                        
-	                         
-                        </div><!--//col-->
-                    </div><!--//row-->
-                    <hr>
-                    <div class="desc">
-	                    <p>Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero.</p>
-	                    <p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae</p>
-	                </div>
-                </div><!--//modal-body-->
-            </div><!--//modal-content-->
-        </div><!--//modal-dialog-->
-    </div><!--//modal-->
-    
-   <!-- Login Modal -->
-	<div class="modal modal-login" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 id="loginModalLabel" class="modal-title justify-content-center">Log in to your account</h4>
-				</div>
-				<div class="modal-body">
-					<div class="social-login text-center">                        
-						<ul class="list-unstyled social-login">
-							<li><button class="twitter-btn btn" type="button"><i class="fa-brands fa-x-twitter"></i>Log in with Twitter</button></li>
-							<li><button class="facebook-btn btn" type="button"><i class="fa-brands fa-facebook-f"></i>Log in with Facebook</button></li>
-							<li><button class="google-btn btn" type="button"><i class="fa-brands fa-google"></i>Log in with Google</button></li>
-						</ul>
-					</div>
-					<div class="divider"><span>Or</span></div>
-					<div class="login-form-container">
-						<form class="login-form">                
-							<div class="form-group email mb-3">
-								<i class="fas fa-envelope"></i>
-								<label class="sr-only" for="login-email">Your email</label>
-								<input id="login-email" name="login-email" type="email" class="form-control login-email" placeholder="Your email">
-							</div><!--//form-group-->
-							<div class="form-group password mb-3">
-								<i class="fas fa-lock"></i>
-								<label class="sr-only" for="login-password">Password</label>
-								<input id="login-password" name="login-password" type="password" class="form-control login-password" placeholder="Password">
-								<p class="forgot-password">
-									<a href="#" id="resetpass-link" data-bs-toggle="modal" data-bs-target="#resetpass-modal">Forgot password?</a>
-								</p>
-							</div><!--//form-group-->
-							<button type="submit" class="btn btn-block btn-cta-primary">Log in</button>
-							<div class="form-check remember mt-2">
-								<input class="form-check-input" type="checkbox" value="" id="RememberPassword">
-								<label class="form-check-label" for="RememberPassword">
-								Remember me
-								</label>
-							</div>
-						</form>
-					</div><!--//login-form-container-->
-				</div><!--//modal-body-->
-				<div class="modal-footer">
-					<p>New to Tempo? <a class="signup-link" id="signup-link" href="#">Sign up now</a></p>                    
-				</div><!--//modal-footer-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal-->
-	
-	<!-- Signup Modal -->
-	<div class="modal modal-signup" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 id="signupModalLabel" class="modal-title text-center">New to Tempo? Sign up now.</h4>
-					
-				</div>
-				<div class="modal-body">
-					<p class="intro text-center">It only takes 3 minutes!</p>
-					<div class="social-login text-center">                        
-						<ul class="list-unstyled social-login">
-							<li><button class="twitter-x-btn btn" type="button"><i class="fa-brands fa-x-twitter"></i>Sign up with Twitter</button></li>
-							<li><button class="facebook-btn btn" type="button"><i class="fa-brands fa-facebook-f"></i>Sign up with Facebook</button></li>
-							<li><button class="google-btn btn" type="button"><i class="fa-brands fa-google"></i>Sign up with Google</button></li>
-						</ul>
-						<p class="note">Don't worry, we won't post anything without your permission.</p>
-					</div>
-					<div class="divider"><span>Or</span></div>
-					<div class="login-form-container">
-						<form class="login-form">                
-							<div class="form-group email mb-3">
-								<i class="fas fa-envelope"></i>
-								<label class="sr-only" for="signup-email">Your email</label>
-								<input id="signup-email" name="signup-email" type="email" class="form-control login-email" placeholder="Your email">
-							</div><!--//form-group-->
-							<div class="form-group password mb-3">
-								<i class="fas fa-lock"></i>
-								<label class="sr-only" for="signup-password">Your password</label>
-								<input id="signup-password" name="signup-password" type="password" class="form-control login-password" placeholder="Password">
-							</div><!--//form-group-->
-							<button type="submit" class="btn btn-block btn-cta-primary">Sign up</button>
-							<p class="note">By signing up, you agree to our terms of services and privacy policy.</p>
-						</form>
-					</div><!--//login-form-container-->
-				</div><!--//modal-body-->
-				<div class="modal-footer">
-					<p>Already have an account? <a class="login-link" id="login-link" href="#">Log in</a></p>                    
-				</div><!--//modal-footer-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal-->
-	
-	<!-- Reset Password Modal -->
-	<div class="modal modal-resetpass" id="resetpass-modal" tabindex="-1" role="dialog" aria-labelledby="resetpassModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 id="resetpassModalLabel" class="modal-title text-center">Password Reset</h4>
-				</div>
-				<div class="modal-body">
-					<div class="resetpass-form-container">
-						<p class="intro">Please enter your email address below and we'll email you a link to a page where you can easily create a new password.</p>
-						<form class="resetpass-form">                
-							<div class="form-group email mb-3">
-								<i class="fas fa-envelope"></i>
-								<label class="sr-only" for="reg-email">Your email</label>
-								<input id="reg-email" name="reg-email" type="email" class="form-control login-email" placeholder="Your email">
-							</div><!--//form-group-->
-							<button type="submit" class="btn btn-block btn-cta-primary">Reset Password</button>
-						</form>
-					</div><!--//login-form-container-->
-				</div><!--//modal-body-->
-				<div class="modal-footer">
-					<p>I want to <a class="back-to-login-link" id="back-to-login-link" href="#">return to login</a></p>                    
-				</div><!--//modal-footer-->
-			</div><!--//modal-content-->
-		</div><!--//modal-dialog-->
-	</div><!--//modal--> 
-    
-    <!-- *****CONFIGURE STYLE****** -->
-			</ul><!--//color-options-->
-			<a id="config-close" class="close" href="#"><i class="fas fa-times-circle"></i></a>
-			
-		</div><!--//panel-inner-->
-	</div><!--//config-panel-->
+    <?php include __DIR__.'/../src/partials/footer.php'; ?>
+    <?php include __DIR__.'/../src/partials/modals.php'; ?>
           
-    <!-- Javascript -->          
-	<script src="assets/plugins/popper.min.js"></script> 
-	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
-	<script src="assets/plugins/vanilla-back-to-top.min.js"></script>   
-	<script src="assets/js/main.js"></script> 
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="assets/plugins/vanilla-back-to-top.min.js"></script>   
+    <script src="assets/js/main.js"></script>
     
-    
-    <!-- Theme Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
-<a id="lang-toggle" class="btn btn-sm btn-outline-secondary position-fixed bottom-0 end-0 m-3" href="?lang=<?= ($lang ?? 'en') === 'en' ? 'es' : 'en' ?>"><?= ($lang ?? 'en') === 'en' ? 'ES' : 'EN' ?></a>
-<script src="assets/js/lang-switcher.js"></script>
-<script src="assets/js/lang-switcher.js"></script>
-<script src="assets/js/lang-switcher.js"></script>
+    <a id="lang-toggle" class="btn btn-sm btn-outline-secondary position-fixed bottom-0 end-0 m-3" href="?lang=<?=($lang === 'en') ? 'es' : 'en'?>"><?=($lang === 'en') ? 'ES' : 'EN'?></a>
 </body>
-
-<!-- Mirrored from themes.3rdwavemedia.com/tempo/bs5/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Dec 2025 21:28:25 GMT -->
-</html> 
-
+</html>

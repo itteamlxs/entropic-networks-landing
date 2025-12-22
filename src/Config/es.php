@@ -155,6 +155,53 @@ return [
 'plan_no_account_manager' => 'Gestor de cuenta dedicado',
 'plan_no_server_config' => 'Configuración de servidores',
 
+
+//# TRADUCCIONES ESPANIOL (es.php) - ABOUT PAGE
+
+// About Page
+'about_title' => 'Acerca de Nosotros',
+'about_meta_desc' => 'Conoce Entropic Network, nuestra misión de transformar desafíos tecnológicos en ventajas competitivas.',
+'about_intro' => 'En Entropic Network, transformamos el caos tecnológico en una ventaja competitiva. Brindamos soluciones integrales que optimizan el rendimiento de los sistemas y protegen la información crítica.',
+
+'mission_title' => 'Nuestra Misión',
+'mission_text' => 'Transformar los desafíos tecnológicos en soluciones efectivas que impulsen la productividad y protejan la inversión de nuestros clientes, con un enfoque profesional y personalizado.',
+
+'vision_title' => 'Nuestra Visión',
+'vision_text' => 'Ser el aliado estratégico tecnológico que convierte el desorden en equilibrio, brindando soluciones integrales, preventivas y personalizadas.',
+
+'our_services_title' => 'Nuestros Servicios',
+'our_services_intro' => 'Ofrecemos una gama integral de servicios tecnológicos diseñados para garantizar el óptimo funcionamiento de tus sistemas.',
+
+'service_maintenance_title' => 'Mantenimiento Especializado',
+'service_maintenance_desc' => 'Aseguramos que tus PCs y laptops operen en perfecto estado, optimizando tanto el hardware como el software para prolongar su vida útil y maximizar su rendimiento.',
+
+'service_network_title' => 'Instalación y Configuración de Redes',
+'service_network_desc' => 'Diseñamos e implementamos soluciones de conectividad robustas y eficientes, adaptadas a tus necesidades específicas, para que tu infraestructura esté siempre operativa.',
+
+'service_security_title' => 'Ciberseguridad',
+'service_security_desc' => 'Protegemos tus datos y sistemas mediante soluciones innovadoras que anticipan amenazas y reducen vulnerabilidades, garantizando la seguridad de tu información crítica.',
+
+'service_consulting_title' => 'Consultoría Personalizada',
+'service_consulting_desc' => 'Ofrecemos asesoramiento estratégico para optimizar el rendimiento de tus sistemas, mejorar la seguridad y alinear tu tecnología con tus objetivos empresariales.',
+
+'differentiators_title' => 'Qué Nos Diferencia',
+'differentiators_intro' => 'Nuestro enfoque nos convierte en el socio tecnológico ideal para tu negocio.',
+
+'diff_allinone_title' => 'Solución Tecnológica Todo en Uno',
+'diff_allinone_desc' => 'Proveemos una gama completa de servicios en un solo proveedor, eliminando la necesidad de múltiples socios y garantizando coherencia y eficiencia.',
+
+'diff_custom_title' => 'Personalización a Medida',
+'diff_custom_desc' => 'Diseñamos soluciones específicas para las necesidades únicas de cada cliente, ofreciendo estrategias y servicios adaptados que optimizan sus sistemas.',
+
+'diff_preventive_title' => 'Enfoque Preventivo y Estratégico',
+'diff_preventive_desc' => 'Priorizamos la prevención de problemas y la optimización de sistemas, anticipándonos a las necesidades tecnológicas y protegiendo proactivamente a nuestros clientes.',
+
+'cta_about_title' => '¿Listo para Transformar tu Tecnología?',
+'cta_about_text' => 'Optimiza tu tecnología hoy. Contáctanos y descubre la diferencia Entropic Network.',
+'contact_us' => 'Contáctanos',
+
+
+
 //TRADUCCIONES ESPAÑOL (es.php) - CONTACT PAGE
 
 // Contact Page - Main
