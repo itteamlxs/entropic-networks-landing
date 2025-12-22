@@ -220,7 +220,7 @@ $current_page = 'about';
             <div class="container position-relative" style="z-index: 10;">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <img src="assets/images/about/team-photo.jpg" alt="Entropic Networks Team" class="img-fluid rounded shadow-lg" style="border-radius: 12px !important;">
+                        <img src="assets/images/team/team-photo.jpg" alt="Entropic Networks Team" class="img-fluid rounded shadow-lg" style="border-radius: 12px !important;">
                         <!-- IMAGE: team-photo.jpg - Professional team photo in modern office setting -->
                     </div>
                     <div class="col-lg-6">
