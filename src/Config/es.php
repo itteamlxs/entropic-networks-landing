@@ -200,6 +200,12 @@ return [
 'cta_about_text' => 'Optimiza tu tecnología hoy. Contáctanos y descubre la diferencia Entropic Network.',
 'contact_us' => 'Contáctanos',
 
+'team_title' => 'Nuestro Equipo de Expertos',
+'team_desc' => 'Contamos con un equipo de profesionales altamente calificados y certificados en las últimas tecnologías. Cada miembro de nuestro equipo aporta años de experiencia en soporte técnico, redes, ciberseguridad y consultoría empresarial.',
+'team_cert' => 'Certificaciones en Microsoft, Cisco, CompTIA',
+'team_exp' => '+15 años de experiencia promedio',
+'team_training' => 'Formación continua en nuevas tecnologías',
+'team_multilang' => 'Soporte multilingüe (ES/EN)',
 
 
 //TRADUCCIONES ESPAÑOL (es.php) - CONTACT PAGE

@@ -200,7 +200,12 @@ return [
 'cta_about_text' => 'Optimize your technology today. Contact us and discover the Entropic Network difference.',
 'contact_us' => 'Contact Us',
 
-
+'team_title' => 'Our Expert Team',
+'team_desc' => 'We have a team of highly qualified professionals certified in the latest technologies. Each team member brings years of experience in technical support, networks, cybersecurity, and business consulting.',
+'team_cert' => 'Microsoft, Cisco, CompTIA certifications',
+'team_exp' => '15+ years average experience',
+'team_training' => 'Continuous training in new technologies',
+'team_multilang' => 'Multilingual support (ES/EN)',
 
 
 
