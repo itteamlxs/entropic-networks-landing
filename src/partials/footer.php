@@ -18,11 +18,11 @@
                             <div class="footer-col-inner">
                                 <h3 class="title"><?=t('links',$dict)?></h3>
                                 <ul class="list-unstyled">
-                                    <li><a href="#"><i class="fas fa-caret-right"></i>Knowledge Base</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i>Jobs</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i>Press</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i>Terms of services</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i>Privacy Policy</a></li>
+                                   <!-- <li><a href="contact.php?lang=<?=htmlspecialchars($lang, ENT_QUOTES, 'UTF-8')?>"><i class="fas fa-caret-right"></i><?=t('footer_knowledge',$dict)?></a></li>
+                                    <li><a href="contact.php?lang=<?=htmlspecialchars($lang, ENT_QUOTES, 'UTF-8')?>"><i class="fas fa-caret-right"></i><?=t('footer_jobs',$dict)?></a></li>
+                                    <li><a href="contact.php?lang=<?=htmlspecialchars($lang, ENT_QUOTES, 'UTF-8')?>"><i class="fas fa-caret-right"></i><?=t('footer_press',$dict)?></a></li>-->
+                                    <li><a href="terms.php?lang=<?=htmlspecialchars($lang, ENT_QUOTES, 'UTF-8')?>"><i class="fas fa-caret-right"></i><?=t('footer_terms',$dict)?></a></li>
+                                    <li><a href="privacy.php?lang=<?=htmlspecialchars($lang, ENT_QUOTES, 'UTF-8')?>"><i class="fas fa-caret-right"></i><?=t('footer_privacy',$dict)?></a></li>
                                 </ul>
                             </div>
                         </div>

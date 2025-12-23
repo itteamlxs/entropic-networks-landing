@@ -1,5 +1,8 @@
 <?php
 return [
+
+    //# MAIN LANDING PAGE (en.php) 
+
     'site_title'   => 'Entropic Networks',
     'meta_desc'    => 'Entropic Networks transforms technological chaos into competitive advantage.',
     'author'       => 'Entropic Networks',
@@ -61,6 +64,11 @@ return [
     'email'        => 'support@entropicnetworks.com',
     'live_chat'    => 'Live Chat',
 
+    'footer_knowledge' => 'Knowledge Base',
+    'footer_jobs' => 'Jobs',
+    'footer_press' => 'Press', 
+    'footer_terms' => 'Terms of Service',
+    'footer_privacy' => 'Privacy Policy',
 
 // FAQ Section
 'faq_title' => 'Frequently Asked Questions',
@@ -279,8 +287,13 @@ return [
 'contact_success' => 'Thank you! Your message has been sent successfully. We\'ll respond soon.',
 'contact_map_title' => 'Google Map',
 
+//# ENGLISH TRADUCTIOM 404 PAGE#
 
-// #ENGLIS ALERT BAR (en.php) - Alert Bar #
+'404_sorry' => 'Sorry, the page you tried cannot be found.',
+'404_guide' => 'You may have typed the address incorrectly or you may have used an outdated link.',
+'404_back_home' => 'Back to Home',
+
+// #ENGLISH ALERT BAR (en.php) - Alert Bar #
 
 'alert_bar_active' => false, // Set to false to hide alert bar
 'alert_bar_title' => 'Attention!',
@@ -300,5 +313,299 @@ During this time, all services will be temporarily unavailable. We recommend:
 
 We apologize for any inconvenience.',
 'close' => 'Close',
+
+//#############################################################################
+//####################         TERMS OF SERVICE    ############################
+//#############################################################################
+
+// Terms of Service Section
+'terms_title' => 'Terms of Service',
+'terms_meta' => 'Terms and conditions for using Entropic Networks services',
+'terms_last_update' => 'Last Updated',
+'terms_date' => 'December 23, 2024',
+
+// Section 1
+'terms_section1_title' => '1. Acceptance of Terms',
+'terms_section1_content' => 'By accessing and using the services provided by Entropic Networks ("we," "us," or "our"), you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.',
+
+// Section 2
+'terms_section2_title' => '2. Description of Services',
+'terms_section2_content' => 'Entropic Networks provides comprehensive IT support services including:',
+'terms_section2_list1' => 'Specialized maintenance for computers and laptops',
+'terms_section2_list2' => 'Network installation and configuration',
+'terms_section2_list3' => 'Cybersecurity solutions and consulting',
+'terms_section2_list4' => 'Personalized IT consulting services',
+'terms_section2_footer' => 'Service specifications, response times, and included features vary by plan (Basic, Business, or Corporate).',
+
+// Section 3
+'terms_section3_title' => '3. Service Plans and Pricing',
+'terms_section3_1_title' => '3.1 Service Plans:',
+'terms_section3_1_content' => 'We offer three service tiers with specific features, response times, and device coverage limits as detailed on our pricing page.',
+'terms_section3_2_title' => '3.2 Payment Terms:',
+'terms_section3_2_content' => 'Monthly fees are billed in advance. Services may be suspended for non-payment after 15 days of invoice due date.',
+'terms_section3_3_title' => '3.3 Price Changes:',
+'terms_section3_3_content' => 'We reserve the right to modify pricing with 30 days advance notice to clients.',
+
+// Section 4
+'terms_section4_title' => '4. Service Level Agreement (SLA)',
+'terms_section4_1_title' => '4.1 Response Times:',
+'terms_section4_1_list1' => 'Basic Plan: 24-hour response time',
+'terms_section4_1_list2' => 'Business Plan: 4-hour response time',
+'terms_section4_1_list3' => 'Corporate Plan: 2-hour response time (24/7)',
+'terms_section4_2_title' => '4.2 Service Hours:',
+'terms_section4_2_content' => 'Support availability varies by plan. Emergency support outside business hours is available for Business and Corporate plans.',
+'terms_section4_3_title' => '4.3 Exclusions:',
+'terms_section4_3_content' => 'SLA does not cover issues caused by client negligence, unauthorized modifications, or force majeure events.',
+
+// Section 5
+'terms_section5_title' => '5. Client Responsibilities',
+'terms_section5_intro' => 'Clients agree to:',
+'terms_section5_list1' => 'Provide accurate information about their systems and issues',
+'terms_section5_list2' => 'Maintain regular backups of critical data (we assist but are not responsible for data loss)',
+'terms_section5_list3' => 'Notify us promptly of any security incidents',
+'terms_section5_list4' => 'Grant necessary access to systems for service delivery',
+'terms_section5_list5' => 'Follow security best practices and recommendations',
+
+// Section 6
+'terms_section6_title' => '6. Data Protection and Confidentiality',
+'terms_section6_1_title' => '6.1 Client Data:',
+'terms_section6_1_content' => 'We treat all client data with strict confidentiality and in compliance with GDPR and applicable data protection regulations.',
+'terms_section6_2_title' => '6.2 Access:',
+'terms_section6_2_content' => 'Our technicians access client systems only as necessary to provide services and do not retain copies of client data.',
+'terms_section6_3_title' => '6.3 Security:',
+'terms_section6_3_content' => 'We implement industry-standard security measures to protect client information during service delivery.',
+
+// Section 7
+'terms_section7_title' => '7. Intellectual Property',
+'terms_section7_1_title' => '7.1 Client Ownership:',
+'terms_section7_1_content' => 'Clients retain all rights to their data, systems, and business information.',
+'terms_section7_2_title' => '7.2 Our Materials:',
+'terms_section7_2_content' => 'Documentation, scripts, and tools developed by Entropic Networks remain our intellectual property unless otherwise agreed in writing.',
+
+// Section 8
+'terms_section8_title' => '8. Limitation of Liability',
+'terms_section8_1_title' => '8.1 Service Limits:',
+'terms_section8_1_content' => 'While we strive for excellence, we cannot guarantee 100% uptime or immunity from all security threats.',
+'terms_section8_2_title' => '8.2 Liability Cap:',
+'terms_section8_2_content' => 'Our liability is limited to the amount paid by the client in the 12 months preceding the incident, except in cases of gross negligence or willful misconduct.',
+'terms_section8_3_title' => '8.3 Indirect Damages:',
+'terms_section8_3_content' => 'We are not liable for indirect, consequential, or incidental damages including lost profits or business interruption.',
+
+// Section 9
+'terms_section9_title' => '9. Warranty Disclaimer',
+'terms_section9_content' => 'Services are provided "as is" without warranties of any kind, express or implied. We do not warrant that services will be uninterrupted or error-free.',
+
+// Section 10
+'terms_section10_title' => '10. Term and Termination',
+'terms_section10_1_title' => '10.1 Contract Duration:',
+'terms_section10_1_content' => 'Service contracts are month-to-month unless otherwise specified.',
+'terms_section10_2_title' => '10.2 Termination by Client:',
+'terms_section10_2_content' => 'Clients may terminate with 30 days written notice.',
+'terms_section10_3_title' => '10.3 Termination by Us:',
+'terms_section10_3_content' => 'We may terminate for breach of terms, non-payment, or with 60 days notice without cause.',
+'terms_section10_4_title' => '10.4 Data Return:',
+'terms_section10_4_content' => 'Upon termination, we will provide reasonable assistance in transitioning services and returning client data.',
+
+// Section 11
+'terms_section11_title' => '11. Compliance and Legal',
+'terms_section11_1_title' => '11.1 GDPR Compliance:',
+'terms_section11_1_content' => 'We comply with EU General Data Protection Regulation (GDPR) for all European clients.',
+'terms_section11_2_title' => '11.2 Spanish Law:',
+'terms_section11_2_content' => 'Services provided in Spain are subject to Spanish commercial and consumer protection laws.',
+'terms_section11_3_title' => '11.3 Licensing:',
+'terms_section11_3_content' => 'We maintain necessary business licenses and professional certifications.',
+
+// Section 12
+'terms_section12_title' => '12. Force Majeure',
+'terms_section12_content' => 'We are not liable for delays or failures due to circumstances beyond our reasonable control including natural disasters, pandemics, strikes, or telecommunications failures.',
+
+// Section 13
+'terms_section13_title' => '13. Changes to Terms',
+'terms_section13_content' => 'We may modify these terms with 30 days notice. Continued use of services after changes constitutes acceptance of new terms.',
+
+// Section 14
+'terms_section14_title' => '14. Governing Law and Jurisdiction',
+'terms_section14_content' => 'These terms are governed by Spanish law. Any disputes shall be resolved in the courts of Madrid, Spain.',
+
+// Section 15
+'terms_section15_title' => '15. Contact Information',
+'terms_section15_intro' => 'For questions about these terms:',
+'terms_section15_company' => 'Entropic Networks',
+'terms_section15_email' => 'Email: legal@entropicnetworks.com',
+'terms_section15_address' => 'Address: Madrid, Spain',
+
+// Section 16
+'terms_section16_title' => '16. Severability',
+'terms_section16_content' => 'If any provision of these terms is found invalid or unenforceable, the remaining provisions shall continue in full force.',
+
+// Section 17
+'terms_section17_title' => '17. Entire Agreement',
+'terms_section17_content' => 'These Terms of Service, along with our Privacy Policy and any service-specific agreements, constitute the entire agreement between client and Entropic Networks.',
+
+
+//#############################################################################################
+//################################# PRIVACY TERMS #############################################
+//#############################################################################################
+
+// Privacy Policy Section
+'privacy_title' => 'Privacy Policy',
+'privacy_meta' => 'Privacy policy and data protection practices of Entropic Networks',
+'privacy_last_update' => 'Last Updated',
+'privacy_date' => 'December 23, 2024',
+
+// Section 1
+'privacy_section1_title' => '1. Introduction',
+'privacy_section1_content' => 'Entropic Networks ("we," "us," or "our") is committed to protecting your privacy and personal data. This Privacy Policy explains how we collect, use, store, and protect your information in compliance with the EU General Data Protection Regulation (GDPR) and applicable Spanish data protection laws.',
+'privacy_section1_controller' => 'Data Controller:',
+'privacy_section1_controller_name' => 'Entropic Networks, Madrid, Spain',
+'privacy_section1_contact' => 'Contact:',
+'privacy_section1_contact_email' => 'privacy@entropicnetworks.com',
+
+// Section 2
+'privacy_section2_title' => '2. Information We Collect',
+'privacy_section2_1_title' => '2.1 Information You Provide:',
+'privacy_section2_1_list1' => 'Contact Information: Name, email address, phone number, company name, job title',
+'privacy_section2_1_list2' => 'Account Information: Username, password (encrypted), service preferences',
+'privacy_section2_1_list3' => 'Billing Information: Billing address, payment method details (processed securely through third-party payment processors)',
+'privacy_section2_1_list4' => 'Technical Information: System specifications, network configurations, software inventory provided for service delivery',
+'privacy_section2_1_list5' => 'Communication Data: Content of support tickets, emails, and other communications with us',
+
+'privacy_section2_2_title' => '2.2 Information We Collect Automatically:',
+'privacy_section2_2_list1' => 'Website Usage: IP address, browser type, device information, pages visited, time spent on pages',
+'privacy_section2_2_list2' => 'Cookies: We use cookies for session management and analytics (see Cookie Policy below)',
+'privacy_section2_2_list3' => 'Service Data: System logs, performance metrics, security event data collected during service delivery',
+
+'privacy_section2_3_title' => '2.3 Information from Third Parties:',
+'privacy_section2_3_list1' => 'Business information from public registries',
+'privacy_section2_3_list2' => 'Threat intelligence data for cybersecurity services',
+
+// Section 3
+'privacy_section3_title' => '3. Legal Basis for Processing',
+'privacy_section3_content' => 'We process your personal data based on:',
+'privacy_section3_list1' => 'Contract Performance: To provide IT services you have contracted (GDPR Art. 6(1)(b))',
+'privacy_section3_list2' => 'Consent: For marketing communications and non-essential cookies (GDPR Art. 6(1)(a))',
+'privacy_section3_list3' => 'Legitimate Interests: For service improvement, security, and fraud prevention (GDPR Art. 6(1)(f))',
+'privacy_section3_list4' => 'Legal Obligation: For tax, accounting, and regulatory compliance (GDPR Art. 6(1)(c))',
+
+// Section 4
+'privacy_section4_title' => '4. How We Use Your Information',
+'privacy_section4_content' => 'We use your information to:',
+'privacy_section4_list1' => 'Deliver IT support and maintenance services',
+'privacy_section4_list2' => 'Manage your account and billing',
+'privacy_section4_list3' => 'Respond to support requests and communications',
+'privacy_section4_list4' => 'Monitor and improve service quality',
+'privacy_section4_list5' => 'Ensure network and system security',
+'privacy_section4_list6' => 'Comply with legal obligations',
+'privacy_section4_list7' => 'Send service updates and important notices',
+'privacy_section4_list8' => 'Provide marketing communications (with your consent)',
+'privacy_section4_list9' => 'Analyze website usage and improve user experience',
+
+// Section 5
+'privacy_section5_title' => '5. Data Sharing and Disclosure',
+'privacy_section5_1_title' => '5.1 We Share Data With:',
+'privacy_section5_1_list1' => 'Service Providers: Cloud hosting, payment processing, email delivery (all under strict data processing agreements)',
+'privacy_section5_1_list2' => 'Business Partners: Software vendors and hardware suppliers when necessary for service delivery',
+'privacy_section5_1_list3' => 'Legal Authorities: When required by law or to protect rights and safety',
+
+'privacy_section5_2_title' => '5.2 We Do NOT:',
+'privacy_section5_2_list1' => 'Sell your personal data to third parties',
+'privacy_section5_2_list2' => 'Share client data for marketing purposes',
+'privacy_section5_2_list3' => 'Transfer data outside the EU without adequate safeguards',
+
+// Section 6
+'privacy_section6_title' => '6. International Data Transfers',
+'privacy_section6_content' => 'Your data is primarily stored and processed within the European Union. If we transfer data outside the EU, we ensure:',
+'privacy_section6_list1' => 'Adequacy decisions by the European Commission',
+'privacy_section6_list2' => 'Standard Contractual Clauses (SCCs)',
+'privacy_section6_list3' => 'Appropriate safeguards under GDPR Art. 46',
+
+// Section 7
+'privacy_section7_title' => '7. Data Retention',
+'privacy_section7_content' => 'We retain your data for:',
+'privacy_section7_list1' => 'Active Accounts: Duration of service relationship plus 6 years (Spanish commercial law requirement)',
+'privacy_section7_list2' => 'Billing Records: 10 years (tax law requirement)',
+'privacy_section7_list3' => 'Support Tickets: 3 years after resolution',
+'privacy_section7_list4' => 'Marketing Data: Until consent is withdrawn or 2 years of inactivity',
+'privacy_section7_list5' => 'Security Logs: 1 year unless required for ongoing investigation',
+'privacy_section7_footer' => 'After retention periods, data is securely deleted or anonymized.',
+
+// Section 8
+'privacy_section8_title' => '8. Your Rights Under GDPR',
+'privacy_section8_content' => 'You have the right to:',
+'privacy_section8_list1' => 'Access: Request a copy of your personal data (Art. 15)',
+'privacy_section8_list2' => 'Rectification: Correct inaccurate data (Art. 16)',
+'privacy_section8_list3' => 'Erasure: Request deletion ("right to be forgotten") (Art. 17)',
+'privacy_section8_list4' => 'Restriction: Limit how we process your data (Art. 18)',
+'privacy_section8_list5' => 'Portability: Receive your data in a structured format (Art. 20)',
+'privacy_section8_list6' => 'Object: Object to processing based on legitimate interests (Art. 21)',
+'privacy_section8_list7' => 'Withdraw Consent: For processing based on consent (Art. 7(3))',
+'privacy_section8_list8' => 'Lodge Complaint: With Spanish Data Protection Authority (AEPD)',
+'privacy_section8_contact' => 'To Exercise Rights: Email privacy@entropicnetworks.com or write to our Madrid address. We will respond within 30 days.',
+
+// Section 9
+'privacy_section9_title' => '9. Data Security',
+'privacy_section9_content' => 'We implement industry-standard security measures:',
+'privacy_section9_list1' => 'Encryption: TLS/SSL for data in transit, AES-256 for data at rest',
+'privacy_section9_list2' => 'Access Controls: Role-based access, multi-factor authentication',
+'privacy_section9_list3' => 'Network Security: Firewalls, intrusion detection, regular security audits',
+'privacy_section9_list4' => 'Employee Training: Regular data protection and security training',
+'privacy_section9_list5' => 'Incident Response: Documented procedures for data breach notification',
+'privacy_section9_footer' => 'In case of a data breach affecting your rights, we will notify you and relevant authorities within 72 hours as required by GDPR Art. 33-34.',
+
+// Section 10
+'privacy_section10_title' => '10. Cookies and Tracking Technologies',
+'privacy_section10_1_title' => '10.1 Essential Cookies:',
+'privacy_section10_1_content' => 'Necessary for website operation (session management, security)',
+'privacy_section10_2_title' => '10.2 Analytics Cookies:',
+'privacy_section10_2_content' => 'Help us understand website usage (Google Analytics with IP anonymization)',
+'privacy_section10_3_title' => '10.3 Marketing Cookies:',
+'privacy_section10_3_content' => 'Used only with your explicit consent',
+'privacy_section10_footer' => 'Cookie Control: You can manage cookie preferences through our cookie banner or browser settings. Essential cookies cannot be disabled without affecting functionality.',
+
+// Section 11
+'privacy_section11_title' => '11. Children\'s Privacy',
+'privacy_section11_content' => 'Our services are not directed to individuals under 16. We do not knowingly collect data from children. If we discover we have collected data from a child, we will delete it promptly.',
+
+// Section 12
+'privacy_section12_title' => '12. Third-Party Links',
+'privacy_section12_content' => 'Our website may contain links to third-party websites. We are not responsible for their privacy practices. Please review their privacy policies.',
+
+// Section 13
+'privacy_section13_title' => '13. Automated Decision-Making',
+'privacy_section13_content' => 'We do not use automated decision-making or profiling that produces legal effects or similarly significantly affects you under GDPR Art. 22.',
+
+// Section 14
+'privacy_section14_title' => '14. Data Protection Officer',
+'privacy_section14_content' => 'For data protection inquiries, contact our DPO:',
+'privacy_section14_email' => 'Email: dpo@entropicnetworks.com',
+'privacy_section14_address' => 'Address: Entropic Networks, Madrid, Spain',
+
+// Section 15
+'privacy_section15_title' => '15. Updates to This Policy',
+'privacy_section15_content' => 'We may update this policy to reflect changes in our practices or legal requirements. Material changes will be notified via email or prominent website notice 30 days before taking effect. Continued use after changes constitutes acceptance.',
+
+// Section 16
+'privacy_section16_title' => '16. Supervisory Authority',
+'privacy_section16_content' => 'You have the right to lodge a complaint with the Spanish Data Protection Authority (Agencia Española de Protección de Datos - AEPD):',
+'privacy_section16_website' => 'Website: www.aepd.es',
+'privacy_section16_address' => 'Address: C/ Jorge Juan, 6, 28001 Madrid',
+'privacy_section16_phone' => 'Phone: +34 901 100 099',
+
+// Section 17
+'privacy_section17_title' => '17. Contact Us',
+'privacy_section17_content' => 'For privacy-related questions or to exercise your rights:',
+'privacy_section17_team' => 'Privacy Team - Entropic Networks',
+'privacy_section17_email' => 'Email: privacy@entropicnetworks.com',
+'privacy_section17_address' => 'Address: Madrid, Spain',
+'privacy_section17_response' => 'Response time: Within 30 days of request',
+
+// Section 18
+'privacy_section18_title' => '18. Specific Service Data Processing',
+'privacy_section18_1_title' => '18.1 Remote Access:',
+'privacy_section18_1_content' => 'When we access your systems remotely, all sessions are logged and encrypted. Access is granted only to authorized technicians.',
+'privacy_section18_2_title' => '18.2 Backup Data:',
+'privacy_section18_2_content' => 'If we manage backups, data is encrypted and stored securely. We never access backup contents except at your explicit request.',
+'privacy_section18_3_title' => '18.3 Security Monitoring:',
+'privacy_section18_3_content' => 'Security logs may contain personal data (IP addresses, usernames). This data is processed for security purposes under legitimate interest.',
 
 ];

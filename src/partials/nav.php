@@ -1,6 +1,5 @@
-<!-- ******HEADER****** -->
 <?php include __DIR__.'/alert-bar.php'; ?>
-<?php include __DIR__.'/alert-modal.php'; ?>
+<!-- ******HEADER****** -->
 <header id="header" class="header">
     <div class="container">
         <h1 class="logo">
@@ -43,7 +42,6 @@
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="blog.php"><?=t('blog_home',$dict)?></a>
                             <a class="dropdown-item" href="blog-single.php"><?=t('blog_single',$dict)?></a>
-                            <a class="dropdown-item" href="404.php">404 Page</a>
                         </div>
                     </li>
                     <li class="nav-item">

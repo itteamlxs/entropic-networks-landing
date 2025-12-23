@@ -9,7 +9,12 @@ RewriteRule ^ - [L]
 
 # Pretty URLs /en /es /en/tour ...
 RewriteRule ^(en|es)/?$ index.php?lang=$1 [QSA,L]
-RewriteRule ^(en|es)/(tour|pricing|about|contact|blog|blog-single|404)/?$ $2.php?lang=$1 [QSA,L]
+RewriteRule ^(en|es)/(tour|pricing|about|contact|blog|blog-single)/?$ $2.php?lang=$1 [QSA,L]
+RewriteRule ^(en|es)/(tour|pricing|about|contact|blog|blog-single|terms|privacy)/?$ $2.php?lang=$1 [QSA,L]
+# Manejar 404 - Redirigir a 404.php
+ErrorDocument 404 /404.php
 
-# Si no coincide, devolver 404 real
-RewriteRule ^ - [L,R=404]
+# Si no coincide ninguna regla, mostrar 404
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /404.php [L]
