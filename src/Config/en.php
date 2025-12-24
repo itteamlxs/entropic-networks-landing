@@ -295,7 +295,7 @@ return [
 
 // #ENGLISH ALERT BAR (en.php) - Alert Bar #
 
-'alert_bar_active' => false, // Set to false to hide alert bar
+'alert_bar_active' => true, // Set to false to hide alert bar
 'alert_bar_title' => 'Attention!',
 'alert_bar_message' => 'Platform enters maintenance on 01/01/2025, take all necessary measures.',
 'alert_bar_link' => 'maintenance.php', // Optional: Leave empty to hide link

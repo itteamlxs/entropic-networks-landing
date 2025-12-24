@@ -1,20 +1,20 @@
 <?php
 /**
  * Contact Form Handler
- * Procesa el formulario de contacto y envía email a support@entropicnetworks.com
+ * Procesa el formulario de contacto y envía email usando configuración .env
  */
 
 function handleContactForm($post_data) {
     // Load environment variables
     $env_file = __DIR__ . '/../.env';
-    if (file_exists($env_file)) {
-        $env = parse_ini_file($env_file);
-    } else {
+    if (!file_exists($env_file)) {
         return [
             'success' => false,
             'message' => 'Configuration file not found'
         ];
     }
+    
+    $env = parse_ini_file($env_file);
     
     // Validate and sanitize inputs
     $name = trim($post_data['name'] ?? '');
@@ -44,8 +44,8 @@ function handleContactForm($post_data) {
         ];
     }
     
-    // Prepare email
-    $to = $env['CONTACT_EMAIL'] ?? 'support@entropicnetworks.com';
+    // Prepare email - All values from .env
+    $to = $env['CONTACT_EMAIL'];
     $email_subject = "[Contact Form] " . $subject;
     
     // Email body
@@ -87,18 +87,18 @@ function sendEmailSMTP($to, $subject, $body, $from_email, $from_name, $env) {
     $mail = new PHPMailer\PHPMailer\PHPMailer(true);
     
     try {
-        // SMTP Configuration
+        // SMTP Configuration - All from .env
         $mail->isSMTP();
         $mail->Host = $env['SMTP_HOST'];
         $mail->SMTPAuth = true;
         $mail->Username = $env['SMTP_USER'];
         $mail->Password = $env['SMTP_PASS'];
-        $mail->SMTPSecure = $env['SMTP_ENCRYPTION'] ?? 'tls';
-        $mail->Port = $env['SMTP_PORT'] ?? 587;
+        $mail->SMTPSecure = $env['SMTP_ENCRYPTION'];
+        $mail->Port = $env['SMTP_PORT'];
         $mail->CharSet = 'UTF-8';
         
-        // Recipients
-        $mail->setFrom($env['SMTP_USER'], $from_name);
+        // Recipients - All from .env
+        $mail->setFrom($env['SMTP_FROM'] ?? $env['SMTP_USER'], $from_name);
         $mail->addAddress($to);
         $mail->addReplyTo($from_email, $from_name);
         

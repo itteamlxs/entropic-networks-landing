@@ -1,7 +1,7 @@
 <?php
 /**
  * Signup Handler
- * Processes newsletter/trial signup requests
+ * Processes newsletter/trial signup requests using PHPMailer
  */
 
 function handleSignupForm($postData) {
@@ -17,53 +17,94 @@ function handleSignupForm($postData) {
         ];
     }
     
-    // Email configuration
-    $to = 'info@entropicnetworks.com'; // Marketing email
+    // Load environment variables
+    $env_file = __DIR__ . '/../.env';
+    if (!file_exists($env_file)) {
+        error_log("Signup: .env file not found");
+        return ['success' => false, 'message' => 'Configuration error', 'return_url' => $return_url];
+    }
+    
+    $env = parse_ini_file($env_file);
+    
+    // Email configuration from .env
+    $to = $env['CONTACT_EMAIL'] ?? 'itspport96@gmail.com';
     $subject = $lang === 'es' 
         ? 'Nueva Solicitud de Prueba Gratuita - Plan Básico' 
         : 'New Free Trial Request - Basic Plan';
     
-    // Email body
     $message = $lang === 'es' ? "
-    Nueva solicitud de prueba gratuita recibida:
+Nueva solicitud de prueba gratuita recibida:
+
+Email del Cliente: {$email}
+Plan Solicitado: Plan Básico (30 días gratis)
+Fecha: " . date('Y-m-d H:i:s') . "
+Idioma: Español
+
+Acción Requerida:
+Por favor, contactar al cliente para completar el proceso de registro.
+
+---
+Este es un mensaje automático del sistema de suscripciones.
+" : "
+New free trial request received:
+
+Customer Email: {$email}
+Requested Plan: Basic Plan (30 days free)
+Date: " . date('Y-m-d H:i:s') . "
+Language: English
+
+Action Required:
+Please contact the customer to complete the registration process.
+
+---
+This is an automated message from the subscription system.
+";
     
-    Email del Cliente: {$email}
-    Plan Solicitado: Plan Básico (30 días gratis)
-    Fecha: " . date('Y-m-d H:i:s') . "
-    Idioma: Español
+    // Send using PHPMailer
+    return sendSignupEmail($to, $subject, $message, $email, $env, $lang, $return_url);
+}
+
+function sendSignupEmail($to, $subject, $body, $reply_to, $env, $lang, $return_url) {
+    $autoload_path = __DIR__ . '/../vendor/autoload.php';
     
-    Acción Requerida:
-    Por favor, contactar al cliente para completar el proceso de registro.
+    if (!file_exists($autoload_path)) {
+        error_log("Signup: Composer autoload not found");
+        return ['success' => false, 'message' => 'Configuration error', 'return_url' => $return_url];
+    }
     
-    ---
-    Este es un mensaje automático del sistema de suscripciones.
-    " : "
-    New free trial request received:
+    require_once $autoload_path;
     
-    Customer Email: {$email}
-    Requested Plan: Basic Plan (30 days free)
-    Date: " . date('Y-m-d H:i:s') . "
-    Language: English
+    if (!class_exists('PHPMailer\PHPMailer\PHPMailer')) {
+        error_log("Signup: PHPMailer class not found");
+        return ['success' => false, 'message' => 'Configuration error', 'return_url' => $return_url];
+    }
     
-    Action Required:
-    Please contact the customer to complete the registration process.
+    $mail = new PHPMailer\PHPMailer\PHPMailer(true);
     
-    ---
-    This is an automated message from the subscription system.
-    ";
-    
-    // Email headers
-    $headers = "From: no-reply@entropicnetworks.com\r\n";
-    $headers .= "Reply-To: {$email}\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-    
-    // Send email
-    $sent = mail($to, $subject, $message, $headers);
-    
-    if ($sent) {
-        // Optional: Log successful signup
-        error_log("Signup request from: {$email}");
+    try {
+        // SMTP Configuration
+        $mail->isSMTP();
+        $mail->Host = $env['SMTP_HOST'];
+        $mail->SMTPAuth = true;
+        $mail->Username = $env['SMTP_USER'];
+        $mail->Password = $env['SMTP_PASS'];
+        $mail->SMTPSecure = $env['SMTP_ENCRYPTION'] ?? 'tls';
+        $mail->Port = $env['SMTP_PORT'] ?? 587;
+        $mail->CharSet = 'UTF-8';
+        
+        // Recipients
+        $mail->setFrom($env['SMTP_FROM'] ?? $env['SMTP_USER'], 'Entropic Networks Signups');
+        $mail->addAddress($to);
+        $mail->addReplyTo($reply_to, 'Customer');
+        
+        // Content
+        $mail->isHTML(false);
+        $mail->Subject = $subject;
+        $mail->Body = $body;
+        
+        $mail->send();
+        
+        error_log("Signup email sent successfully to {$to} for customer: {$reply_to}");
         
         return [
             'success' => true,
@@ -72,14 +113,14 @@ function handleSignupForm($postData) {
                 : 'Thank you! We will contact you soon.',
             'return_url' => $return_url
         ];
-    } else {
-        error_log("Failed to send signup email for: {$email}");
         
+    } catch (Exception $e) {
+        error_log("Signup email failed: " . $e->getMessage() . " | PHPMailer: " . ($mail->ErrorInfo ?? 'N/A'));
         return [
             'success' => false,
             'message' => $lang === 'es' 
-                ? 'Error al procesar la solicitud. Por favor, inténtelo de nuevo.' 
-                : 'Error processing request. Please try again.',
+                ? 'Error al enviar la solicitud. Intente de nuevo.' 
+                : 'Error sending request. Please try again.',
             'return_url' => $return_url
         ];
     }

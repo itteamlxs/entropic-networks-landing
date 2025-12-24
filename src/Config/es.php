@@ -296,7 +296,7 @@ return [
 //#TRADUCCION AL ESPANIOL (es.php) - alert-bar.php #
 
 // Alert Bar
-'alert_bar_active' => false, // Cambiar a false para ocultar la barra de alerta
+'alert_bar_active' => true, // Cambiar a false para ocultar la barra de alerta
 'alert_bar_title' => '¡Atención!',
 'alert_bar_message' => 'Plataforma entra en mantenimiento 01/01/2025, toma todas las medidas necesarias.',
 'alert_bar_link' => 'maintenance.php', // Opcional: Dejar vacío para ocultar el enlace
@@ -314,6 +314,12 @@ Durante este tiempo, todos los servicios estarán temporalmente no disponibles. 
 
 Disculpe las molestias.',
 'close' => 'Cerrar',
+
+
+
+
+
+
 
 
 //############################################################################

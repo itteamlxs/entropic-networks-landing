@@ -96,4 +96,5 @@
     }
 }
 </style>
+<?php include __DIR__.'/alert-modal.php'; ?>
 <?php endif; ?>
