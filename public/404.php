@@ -14,13 +14,13 @@ $current_page = '404';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">    
-    <link rel="shortcut icon" href="favicon.ico">  
+    <link rel="shortcut icon" href="/favicon.ico">  
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,500,700' rel='stylesheet' type='text/css'>
-    <script defer src="assets/plugins/fontawesome/js/all.js"></script>
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
-    <link rel="stylesheet" href="assets/css/custom-lang.css">
+    <script defer src="/assets/plugins/fontawesome/js/all.js"></script>
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <link id="theme-style" rel="stylesheet" href="/assets/css/theme-1.css">
+    <link rel="stylesheet" href="/assets/css/custom-lang.css">
 </head> 
 
 <body class="page-404">    
@@ -33,7 +33,7 @@ $current_page = '404';
                 <h2 class="title title-404">404</h2>
                 <p class="intro"><?=t('404_sorry',$dict)?></p>
                 <p class="guide"><?=t('404_guide',$dict)?></p>
-                <a class="btn btn-cta-primary btn-back-home" href="index.php?lang=<?=htmlspecialchars($lang, ENT_QUOTES, 'UTF-8')?>"><?=t('404_back_home',$dict)?></a>
+                <a class="btn btn-cta-primary btn-back-home" href="/index.php?lang=<?=htmlspecialchars($lang, ENT_QUOTES, 'UTF-8')?>"><?=t('404_back_home',$dict)?></a>
             </div>
         </section>
             
@@ -42,10 +42,10 @@ $current_page = '404';
     <?php include __DIR__.'/../src/partials/footer.php'; ?>
     <?php include __DIR__.'/../src/partials/modals.php'; ?>
           
-    <script src="assets/plugins/popper.min.js"></script> 
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
-    <script src="assets/plugins/vanilla-back-to-top.min.js"></script>   
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/plugins/popper.min.js"></script> 
+    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="/assets/plugins/vanilla-back-to-top.min.js"></script>   
+    <script src="/assets/js/main.js"></script>
     
     <a id="lang-toggle" href="?lang=<?=($lang === 'en') ? 'es' : 'en'?>">
         <i class="fa-solid fa-language"></i>

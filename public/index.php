@@ -333,21 +333,10 @@ $current_page = 'index';
 		</section>
 
 		<!-- ******SIGNUP****** -->
-		<section id="signup" class="signup">
-			<div class="container text-center">
-				<h2 class="title"><?=t('signup2_title',$dict)?></h2>
-				<p class="summary"><?=t('signup2_sub',$dict)?></p>
-				<form class="signup-form" method="post" action="#">
-					<div class="form-group">
-						<label class="sr-only" for="semail2"><?=t('your_email',$dict)?></label>
-						<input type="email" id="semail2" name="semail2" class="form-control" placeholder="<?=t('email_placeholder',$dict)?>" required>
-					</div>
-					<button type="submit" class="btn btn-cta btn-cta-primary"><?=t('signup_btn',$dict)?></button>
-				</form>
-			</div>
-		</section>
 
-	</div>
+		<?php include __DIR__.'/../src/partials/signup-section.php'; ?>
+
+	        <!-- *****END SIGNUP*******>
 
 	<?php include __DIR__.'/../src/partials/footer.php'; ?>
 	<?php include __DIR__.'/../src/partials/modals.php'; ?>

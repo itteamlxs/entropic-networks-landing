@@ -11,7 +11,7 @@ return [
     'nav_tour'     => 'Servicios',
     'nav_pricing'  => 'Planes',
     'nav_about'    => 'Nosotros',
-    'nav_blog'     => 'Blog',
+    'nav_portal'   => 'Portal',
     'blog_home'    => 'Inicio del Blog',
     'blog_single'  => 'Entrada Individual',
     'nav_contact'  => 'Contacto',

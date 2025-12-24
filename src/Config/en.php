@@ -12,7 +12,7 @@ return [
     'nav_pricing'  => 'Plans',
     'nav_about'    => 'About',
     'nav_blog'     => 'Blog',
-    'blog_home'    => 'Blog Home',
+    'nav_portal'   => 'Portal',
     'blog_single'  => 'Single Post',
     'nav_contact'  => 'Contact',
     'login'        => 'Log in',
@@ -69,7 +69,7 @@ return [
     'footer_press' => 'Press', 
     'footer_terms' => 'Terms of Service',
     'footer_privacy' => 'Privacy Policy',
-
+    'signup_success' => 'Thank you for your interest! We will contact you soon to activate your free trial.',
 // FAQ Section
 'faq_title' => 'Frequently Asked Questions',
 'faq_more' => 'More questions?',
