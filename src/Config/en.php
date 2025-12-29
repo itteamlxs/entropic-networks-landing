@@ -22,11 +22,11 @@ return [
     'hero_sub'     => 'Entropic Networks offers comprehensive technological solutions that optimize system performance and protect critical information with a preventive, personalized, and professional approach.',
     'hero_cta'     => 'Our Services',
 
-    'signup_title' => 'Try Entropic Networks Free',
-    'signup_sub'   => 'Sign up to try our Basic Plan FREE for 30 days! No credit card needed.',
+    'signup_title' => 'Discover Entropic Networks',
+    'signup_sub'   => 'Sign up for an initial assessment and discover which technical support plan best fits your infrastructure.',
     'your_email'   => 'Your email',
     'email_placeholder' => 'Enter your email address',
-    'signup_btn'   => 'SIGN UP',
+    'signup_btn'   => 'Request Initial Assessment',
 
     'why_title'    => 'Why Choose Entropic Networks',
     'why_sub'      => 'More than 300,000 satisfied customers trust our technological solutions worldwide',
@@ -52,7 +52,7 @@ return [
     'watch_video'  => 'Watch Video',
 
     'signup2_title' => 'Ready to bring technology in balance with Entropic Networks?',
-    'signup2_sub'   => 'Sign up to try our Basic Plan FREE for 30 days! No credit card needed.',
+    'signup2_sub'   => 'Request an initial assessment and receive a tailored technical support recommendation based on your needs.',
 
     'footer_title' => 'About Entropic Networks',
     'footer_desc'  => 'At Entropic Networks, we specialize in providing a comprehensive range of technological services designed to ensure optimal performance of your equipment and systems.',
@@ -70,6 +70,7 @@ return [
     'footer_terms' => 'Terms of Service',
     'footer_privacy' => 'Privacy Policy',
     'signup_success' => 'Thank you for your interest! We will contact you soon to activate your free trial.',
+
 // FAQ Section
 'faq_title' => 'Frequently Asked Questions',
 'faq_more' => 'More questions?',

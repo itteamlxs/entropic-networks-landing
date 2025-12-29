@@ -22,11 +22,11 @@ return [
     'hero_sub'     => 'Entropic Networks ofrece soluciones tecnológicas integrales que optimizan el rendimiento de los sistemas y protegen la información crítica con un enfoque preventivo, personalizado y profesional.',
     'hero_cta'     => 'Nuestros Servicios',
 
-    'signup_title' => 'Prueba Entropic Networks Gratis',
-    'signup_sub'   => '¡Regístrate para probar nuestro Plan Básico GRATIS por 30 días! No se necesita tarjeta de crédito.',
+    'signup_title' => 'Prueba Entropic Networks',
+    'signup_sub'   => 'Solicita una evaluación inicial y recibe una recomendación personalizada de soporte técnico según tus necesidades.',
     'your_email'   => 'Tu correo',
     'email_placeholder' => 'Introduce tu dirección de correo',
-    'signup_btn'   => 'REGISTRARSE',
+    'signup_btn'   => 'Solicitar evaluación inicial',
 
     'why_title'    => 'Por qué elegir Entropic Networks',
     'why_sub'      => 'Más de 300.000 clientes satisfechos confían en nuestras soluciones tecnológicas en todo el mundo',
@@ -52,7 +52,7 @@ return [
     'watch_video'  => 'Ver vídeo',
 
     'signup2_title' => '¿Listo para equilibrar la tecnología con Entropic Networks?',
-    'signup2_sub'   => '¡Regístrate para probar nuestro Plan Básico GRATIS por 30 días! No se necesita tarjeta de crédito.',
+    'signup2_sub'   => 'Solicita una evaluación inicial y recibe una recomendación personalizada de soporte técnico según tus necesidades',
 
     'footer_title' => 'Acerca de Entropic Networks',
     'footer_desc'  => 'En Entropic Networks nos especializamos en brindar una gama integral de servicios tecnológicos diseñados para garantizar el óptimo rendimiento de tus equipos y sistemas.',

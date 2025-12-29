@@ -62,8 +62,8 @@
                             <?=t('nav_contact',$dict)?>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link login-trigger" data-bs-toggle="modal" data-bs-target="#login-modal">
+                    <!---<li class="nav-item">
+                       <a class="nav-link login-trigger" data-bs-toggle="modal" data-bs-target="#login-modal">
                             <?=t('login',$dict)?>
                         </a>
                     </li>
@@ -71,7 +71,7 @@
                         <a class="nav-link btn btn-cta btn-cta-primary" data-bs-toggle="modal" data-bs-target="#signup-modal">
                             <?=t('get_started',$dict)?>
                         </a>
-                    </li>
+                    </li>--->
                 </ul>
             </div>
         </nav>
